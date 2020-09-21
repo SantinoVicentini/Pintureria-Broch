@@ -1,5 +1,5 @@
 # Pintureria-Broch
-Proyecto Integrador 
+Proyecto Integrador <h2>  
 
 Tienda eCommerce dirigida a la compra de articulos de pinturería y pinturas.
 Está dirigido a un público general (minorista).
