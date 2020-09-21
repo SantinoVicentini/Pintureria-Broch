@@ -7,7 +7,7 @@ Está dirigido a un público general (minorista).
 
 Los integrantes del equipo somos:
 
-Santino Vicentini, tengo 18 años y voy a estudiar Tecnología Digital.  Me encuentr actualmente cursando  PWFS en Digital House. 
+Santino Vicentini, tengo 18 años y voy a estudiar Tecnología Digital.  Me encuentr actualmente cursando  PWFS en Digital House.   
 
 Luciano Serenellini, estudiante de licenciatura en Sistemas de Información de las Organizaciones y del curso de Programación Web Full Stack de Digital House, 23 años y emprendedor nato 
 
