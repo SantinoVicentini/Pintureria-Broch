@@ -4,7 +4,8 @@
 * Tienda eCommerce dirigida a la compra de articulos de pinturería y pinturas.
 
 <h2> Audiencia: </h2>
-*  Está dirigido a un público general (minorista).
+
+* Está dirigido a un público general (minorista).
 
 <h2> Integrantes </h2>
 
