@@ -15,7 +15,7 @@
 
 * Alexis Coria , estudiante de Programación Full Stack y de sistemas de Información en la UTN BSAS. 26 años.
 
-<h2> Paginas web: </h2>
+<h2> Paginas web referente: </h2>
 
 * https://www.pisano.com.ar/
 
