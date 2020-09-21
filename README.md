@@ -4,9 +4,10 @@
 * Tienda eCommerce dirigida a la compra de articulos de pinturería y pinturas.
 
 <h2> Audiencia: </h2>
-Está dirigido a un público general (minorista).
+* Está dirigido a un público general (minorista).
 
 <h2> Integrantes </h2>
+
 * Santino Vicentini, tengo 18 años y voy a estudiar Tecnología Digital.  Me encuentr actualmente cursando  PWFS en Digital House.   
 
 * Luciano Serenellini, estudiante de licenciatura en Sistemas de Información de las Organizaciones y del curso de Programación Web Full Stack de Digital House, 23 años y emprendedor nato 
