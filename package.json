@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SantinoVicentini/Pintureria-Broch/issues"
   },
-  "homepage": "https://github.com/SantinoVicentini/Pintureria-Broch#readme"
+  "homepage": "https://github.com/SantinoVicentini/Pintureria-Broch#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
