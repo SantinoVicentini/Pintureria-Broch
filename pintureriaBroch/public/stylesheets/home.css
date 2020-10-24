@@ -7,6 +7,8 @@
  header {
    background-color: rgb(111, 111, 245);
    padding: 15px 0px 0px 0px;
+   width: 100%;
+   
  }
 
  .header-container {
@@ -16,19 +18,21 @@
  }
 
  .header-container img {
-   position: absolute;
+   position: relative;
    top: 15px;
    left: 5px;
  }
 
  .header-container .buscador input{
-   width: 700px;
+   width: 500px;
    border-radius: 10px;
+   
  }
 
  .nav-bar {
    background-color: rgb(107, 174, 197);
    margin-top: 30px;
+   width: 100%;
  }
 
  .nav-bar ul li{
