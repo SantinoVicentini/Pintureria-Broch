@@ -2,6 +2,7 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   font-family: Roboto;
  }
 
  header {
@@ -33,14 +34,16 @@
    background-color: rgb(107, 174, 197);
    margin-top: 30px;
    width: 100%;
+   /*Flexbox*/
+   display:flex;
  }
 
- .nav-bar ul li{
+ /*.nav-bar ul li{
    display: inline-block;
    position: relative;
    left: 280px;
    margin-left: 100px;
-   margin-right: 100px;
+   margin-right: 100px;*/
    
  }
 
@@ -49,18 +52,35 @@
    width: 99%;
    margin-left: auto;
    margin-right: auto;
+ }
+
+ section{
+/*Flexbox*/
+display:flex;
+flex-wrap:wrap;
+height:500;
+background-color: red;
 
  }
- 
+ article{
+   width: 25%;
+   margin-bottom:30px;
+   padding:15px
+   border-radius:10px;
+   background: white;
+ }
+
+ article img{
+   width:20%;
+ }
  footer {
-   background-color: hotpink;
+  background-color: rgb(111, 111, 245);
  }
 
-
- .interioresCarrusel div {
-  vertical-align:top;
-  display: inline-block;
-}
+ .footer-bottom-contenido
+ {
+   padding:10px;
+ }
 
  .promos article {
    vertical-align: top;
