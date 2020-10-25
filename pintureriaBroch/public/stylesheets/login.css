@@ -2,29 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
-body{
-    font-family: sans-serif;
+/*body{
     background-image: url("/images/azulOscuro.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-header{
-    height: 200px;
-    border: 1px solid black;
-}
-
-.logo {
-    text-align: center;
-    position: relative;
-    top: 100px;
-}
-
-.login {
-    width: 280px;
-    position: absolute;
-    top: 37%;
-    left: 47%;
-}
+}*/

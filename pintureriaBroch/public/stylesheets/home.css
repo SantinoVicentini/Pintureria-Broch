@@ -6,33 +6,32 @@
  }
 
  header {
-   background-color: rgb(111, 111, 245);
-   padding: 15px 0px 0px 0px;
-   width: 100%;
-   
- }
+  background-color: rgb(111, 111, 245);
+  padding: 25px 0px 0px 0px;
+  width: 100%;
+  
+}
 
- .header-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
- }
+.header-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
 
- .header-container img {
-   position: relative;
-   top: 15px;
-   left: 5px;
- }
+.header-container img {
+  position: relative;
+  left: 15px;
+}
 
- .header-container .buscador input{
-   width: 500px;
-   border-radius: 10px;
-   
- }
+.header-container .buscador input{
+  width: 500px;
+  border-radius: 10px;
+  
+}
 
  .nav-bar {
    background-color: rgb(107, 174, 197);
-   margin-top: 30px;
+   margin-top: 25px;
    width: 100%;
    /*Flexbox*/
    display:flex;
@@ -43,13 +42,13 @@
    position: relative;
    left: 280px;
    margin-left: 100px;
-   margin-right: 100px;*/
-   
- }
+   margin-right: 100px;
+ }*/
+ 
 
  main {
    background-color: grey;
-   width: 99%;
+   width: 100%;
    margin-left: auto;
    margin-right: auto;
  }
@@ -59,40 +58,47 @@
 display:flex;
 flex-wrap:wrap;
 height:500;
-background-color: red;
 
  }
  article{
    width: 25%;
    margin-bottom:30px;
-   padding:15px
-   border-radius:10px;
-   background: white;
+   padding:15px;
+  background: white;
  }
 
  article img{
    width:20%;
  }
+ 
+ 
+ /*FOOTER*/
+ 
  footer {
   background-color: rgb(111, 111, 245);
  }
+.footer-contenido{
+padding:20px;
+margin-left: 50px;
+/*Flexbox*/
+display:flex;
+}
 
- .footer-bottom-contenido
- {
-   padding:10px;
- }
-
- .promos article {
-   vertical-align: top;
-   display: inline-block;
- }
-
-  .exterioresCarrusel div {
-    vertical-align: top;
-    display: inline-block;
+.footer-contenido-logo{
+padding-top:30px;
   }
 
-   .pie article{
-     vertical-align: top;
-     display: inline-block;
-   }
+  .footer-bottom{
+    text-align: center;
+    padding:30px;
+margin-left: 50px;
+  }
+ .footer-bottom-contenido
+ {
+   padding:20px;
+   margin-left: 50px;
+   color:white;
+ }
+
+
+ 
