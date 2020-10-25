@@ -1,66 +1,126 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Roboto;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
 
+header {
+ background-color: rgb(111, 111, 245);
+ padding: 25px 0px 0px 0px;
+ width: 100%;
 
- header {
-  background-color: rgb(111, 111, 245);
-  padding: 15px 0px 0px 0px;
-  width: 100%;
-  
+ 
 }
 
 .header-container {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 }
 
 .header-container img {
-  position: relative;
-  top: 15px;
-  left: 5px;
+ position: relative;
+ left: 15px;
 }
 
 .header-container .buscador input{
-  width: 500px;
-  border-radius: 10px;
-  
+ width: 500px;
+ border-radius: 10px;
+ 
 }
 
 .nav-bar {
   background-color: rgb(107, 174, 197);
-  margin-top: 30px;
+  margin-top: 25px;
   width: 100%;
+  /*Flexbox*/
   display:flex;
   justify-content: space-around;
 
 }
 
+/*MAIN*/
+
+main .principal {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+main .secundario .Acciones {
+  margin: 10px;
+  background-color:#95BED5;
+  padding: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+main .secundario .Descripción-Producto {
+  margin: 10px;
+  background-color:#95BED5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: space-between;
+}
+
+main .secundario .Descripción-Producto h3 {
+  text-align: center;
+
+}
+
+main .terciario .PromoImportante {
+  text-align: center;
+
+}
+
+main .terciario .Productos-Interesar {
+  text-align: center;
+  font-size: 40px;
+}
+
+main .terciario .Imagenes-Interesar {
+  display: flex;
+  flex-direction: row;
+}
 
 
-  footer {
-    background-color: rgb(111, 111, 245);
-  
-   }
 
-   .footer-contenido {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+ /*FOOTER*/
+ 
+ footer {
+  background-color: rgb(111, 111, 245);
+ }
 
-   }
-   
+.footer-contenido{
+padding:20px;
+margin-left: 50px;
+/*Flexbox*/
+display:flex;
+text-align: center;
+}
 
-   .footer-bottom
-   {
-     padding:10px;
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-around;
-   }
+.footer-contenido-logo{
+padding-top:30px;
+
+  }
+
+  .footer-bottom{
+    text-align: center;
+    padding:30px;
+margin-left: 50px;
+  }
+ .footer-bottom-contenido
+ {
+   padding:20px;
+   margin-left: 50px;
+   color:white;
+ }
