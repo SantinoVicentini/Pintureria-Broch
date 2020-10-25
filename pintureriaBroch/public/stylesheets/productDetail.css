@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+  }
+
+
+ header {
+  background-color: rgb(111, 111, 245);
+  padding: 15px 0px 0px 0px;
+  width: 100%;
+  
+}
+
+.header-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.header-container img {
+  position: relative;
+  top: 15px;
+  left: 5px;
+}
+
+.header-container .buscador input{
+  width: 500px;
+  border-radius: 10px;
+  
+}
+
+.nav-bar {
+  background-color: rgb(107, 174, 197);
+  margin-top: 30px;
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+
+}
+
+
+
+  footer {
+    background-color: rgb(111, 111, 245);
+  
+   }
+
+   .footer-contenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+   }
+   
+
+   .footer-bottom
+   {
+     padding:10px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+   }
