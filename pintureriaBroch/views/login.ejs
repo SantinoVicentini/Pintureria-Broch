@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/home.css' />
     <link rel='stylesheet' href='/stylesheets/login.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Ingresar</title>
@@ -16,9 +15,9 @@
   
             <img src="/./images/logo3.jpg" width="40" alt="logo"> 
             <div class="buscador"><input type="search" id="site-search" name="search"><button>search</button></div>
-            <div class="fav">Favoritos</div> 
-            <div class="carrito">Carrito</div>
-            <div class="ingreso"><a href="/login">Ingresá a tu cuenta</a></div>
+            <div class="fav"> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></div> 
+       <div class="carrito"> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </div>
+        <div class="ingreso"><a href="/login"><i class="far fa-sign-in-alt"></i> Ingresá a tu cuenta</a></div>
   
         </div>
       
@@ -31,7 +30,7 @@
       </header>
 
     </header>
-    <section class="main">
+    <main>
         <div class="login-container">
             <form action="/" method="GET">
                 
@@ -52,7 +51,7 @@
                     </div>
             </form>
         </div>
-        </section>
+        </main>
     <footer>
         <div class="footer-contenido">
           <div class="footer-contenido-logo">
@@ -103,5 +102,6 @@
               <p>Todos los derechos reservados.
                  Copyright 2020</p>
                  </div>
+                </footer>
 </body>
 </html>

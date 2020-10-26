@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/home.css' />
+    <link rel="stylesheet" href="/stylesheets/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Crea tu cuenta</title>
 </head>
@@ -27,23 +27,29 @@
         <li><a href="">|Revestimientos|</a></li>
         <li><a href="">|Esmaltes|</a></li>
        </ul>
-      </header>
 
     </header>
-    <section class="main">
+    <main>
         <div class="register-container">
             <form action="/" method="GET">
                 
-                    <h1>Register</h1>
-                
+                    <h1>Create Account</h1>
+                    <div class="text-box">
+                        <input type="text" name="fullName" id="fullName" placeholder="Full Name">
+                    </div>
                         <div class="text-box">
                           <i class="fas fa-user"></i>
                     <input type="text" name="username" id="username" placeholder="username">
                     </div>
-
+                    <div class="text-box">
+                      <input type="email" name="email" id="email" placeholder="email">
+                    </div>
                     <div class="text-box">
                        <i class="fas fa-lock"></i>
                     <input type="password" name="password" id="password" placeholder="password">
+                     </div>
+                     <div class="text-box">
+                       <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
                      </div>
 
                     <div class="btn">
@@ -51,7 +57,7 @@
                     </div>
             </form>
         </div>
-        </section>
+      </main>
     <footer>
         <div class="footer-contenido">
           <div class="footer-contenido-logo">
@@ -102,5 +108,7 @@
               <p>Todos los derechos reservados.
                  Copyright 2020</p>
                  </div>
+                </footer>
+                </div>
 </body>
 </html>
