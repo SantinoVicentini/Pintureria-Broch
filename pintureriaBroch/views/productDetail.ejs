@@ -3,6 +3,7 @@
   <head>
     <title>Pintureria Broch</title>
     <link rel='stylesheet' href='/stylesheets/productDetail.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
   </head>
   <body>
     <div class="container">
@@ -11,11 +12,12 @@
       
       <div class="header-container">
 
-      <img src="/images/logo3.jpg" alt="logo"> 
+        <img src="/images/logo3.jpg" alt="logo"> 
+
       <div class="buscador"><input type="search" id="site-search" name="search"><button>search</button></div>
-       <div class="fav">Favoritos</div> 
-       <div class="carrito">Carrito</div>
-        <div class="ingreso"><a href="/login">Ingresá a tu cuenta</a></div>
+       <div class="fav"> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></div> 
+       <div class="carrito"> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </div>
+        <div class="ingreso"><a href="/login"><i class="far fa-sign-in-alt"></i> Ingresá a tu cuenta</a></div>
 
         </div>
 
@@ -37,10 +39,11 @@
         </section>
 
         
-          <section class="Producto"> 
+          <section class="Producto">
+            <h3>Albalatex Interior 10 lts</h3> 
+            <h6>Código: ALMB0BCO10</h6>
             <img src="images/interior/albalatex_interior_10.jpg" alt="500px">
-            <h3>Albalatex Interior 10 lts</h3>
-            <h5>Código: ALMB0BCO10</h5>
+            
   
           </section>
 
@@ -62,9 +65,9 @@
         <div class="secundario">
 
           <section class="Acciones">
-            <p> <a href="/cart">Agregar al carrito</a> </p>
-            <p> <a href="/payment">Medios de Pago</a> </p>
-            <p> <a href="/shipping">Calcular envío</a> </p>
+            <p> <a href="/cart"> <i class="fas fa-shopping-cart"></i> Agregar al carrito</a> </p>
+            <p> <a href="/payment"><i class="fas fa-credit-card"></i> Medios de Pago</a> </p>
+            <p> <a href="/shipping"><i class="fas fa-shipping-fast"></i> Calcular envío</a> </p>
           </section>
           <hr>
 
