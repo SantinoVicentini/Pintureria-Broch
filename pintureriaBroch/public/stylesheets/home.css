@@ -46,31 +46,44 @@
  }*/
  
 
- main {
+ main{
    background-color: grey;
    width: 100%;
    margin-left: auto;
    margin-right: auto;
  }
 
- section{
-/*Flexbox*/
-display:flex;
-flex-wrap:wrap;
-height:500;
+.container{
+  margin: 0 auto;
+  max-width:900px;
+  
+}
+section{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+   }
 
- }
- article{
-   width: 25%;
-   margin-bottom:30px;
-   padding:15px;
-  background: white;
- }
+section article {
+ background-color: white;
+ height: 350px;
+ width: 200px;
+ padding: 30px;
+ position: relative;
+ top: 20%;
+ border-radius: 8px;
+ box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+/*FLEXBOX*/
+
+justify-content:center;
+
+}
+
 
  article img{
-   width:20%;
+   width:100%;
  }
- 
+
  
  /*FOOTER*/
  
