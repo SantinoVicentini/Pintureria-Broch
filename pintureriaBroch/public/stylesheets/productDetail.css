@@ -47,43 +47,130 @@ width: 100%;
 /*MAIN*/
 
 main .principal {
-  margin: 1%;
   width: 100%;
   display: flex;
   text-align: center;
   align-self: center;
   align-items: center;
   justify-content: space-around;
-  font-size: xx-large;
-
+  background-color: white;
 }
+
+
+
+main .principal .Producto {
+  width: 33%;
+  margin: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+main .principal .Producto h1 {
+  color: #d9871b;
+}
+
 
 
 main .principal .Información {
-font-size: xx-large;
-}
-
-main .secundario .Acciones {
-  margin: 10px;
-  background-color:#95BED5;
+  width: 33%;
+margin: 10px;
   padding: 40px;
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: space-around;
 }
 
-main .secundario .Acciones a {
+main .principal .Información .Color {
+  display: flex;
+  flex-direction: column;
+}
+
+main .principal .Información .Color i {
+font-size: 300%;
+}
+
+main .principal .Acciones {
+  width: 33%;
+  margin: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+
+
+main .principal .Acciones a {
   color: black;
   text-decoration: none;
 }
-main .secundario .Acciones a:focus {
+main .principal .Acciones a:focus {
   border-bottom: 1px solid;
   background: #BAE498;
 }
 
-main .secundario .Acciones a:hover {
+main .principal .Acciones a:hover {
   border-bottom: 1px solid;     
   background-color: transparent;
+}
+
+
+main .principal .Acciones {
+  width: 33%;
+}
+
+main .principal .Información .Precio {
+  color: cadetblue;
+}
+
+main .principal .Información .Cantidad {
+ 
+}
+
+
+main .principal .Información .Promo {
+ 
+}
+
+main .principal .Acciones .Carrito {
+  display: flex;
+
+}
+
+main .principal .Acciones .Carrito .Boton {
+  width: 80%;
+height: 50px;
+line-height: 54px;
+display: block;
+background-color: #d9871b;
+color: #FFF;
+border-radius: 4px;
+}
+
+main .principal .Acciones .Carrito .Cantidad {
+  width: 20%;
+height: 50px;
+margin-right: 10px;
+border: 1px solid #d9871b;
+border-radius: 4px;
+padding: 5px 0;
+color: #d9871b; 
+}
+
+main .principal .Acciones .Pago_Extra {
+  display: flex;
+}
+
+main .principal .Acciones .Pago_Extra .Pagos {
+  width: 49%;
+}
+
+main .principal .Acciones .Pago_Extra .Envíos {
+  width: 49%;
 }
 
 
