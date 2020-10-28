@@ -67,8 +67,8 @@ button:hover{
 
 .login-container{
     background-color: white;
-    height: 450px;
-    width: 450px;
+    height: 60vh;
+    width: 30%;
     padding: 30px 65px;
     position: absolute;
     top: 25%;
@@ -131,3 +131,39 @@ button:hover{
 
  /*FOOTER*/
  
+
+ /*Tablet*/
+
+ @media (max-width: 768px) { 
+    .login-container{
+        background-color: white;
+        height: 60vh;
+        width: 50%;
+        padding: 30px 65px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        border-radius: 6px;
+        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+  }
+
+  /*mobile*/
+
+  @media (max-width: 576px) { 
+    .login-container{
+        background-color: white;
+        height: 60vh;
+        width: 50%;
+        padding: 1px 6px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        border-radius: 6px;
+        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+  }
+
+  .login-container p{
+    padding-top: 1px;
+  }
+
+   }
