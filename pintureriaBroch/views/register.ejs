@@ -10,24 +10,15 @@
 <body>
     <div class="container">
       <header>
-        
-        <div class="header-container">
-  
-            <img src="/./images/logo3.jpg" width="40" alt="logo"> 
-            <div class="buscador"><input type="search" id="site-search" name="search"><button>search</button></div>
-            <div class="fav">Favoritos</div> 
-            <div class="carrito">Carrito</div>
-            <div class="ingreso"><a href="/login">Ingresá a tu cuenta</a></div>
-  
-        </div>
-      
-       <ul class="nav-bar">
-        <li><a href="">|Interiores|</a></li>
-        <li><a href="">|Exteriores|</a></li>
-        <li><a href="">|Revestimientos|</a></li>
-        <li><a href="">|Esmaltes|</a></li>
-       </ul>
-
+          <img src="/./images/logo3.jpg" width="40" alt="logo">
+          <nav>
+            <ul class="nav-links">
+                <li><a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></li>
+                <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </li>
+            </ul>
+           </nav>
+           <a href="/login"><button>Ingresar</button></a>
+     
     </header>
     <main>
         <div class="register-container">
@@ -35,6 +26,7 @@
                 
                     <h1>Create Account</h1>
                     <div class="text-box">
+                      <i class="fas fa-user"></i>
                         <input type="text" name="fullName" id="fullName" placeholder="Full Name">
                     </div>
                         <div class="text-box">
@@ -42,6 +34,7 @@
                     <input type="text" name="username" id="username" placeholder="username">
                     </div>
                     <div class="text-box">
+                      <i class="fas fa-at"></i>
                       <input type="email" name="email" id="email" placeholder="email">
                     </div>
                     <div class="text-box">
@@ -49,6 +42,7 @@
                     <input type="password" name="password" id="password" placeholder="password">
                      </div>
                      <div class="text-box">
+                      <i class="fas fa-lock"></i>
                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
                      </div>
 
@@ -59,56 +53,17 @@
         </div>
       </main>
     <footer>
-        <div class="footer-contenido">
-          <div class="footer-contenido-logo">
-            <img src="/./images/logo3.jpg" width="80" alt="destacado">
-            <h4>Pinturerias Broch</h4>
+      <footer>
+        <div class="footer-contenido-logo">
+          <img src="/./images/logo3.jpg" width="80" alt="destacado">
+          <h4>Pinturerias Broch</h4>
           </div>
-             
-              
-                  <div class="footer-container">
-                    <div class="footer-contenido">
-                        <ul class="links">
-                        <li><p>Quienes somos</p></li>
-                        <li><p>Hacia donde vamos</p></li>
-                        <li><p>Que queremos</p></li>
-                        <li><p>Está para una cerveza</p></li>
-                        <li><p>No me gusta</p></li>
-                        </ul>
-                    </div>
-                   </div> 
-
-
-                   <div class="footer-container">
-                    <div class="footer-contenido">
-                        <ul class="links">
-                        <li><p>sumbutrule</p></li>
-                        <li><p>Miami</p></li>
-                        <li><p>Basta chicos</p></li>
-                        <li><p>Sale vinito</p></li>
-                        <li><p>Bip bip Richie</p></li>
-                        </ul>
-                    </div>
-                   </div> 
-
-                   <div class="footer-container">
-                    <div class="footer-contenido">
-                        <ul class="links">
-                          <h4>Seguinos en las Redes</h4>
-                          <br>
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">Twitter</a></li>
-                        <li><a href="">Instagram</a></li>
-                        </ul>
-                    </div>
-                   </div> 
-          </div>
-          <div class="footer-bottom">
-            <div class="footer-bottom-contenido">
-              <p>Todos los derechos reservados.
-                 Copyright 2020</p>
-                 </div>
-                </footer>
+          
+          <div class="footer-bottom-contenido">
+            <p>Todos los derechos reservados.
+               Copyright 2020</p>
+               </div>
+              </footer>
                 </div>
 </body>
 </html>
