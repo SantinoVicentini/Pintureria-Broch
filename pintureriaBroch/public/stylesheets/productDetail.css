@@ -2,25 +2,25 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Roboto;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 header {
  background-color: lightsalmon;
  padding: 25px 0px 0px 0px;
  width: 100%;
-
- 
+color: white;
 }
 
-.header-container {
+header .header-container {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 width: 100%;
+
 }
 
-.header-container img {
+header .header-container img {
  position: relative;
  left: 15px;
  width: 5%;
@@ -28,10 +28,10 @@ width: 100%;
  
 }
 
-.header-container .buscador input{
- width: 500px;
+header .header-container .buscador input{
+ width: 70%;
  border-radius: 10px;
- 
+
 }
 
 .nav-bar {
@@ -46,6 +46,12 @@ width: 100%;
 
 /*MAIN*/
 
+main {
+  font-family: Roboto;
+  font-variant: small-caps;
+  /* me gustó small caps pero bueno, a decidir */ 
+}
+
 main .principal {
   width: 100%;
   display: flex;
@@ -53,7 +59,8 @@ main .principal {
   align-self: center;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color:white;
+ 
 }
 
 
@@ -69,7 +76,7 @@ main .principal .Producto {
 
 
 main .principal .Producto h1 {
-  color: #d9871b;
+  color: lightcoral;
 }
 
 
@@ -80,6 +87,7 @@ margin: 10px;
   padding: 40px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: space-around;
 }
@@ -87,11 +95,48 @@ margin: 10px;
 main .principal .Información .Color {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  padding: 5%;
+  box-sizing: border-box;
+  border-style: solid;
+  background-color: wheat;
+  color: white;
 }
 
-main .principal .Información .Color i {
+
+main .principal .Información .Colores_Disponibles {
 font-size: 300%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 2%;
 }
+
+
+main .principal .Información .Colores_Disponibles .uno {
+ color: black;
+}
+
+main .principal .Información .Colores_Disponibles .dos {
+  color: orange;
+
+ }
+
+ main .principal .Información .Colores_Disponibles .tres {
+  color: green;
+ }
+
+ main .principal .Información .Colores_Disponibles .cuatro {
+  color: yellow;
+ }
+
+
+main .principal .Información .Precio {
+  color: cadetblue;
+  font-size: large;
+}
+
 
 main .principal .Acciones {
   width: 33%;
@@ -107,10 +152,25 @@ main .principal .Acciones .Carrito {
   display: flex;
 }
 
+main .principal .Información .Retiro_Gratis {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding-top: 20%;
+  justify-content: space-around;
+
+}
+
+main .principal .Información .Retiro_Gratis a {
+  color:lightcoral;
+  text-decoration: none;
+}
+
+
+
 main .principal .Acciones input {
   width: 15%;
   background-color: lightcoral;
-  opacity: 7;
   margin-right: 5%;
   color: white;
   text-align: center;
@@ -138,6 +198,7 @@ background-color: white;
 main .principal .Acciones .Carrito a {
   color:whitesmoke;
   text-decoration: none;
+  width: 100%;
 }
 
 main .principal .Acciones .Pago_Extra a {
@@ -151,10 +212,6 @@ main .principal .Acciones .Pago_Extra a i {
   text-decoration: none;
 }
 
-main .principal .Información .Precio {
-  color: cadetblue;
-  font-size: large;
-}
 
 
 

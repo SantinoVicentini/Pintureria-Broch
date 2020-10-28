@@ -4,6 +4,7 @@
     <title>Detalle de Producto</title>
     <link rel='stylesheet' href='/stylesheets/productDetail.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
+
   </head>
   <body>
     <div class="container">
@@ -14,10 +15,10 @@
 
         <img src="/images/logo3.jpg" alt="logo"> 
 
-      <div class="buscador"><input type="search" id="site-search" name="search"><button>search</button></div>
-       <div class="fav"> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></div> 
-       <div class="carrito"> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </div>
-        <div class="ingreso"><a href="/login"><i class="far fa-sign-in-alt"></i> Ingresá a tu cuenta</a></div>
+      <p class="buscador"><input type="search" id="site-search" name="search"><button>search</button></p>
+       <p class="fav"> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></p> 
+       <p class="carrito"> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </p>
+        <p class="ingreso"><a href="/login"><i class="far fa-sign-in-alt"></i> Ingresá a tu cuenta</a></p>
 
         </div>
 
@@ -37,16 +38,26 @@
         
           <section class="Producto">
             <h1>Albalatex Interior 10 lts</h1> 
-            <h6>Código: ALMB0BCO10</h6>
+            <h6>- Código: ALMB0BCO10 -</h6>
             <img src="images/interior/albalatex_interior_10.jpg" alt="500px">
-            
-            
             
   
           </section>
 
           <section class="Información">
-        <article class="Color"> ELIJA COLOR:<i class="fas fa-brush"></i> </article>
+            <div class="Color">
+        <h3> Colores disponibles</h3>
+        <br>
+        <div class="Colores_Disponibles">
+
+            <article class="uno"><i class="fas fa-brush"></i> </article>
+            <article class="dos"><i class="fas fa-brush"></i> </article>
+            <article class="tres"> <i class="fas fa-brush"></i></article>
+            <article class="cuatro"> <i class="fas fa-brush"></i></article>
+      </div>
+    </div>
+
+
 <br>
 <br>
         <article class="Precio"> $ 4.585,70 </article>
@@ -59,13 +70,23 @@
         <br>
         <br>
 
+        <div class="Retiro_Gratis">
+            
+          <a href="/donde-estamos">
+            
+         <h3>¡RETIRO GRATIS EN SUCURSALES!</h3> 
+         <br>
+         <p><i class="fas fa-store-alt"></i> Ver Sucursales disponibles</p>
+          </a>
+        </div>
+
           </section>
 
           <section class="Acciones">
 <div class="Carrito">
 
  <input type="number" min="0" name="CantidadDeProductos">
-  <p class="Boton"> <a href="/cart"> <i class="fas fa-shopping-cart"></i> Agregar al carrito</a> </p>
+ <p class="Boton"> <a href="/cart">  <i class="fas fa-shopping-cart"></i> Agregar al carrito </a> </p> 
 </div>
           <br>
           <br>
@@ -77,11 +98,12 @@
              <p class="Envíos"> <a href="/shipping"><i class="fas fa-shipping-fast"></i> </a> <a href="/shipping"> Calcular envío </a> </p>
 
           </div>
+
+          
             
           </section>
 
-      </div>
-
+        </div>
         <div class="secundario">
 
 
