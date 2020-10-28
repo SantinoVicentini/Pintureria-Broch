@@ -103,66 +103,84 @@ main .principal .Acciones {
   justify-content: space-around;
 }
 
-
-main .principal .Acciones a {
-  color: black;
-  text-decoration: none;
+main .principal .Acciones .Carrito {
+  display: flex;
 }
+
+main .principal .Acciones input {
+  width: 15%;
+  background-color: lightcoral;
+  opacity: 7;
+  margin-right: 5%;
+  color: white;
+  text-align: center;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 4px;
+  border-color: lightcoral;
+}
+
 main .principal .Acciones a:focus {
   border-bottom: 1px solid;
   background: #BAE498;
 }
 
-main .principal .Acciones a:hover {
-  border-bottom: 1px solid;     
-  background-color: transparent;
+main .principal .Acciones a:hover {  
+  transition: background-color .10s; 
+  background-color: rgba(0,0,0, 0.19);
+}
+
+main .principal .Acciones .Pago_Extra a:hover {
+background-color: white;
 }
 
 
-main .principal .Acciones {
-  width: 33%;
+main .principal .Acciones .Carrito a {
+  color:whitesmoke;
+  text-decoration: none;
+}
+
+main .principal .Acciones .Pago_Extra a {
+  color:black;
+  text-decoration: none;
+}
+
+main .principal .Acciones .Pago_Extra a i {
+  font-size: xx-large;
+  color:lightcoral;
+  text-decoration: none;
 }
 
 main .principal .Información .Precio {
   color: cadetblue;
-}
-
-main .principal .Información .Cantidad {
- 
+  font-size: large;
 }
 
 
-main .principal .Información .Promo {
- 
-}
-
-main .principal .Acciones .Carrito {
-  display: flex;
-
-}
 
 main .principal .Acciones .Carrito .Boton {
   width: 80%;
 height: 50px;
 line-height: 54px;
 display: block;
-background-color: #d9871b;
+background-color: lightcoral;
 color: #FFF;
 border-radius: 4px;
 }
 
-main .principal .Acciones .Carrito .Cantidad {
-  width: 20%;
-height: 50px;
-margin-right: 10px;
-border: 1px solid #d9871b;
-border-radius: 4px;
-padding: 5px 0;
-color: #d9871b; 
-}
-
 main .principal .Acciones .Pago_Extra {
   display: flex;
+}
+
+main .principal .Acciones .Pago_Extra .Pagos {
+  display: flex;
+  flex-direction: column;
+}
+
+main .principal .Acciones .Pago_Extra .Envíos {
+  display: flex;
+  flex-direction: column;
+
 }
 
 main .principal .Acciones .Pago_Extra .Pagos {
