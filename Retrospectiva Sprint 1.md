@@ -10,6 +10,10 @@
 * Si bien tuvimos comunicación, la necesaria, para los próximos sprints con más trabajo deberíamos comunicarnos de una manera más proactiva y regular.   
 
 
+<h2> Keep Doing </h2>
+
+* Trabajar en equipo con respeto.
+
 <h2> Less Of </h2>
 
 * Aún no tenemos nada que debemos 'hacer menos'.
