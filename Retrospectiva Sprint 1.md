@@ -1,7 +1,5 @@
-# Sprint-1 :
+# Retrospectiva Sprint-1 :
 
-
-* Retrospectiva:
 
 <h2> Start Doing </h2>
 
