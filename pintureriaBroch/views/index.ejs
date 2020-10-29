@@ -8,27 +8,17 @@
   </head>
   <body>
     <div class="container">
-
-      <header>
         
-        <div class="header-container">
-  
-            <img src="/./images/logo3.jpg" width="40" alt="logo"> 
-            <div class="buscador"><input type="search" id="site-search" name="search"><button>Buscar</button></div>
-            <div class="fav"> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></div> 
-            <div class="carrito"> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </div>
-            <div class="ingreso"><a href="/login"><i class="far fa-sign-in-alt"></i> Ingresá a tu cuenta</a></div>
-  
-        </div>
-      
-        <ul class="nav-bar">
-          <li><a href="">|Interiores|</a></li>
-          <li><a href="">|Exteriores|</a></li>
-          <li><a href="">|Revestimientos|</a></li>
-          <li><a href="">|Esmaltes|</a></li>
-        </ul>
-
-      </header>
+        <header>
+          <img src="/./images/logo3.jpg" width="40" alt="logo">
+            <nav>
+              <ul class="nav-links">
+                <li> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></li>
+                <li> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </li>
+              </ul>
+            </nav>
+            <a href="/register"> <button>Crear cuenta</button> </a>
+          </header>
 
     </div>
 
@@ -45,7 +35,7 @@
           </nav>
 
         <section class="destacadoDeLaSemana">
-          <img src="/./images/logo3.jpg" alt="destacado">
+          <img src="/./images/destacado.jpg" alt="destacado" class="responsive">
         </section>
         <h2>Interiores</h2>
         <div class="container">
@@ -54,33 +44,37 @@
               <article class="art1">
                 <img src="/./images/interior/albalatex_interior_10.jpg" alt="albalatex interior 10 litros">
                 <h3>Albalatex Interior 10 litros</h3>
-                <p>Probando</p>
+                <br>
+                <p>$4585,70</p>
               </article>
 
               <article class="art2">
                 <img src="/./images/interior/enduido_pasta_interior_25kg.jpg" alt="enduido pasta interior 25kg">
                 <h3>Enduido Pasta Interior</h3>
-                <p>Probando</p>
+                <br>
+                <p>$1385,27</p>
               </article>
 
               <article class="art3">
                 <img src="/./images/interior/latex_interior_king_blanco_10.jpg" alt="latex interior king blanco 10">
                 <h3>Latex interior King Black</h3>
-                <p>Probando</p>
+                <br>
+                <p>$2115,94</p>
               </article>
 
               <article class="art4">
                   <img src="/./images/interior/latex_profesional_interior_blanco_10lt.jpg" alt="latex interior blanco 10 litros">
                   <h3>Latex profesional blanco</h3>
-                  <p>Probando</p>
+                  <br>
+                  <p>$2050,92</p>
               </article>
           
         </section> <br>
         
        // <section class="promos">
-         <img src="" alt="promo1">
-          <img src="" alt="promo2">
-          <img src="" alt="promo3">
+         <img src="/./images/promo.jpg" alt="promo1" >
+          <img src="/./images/promo.jpg" alt="promo2">
+          <img src="/./images/promo.jpg" alt="promo3">
         </section>
 
 
@@ -91,30 +85,34 @@
             <article class="art5">
               <img src="/./images/exterior/aguaplast_madera.jpg" alt="aguaplast madera">
               <h3>Aguaplast 1</h3>
-                <p>Probando</p>
+              <br>
+              <p>$273,92</p>
             </article>
 
             <article class="art6">
               <img src="/./images/exterior/barniplast_1_1.jpg" alt="barniplast">
               <h3>Barniplast Exterior</h3>
-                <p>Probando</p>
+              <br>
+                  <p>$6675,53</p>
             </article>
 
             <article class="art7">
               <img src="/./images/exterior/sidsgbco04_0.jpg" alt="esmalte">
               <h3>Esmalte</h3>
-                <p>Probando</p>
+              <br>
+              <p>$5299</p>
             </article>
             
             <article>
             <img  src="/./images/exterior/sipp1cel10_0.jpg" alt="revestimiento para piscinas">
             <h3>Revestimiento para piletas</h3>
-                <p>Probando</p>
+            <br>
+            <p>$2471,80</p>
             </article>
       </section> <br>
 
       <section class="marcas">
-        <img src="" alt="marcas">
+        <img src="/./images/marcas.jpg" alt="marcas" >
       </section> <br>
 
       </main>
@@ -130,11 +128,10 @@
                     <div class="footer-container">
                         <div class="footer-contenido">
                           <ul class="links">
-                            <li><p>Quienes somos</p></li>
-                            <li><p>Trabajá con nosotros</p></li>
-                            <li><p>FAQ</p></li>
-                            <li><p>Está para una cerveza</p></li>
-                            <li><p>No me gusta</p></li>
+                            <li><a href="">Quienes somos</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Trabajá con nosotros</a></li>
+                            <li><a href="">Contacto</a></li>
                          </ul>
                         </div>
                     </div> 
@@ -143,11 +140,10 @@
                     <div class="footer-container">
                       <div class="footer-contenido">
                         <ul class="links">
-                              <li><p>Sobre nosotros</p></li>
-                              <li><p>Miami</p></li>
-                              <li><p>Basta chicos</p></li>
-                              <li><p>Sale vinito</p></li>
-                              <li><p>Contacto</p></li>
+                          <li><a href="">Nuestras sedes</a></li>
+                          <li><a href="">Nuestros patricinadores</a></li>
+                          <li><a href="">Marcas con las que trabajamos</a></li>
+                          <li><a href="">Prensa</a></li>
                         </ul>
                       </div>
                     </div> 
@@ -157,9 +153,10 @@
                         <ul class="links">
                             <h4>Seguinos en las Redes</h4>
                             <br>
-                              <li><a href="">Facebook</a></li>
-                              <li><a href="">Twitter</a></li>
-                              <li><a href="">Instagram</a></li>
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">Pinterest</a></li>
                         </ul>
                       </div>
                     </div> 

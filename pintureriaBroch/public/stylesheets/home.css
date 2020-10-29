@@ -5,41 +5,62 @@
    font-family: Roboto;
  }
 
- header {
-  background-color: rgb(111, 111, 245);
-  padding: 25px 0px 0px 0px;
-  width: 100%;
-  
+ li, a, button{
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+ 
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: rgb(112, 136, 218);
 }
 
-.header-container {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
- width: 100%;
+.header-container{
+  display: flex;
+  justify-content: space-around;
 }
 
-.header-container img {
-  position: relative;
-  left: 15px;
+header img{
+  margin-right: auto;
 }
 
-.header-container .buscador input button{
-  width: 600px;
-  border-radius: 10px;
-  /*FLEXBOX*/ 
-  display:flex;
-  
+
+
+.nav-links{
+  list-style: none;
 }
 
- .nav-bar {
-   background-color: rgb(107, 174, 197);
-   margin-top: 25px;
-   width: 100%;
-   /*Flexbox*/
-   display:flex;
-   justify-content: space-around;
- }
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+  color: #0088a9;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 136, 169, 0.8);
+}
  
  main{
    background-color: grey;
@@ -61,7 +82,7 @@ section{
   height: auto;
    }
 
-section article {
+.container section article {
  background-color: white;
  height: 350px;
  width: 200px;
@@ -75,25 +96,24 @@ justify-content:center;
 }
 article img{
   width:100%;
+
+}
+.marcas{
+  position: relative;
+  width: auto;
 }
 
-@media(max-width:768px){
-section article{
-  height: 50%;
- width: 40%;
- float:left;
-}
-  }
 
  /*FOOTER*/
  
  footer {
   background-color: rgb(111, 111, 245);
-  display:flex;
+  height: auto;
+  text-align: center;
  }
 .footer-contenido{
 padding:20px;
-margin-left: 50px;
+margin-left: 20px;
 /*Flexbox*/
 display:flex;
 
@@ -101,19 +121,31 @@ display:flex;
 
 .footer-contenido-logo{
 padding-top:30px;
+padding-left:30px;
   }
 
   .footer-bottom{
     text-align: center;
     padding:30px;
-margin-left: 50px;
   }
  .footer-bottom-contenido
  {
    padding:20px;
-   margin-left: 50px;
    color:white;
  }
 
+ @media(max-width:426px){
+  .footer-contenido{
+    flex-direction:column;
+  }
+ section .promo{
+    width:30%;
+ }
 
+}
  
+@media(max-width:768px){
+  .marcas{
+    display:none;
+  }
+}
