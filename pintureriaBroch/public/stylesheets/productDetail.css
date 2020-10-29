@@ -5,44 +5,44 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
+/*HEADER*/
+
 header {
- background-color: lightsalmon;
- padding: 25px 0px 0px 0px;
- width: 100%;
-color: white;
-}
-
-header .header-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-width: 100%;
-
-}
-
-header .header-container img {
- position: relative;
- left: 15px;
- width: 5%;
- height: 5%;
- 
-}
-
-header .header-container .buscador input{
- width: 70%;
- border-radius: 10px;
-
-}
-
-.nav-bar {
-  background-color: salmon;
-  margin-top: 25px;
+  background-color: rgb(111, 111, 245);
+  padding: 25px 0px 0px 0px;
   width: 100%;
-  /*Flexbox*/
-  display:flex;
-  justify-content: space-around;
-
+  
 }
+
+.header-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ width: 100%;
+}
+
+.header-container img {
+  position: relative;
+  left: 15px;
+}
+
+.header-container .buscador input button{
+  width: 600px;
+  border-radius: 10px;
+  /*FLEXBOX*/ 
+  display:flex;
+  
+}
+
+ .nav-bar {
+   background-color: rgb(107, 174, 197);
+   margin-top: 25px;
+   width: 100%;
+   /*Flexbox*/
+   display:flex;
+   justify-content: space-around;
+ }
+
 
 /*MAIN*/
 
@@ -51,6 +51,8 @@ main {
   font-variant: small-caps;
   /* me gustó small caps pero bueno, a decidir */ 
 }
+
+/* MAIN PRINCIPAL */
 
 main .principal {
   width: 100%;
@@ -67,8 +69,12 @@ main .principal {
 
 main .principal .Producto {
   width: 33%;
-  margin: 10px;
-  padding: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,64 +89,72 @@ main .principal .Producto h1 {
 
 main .principal .Información {
   width: 33%;
-margin: 10px;
-  padding: 40px;
+padding: 40px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-around;
+  box-sizing: border-box;
+  
+  border-style: solid;
+  border-color: lightcoral;
 }
 
 main .principal .Información .Color {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 5%;
-  box-sizing: border-box;
-  border-style: solid;
-  background-color: wheat;
-  color: white;
+  color: black;
+  text-decoration: underline;
+  
 }
 
 
-main .principal .Información .Colores_Disponibles {
-font-size: 300%;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-flex-wrap: wrap;
-padding: 2%;
+main .principal .Información .Color .Colores_Disponibles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 2%;
+}
+
+main .principal .Información .Color .Colores_Disponibles .Rojo input {
+  background-color: red;
+color: red;
+}
+
+main .principal .Información .Color .Colores_Disponibles .Azul input {
+  background-color: blue;
+color: blue;
+}
+
+main .principal .Información .Color .Colores_Disponibles .Verde input {
+  background-color: green;
+color: green;
+}
+
+main .principal .Información .Color .Colores_Disponibles .Amarillo input {
+  background-color: yellow;
+color: yellow;
+}
+
+main .principal .Información .Color .Colores_Disponibles .Marron input {
+  background-color: brown;
+color: brown;
 }
 
 
-main .principal .Información .Colores_Disponibles .uno {
- color: black;
-}
-
-main .principal .Información .Colores_Disponibles .dos {
-  color: orange;
-
- }
-
- main .principal .Información .Colores_Disponibles .tres {
-  color: green;
- }
-
- main .principal .Información .Colores_Disponibles .cuatro {
-  color: yellow;
- }
 
 
 main .principal .Información .Precio {
   color: cadetblue;
-  font-size: large;
+  font-size: xx-large;
 }
 
 
 main .principal .Acciones {
   width: 33%;
-  margin: 10px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -213,8 +227,6 @@ main .principal .Acciones .Pago_Extra a i {
 }
 
 
-
-
 main .principal .Acciones .Carrito .Boton {
   width: 80%;
 height: 50px;
@@ -249,36 +261,57 @@ main .principal .Acciones .Pago_Extra .Envíos {
 }
 
 
+/* MAIN SECUNDARIO */
+
 main .secundario .Descripción-Producto {
-  margin: 10px;
-  background-color:#95BED5;
-  padding: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
-  text-align: start;
-  justify-content: space-between;
+  justify-content: space-around;
+  font-size: large;
 }
 
-main .secundario .Descripción-Producto h3 {
+main .secundario .Descripción-Producto p {
   text-align: center;
-
 }
+
+main .secundario .Descripción-Producto ul {
+  padding: 0px 15%;
+ 
+}
+
+/* MAIN TERCIARIO */
 
 main .terciario .PromoImportante {
   text-align: center;
-
+  padding: 4%;
+  background-color:lightblue;
 }
 
-main .terciario .Productos-Interesar {
+main .terciario .Productos_Interesar {
   text-align: center;
-  font-size: 40px;
+  font-size: xx-large;
+  margin: 10%;
 }
 
-main .terciario .Imagenes-Interesar {
+main .terciario .Productos_Interesar .Imagenes_Interesar {
+  box-sizing: border-box;
+  border-color: black;
+  border-style: groove;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
 }
 
+main .terciario .Productos_Interesar .Imagenes_Interesar img {
+height: 200px;
+
+}
 
 
  /*FOOTER*/
