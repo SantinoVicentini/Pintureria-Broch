@@ -100,7 +100,7 @@ align-self: start;
 
 
 main .principal .Producto h1 {
-  color: lightcoral;
+  color: rgb(112, 136, 218);
 }
 
 
@@ -115,7 +115,7 @@ padding: 10px;
   justify-content: space-around;
   box-sizing: border-box;
   border-style: solid;
-  border-color: lightcoral;
+  border-color:  rgb(112, 136, 218);
  
 }
 
@@ -215,7 +215,7 @@ main .principal .Información .Retiro_Gratis {
 }
 
 main .principal .Información .Retiro_Gratis a {
-  color:lightcoral;
+  color: rgb(112, 136, 218);
   text-decoration: none;
 }
 
@@ -223,14 +223,14 @@ main .principal .Información .Retiro_Gratis a {
 
 main .principal .Acciones input {
   width: 15%;
-  background-color: lightcoral;
+  background-color:  rgb(112, 136, 218);;
   margin-right: 5%;
   color: white;
   text-align: center;
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border-radius: 4px;
-  border-color: lightcoral;
+  border-color: black;
 }
 
 main .principal .Acciones a:focus {
@@ -261,7 +261,7 @@ main .principal .Acciones .Pago_Extra a {
 
 main .principal .Acciones .Pago_Extra a i {
   font-size: xx-large;
-  color:lightcoral;
+  color: rgb(112, 136, 218);
   text-decoration: none;
 }
 
@@ -271,7 +271,7 @@ main .principal .Acciones .Carrito .Boton {
 height: 50px;
 line-height: 54px;
 display: block;
-background-color: lightcoral;
+background-color:  rgb(112, 136, 218);
 color: #FFF;
 border-radius: 4px;
 }
