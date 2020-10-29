@@ -31,5 +31,10 @@ router.get('/admin', function(req, res, next) {
   res.render('admin');
 });
 
+/* GET admin product page. */
+router.get('/productAdd', function(req, res, next) {
+  res.render('productAdd');
+});
+
 
 module.exports = router;

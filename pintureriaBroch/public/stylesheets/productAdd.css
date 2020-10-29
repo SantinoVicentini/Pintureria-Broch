@@ -11,45 +11,6 @@ body{
     
 }
 
-    /*header*/
-
-li, a, button{
-    text-decoration: none;
-    color: #edf0f1;
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-header{
-    background-color: rgb(112, 136, 218);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-}
-
-header img{
-    margin-right: auto;
-}
-
-.nav-links{
-    list-style: none;
-}
-
-.nav-links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav-links li a{
-    transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover{
-    color: #0088a9;
-}
-
 button{
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
@@ -70,7 +31,7 @@ button:hover{
 
 .register-container{
     background-color: white;
-    height: 65vh;
+    height: auto;
     width: 30%;
     padding: 20px 65px;
     position: absolute;
@@ -81,7 +42,7 @@ button:hover{
 }
 
 .register-container h1{
-    float: left;
+    text-align: center;
     font-size: 40px;
     border-bottom: 6px solid rgb(111, 111, 245);
     margin-bottom: 50px;
@@ -135,7 +96,7 @@ button:hover{
  @media (max-width: 768px) { 
     .register-container{
         background-color: white;
-        height: 65vh;
+        height: auto;
         width: 50%;
         padding: 0px 65px;
         position: absolute;
@@ -150,7 +111,7 @@ button:hover{
   @media (max-width: 576px) { 
     .register-container{
         background-color: white;
-        height: 70vh;
+        height: auto;
         width: 50%;
         padding: 0px 6px;
         position: absolute;
