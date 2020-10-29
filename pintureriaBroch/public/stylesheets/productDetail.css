@@ -326,9 +326,20 @@ main .secundario .Descripción-Producto ul {
 
 /* MAIN TERCIARIO */
 
-main .terciario .PromoImportante img {
-  display: inline;
+main .terciario .PromoImportante  {
+
+  
+}
+
+main .terciario .PromoImportante p {
+  padding-top: 10%;
   width: 100%;
+  text-align: center;
+
+}
+
+main .terciario .PromoImportante p img {
+  width: 50%;
 }
 
 main .terciario .Productos_Interesar {
