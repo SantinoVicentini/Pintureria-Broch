@@ -48,7 +48,15 @@ header img{
 .nav-links li a:hover{
   color: #0088a9;
 }
+.container-aviso article{
+  display: flex;
+  background-color: white;
+ height: 120px;
+ width: 120px;
+ text-align: center;
+ padding: 10px;
 
+}
 button{
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
