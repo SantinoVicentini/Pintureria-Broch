@@ -7,46 +7,61 @@
 
 /*HEADER*/
 
-header {
-  background-color: rgb(111, 111, 245);
-  padding: 25px 0px 0px 0px;
-  width: 100%;
-  
+   
+body header li, a, button{
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+ 
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: rgb(112, 136, 218);
 }
 
-.header-container {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
- width: 100%;
+header img{
+  margin-right: auto;
 }
 
-.header-container img {
-  position: relative;
-  left: 15px;
+.nav-links{
+  list-style: none;
 }
 
-.header-container .buscador input button{
-  width: 600px;
-  border-radius: 10px;
-  /*FLEXBOX*/ 
-  display:flex;
-  
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
 }
 
- .nav-bar {
-   background-color: rgb(107, 174, 197);
-   margin-top: 25px;
-   width: 100%;
-   /*Flexbox*/
-   display:flex;
-   justify-content: space-around;
- }
+.nav-links li a{
+  transition: all 0.3s ease 0s;
+}
 
+.nav-links li a:hover{
+  color: #0088a9;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 136, 169, 0.8);
+}
 
 /*MAIN*/
 
 main {
+  width: 100%;
   font-family: Roboto;
   font-variant: small-caps;
   /* me gustó small caps pero bueno, a decidir */ 
@@ -57,27 +72,30 @@ main {
 main .principal {
   width: 100%;
   display: flex;
-  text-align: center;
-  align-self: center;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   background-color:white;
+
  
 }
 
 
 
 main .principal .Producto {
-  width: 33%;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-left: 40px;
+  width: 32%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+
+
+}
+
+main .principal .Producto img {
+height: 30vw;
+align-self: start;
+
 }
 
 
@@ -88,60 +106,77 @@ main .principal .Producto h1 {
 
 
 main .principal .Información {
-  width: 33%;
-padding: 40px;
+  width: 32%;
+padding: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-around;
   box-sizing: border-box;
-  
   border-style: solid;
   border-color: lightcoral;
+ 
 }
 
 main .principal .Información .Color {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-self: center;
   color: black;
   text-decoration: underline;
+  flex-wrap: wrap;
+text-align: center;
+
   
 }
+
+
 
 
 main .principal .Información .Color .Colores_Disponibles {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
   padding-top: 2%;
 }
 
 main .principal .Información .Color .Colores_Disponibles .Rojo input {
   background-color: red;
 color: red;
+margin:5px;
+
 }
 
 main .principal .Información .Color .Colores_Disponibles .Azul input {
   background-color: blue;
 color: blue;
+margin:5px;
+
+
 }
 
 main .principal .Información .Color .Colores_Disponibles .Verde input {
   background-color: green;
 color: green;
+margin:5px;
+
 }
 
 main .principal .Información .Color .Colores_Disponibles .Amarillo input {
   background-color: yellow;
 color: yellow;
+margin:5px;
+
 }
 
 main .principal .Información .Color .Colores_Disponibles .Marron input {
   background-color: brown;
 color: brown;
+margin:5px;
+
 }
 
 
@@ -154,12 +189,16 @@ main .principal .Información .Precio {
 
 
 main .principal .Acciones {
-  width: 33%;
+  width: 32%;
   padding: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-around;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+
 }
 
 main .principal .Acciones .Carrito {
@@ -283,12 +322,13 @@ main .secundario .Descripción-Producto ul {
  
 }
 
+}
+
 /* MAIN TERCIARIO */
 
-main .terciario .PromoImportante {
-  text-align: center;
-  padding: 4%;
-  background-color:lightblue;
+main .terciario .PromoImportante img {
+  display: inline;
+  width: 100%;
 }
 
 main .terciario .Productos_Interesar {
@@ -296,6 +336,8 @@ main .terciario .Productos_Interesar {
   font-size: xx-large;
   margin: 10%;
 }
+
+
 
 main .terciario .Productos_Interesar .Imagenes_Interesar {
   box-sizing: border-box;
@@ -309,7 +351,8 @@ main .terciario .Productos_Interesar .Imagenes_Interesar {
 }
 
 main .terciario .Productos_Interesar .Imagenes_Interesar img {
-height: 200px;
+  width: 30%;
+height: auto;
 
 }
 
@@ -318,32 +361,97 @@ height: 200px;
  
  footer {
   background-color: rgb(111, 111, 245);
+  height: auto;
+  text-align: center;
  }
-
 .footer-contenido{
 padding:20px;
-margin-left: 50px;
+margin-left: 20px;
 /*Flexbox*/
 display:flex;
-text-align: center;
-justify-content: space-around;
+
 }
 
 .footer-contenido-logo{
 padding-top:30px;
-
+padding-left:30px;
   }
 
   .footer-bottom{
     text-align: center;
     padding:30px;
-margin-left: 50px;
-display:flex;
   }
-
  .footer-bottom-contenido
  {
    padding:20px;
-   margin-left: 50px;
    color:white;
  }
+
+
+ /* Media Queries */
+ @media(max-width:426px){
+
+footer .footer-container .footer-contenido {
+    flex-direction:column;
+  }
+
+  main .principal .Producto {
+   width: 40%;
+   align-content: flex-start;
+   align-self: flex-start;
+   align-items: flex-start;
+   text-align: start;
+
+ 
+  }
+
+  main .principal .Información {
+    width: 40%;
+    align-content: flex-end;
+    align-self: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    font-size: small;
+
+  
+   }
+
+   main .principal .Información .Precio {
+     font-size: large;
+   }
+
+   main .principal .Acciones {
+    width: 100%;
+  
+   }
+
+   main .terciario .Productos_Interesar {
+    font-size: small;
+  }
+
+  main .secundario .Descripción-Producto {
+    font-size: medium;
+  }
+}
+
+@media(max-width:768px){
+
+  main .principal .Información {
+text-align: center;
+  }
+
+
+main .principal .Información .Retiro_Gratis {
+display: none;
+}
+
+  main .principal .Acciones {
+    width: 100%;
+  
+   }
+
+   main .terciario .Productos_Interesar {
+    font-size: large;
+  }
+
+}

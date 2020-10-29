@@ -4,30 +4,20 @@
     <title>Detalle de Producto</title>
     <link rel='stylesheet' href='/stylesheets/productDetail.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
   </head>
   <body>
-    <div class="container">
 
-      <header>
-        
-        <div class="header-container">
-  
-            <img src="/./images/logo3.jpg" width="40" alt="logo"> 
-            <div class="buscador"><input type="search" id="site-search" name="search"><button>Buscar</button></div>
-            <div class="fav"> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></div> 
-            <div class="carrito"> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </div>
-            <div class="ingreso"><a href="/login"><i class="far fa-sign-in-alt"></i> Ingresá a tu cuenta</a></div>
-  
-        </div>
-      
-        <ul class="nav-bar">
-          <li><a href="">|Interiores|</a></li>
-          <li><a href="">|Exteriores|</a></li>
-          <li><a href="">|Revestimientos|</a></li>
-          <li><a href="">|Esmaltes|</a></li>
-        </ul>
-
+    <header>
+      <img src="/./images/logo3.jpg" width="40" alt="logo">
+        <nav>
+          <ul class="nav-links">
+            <li> <a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></li>
+            <li> <a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </li>
+          </ul>
+        </nav>
+        <a href="/register"> <button>Crear cuenta</button> </a>
       </header>
 
       <main>
@@ -38,7 +28,7 @@
           <section class="Producto">
             <h1>Albalatex Interior 10 lts</h1> 
             <h6>- Código: ALMB0BCO10 -</h6>
-            <img src="images/interior/albalatex_interior_10.jpg" alt="500px">
+          <img src="images/interior/albalatex_interior_10.jpg" alt="200px"> 
             
   
           </section>
@@ -54,16 +44,18 @@
           <p class="Marron"><input type="button" value="Color"></p>
         </div>
 
-        <br>
+        
       </div>
-
+      <br>
 
 <br>
 <br>
+<div class="Precio_Promo"> 
         <article class="Precio"> $ 4.585,70 </article>
         <br>
         <hr>
         <article class="Promo"> Con la compra de 2 unidades, 10% OFF  </article>
+      </div>
         <hr>
         <br>
 
@@ -97,36 +89,46 @@
           </div>
 
           
-            
+           
           </section>
 
         </div>
         <div class="secundario">
 
-
+          <br>
+          <br>
         <section class="Descripción-Producto">
           <p>
             Es el látex acrílico de primer nivel para interiores. Ningún color se mantiene tan fresco como el primer día, durante tanto tiempo.
           </p>
-  <br>
+          <br>
           <ul> 
             <li>Excelente terminación</li>
             <li>Fácil aplicación</li>
             <li>Lavable</li>
             <li>Antihongos</li>
           </ul>
+       
         </section> 
+        <br>
+
+        <div class="video">
+          <iframe width="100%" height="468" src="https://www.youtube.com/embed/NFnQesw9E7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+        </div>
 
         </div>
 
        <div class="terciario">
 
-        <iframe width="1440" height="620" src="https://www.youtube.com/embed/NFnQesw9E7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <section class="PromoImportante"> 
+        <img src="/./images/promoImportante.jpg" alt="PromoImportante">
+        </section>
 
-        <hr>
-        <section class="PromoImportante"> <img src="/./images/promoImportante.jpg" alt="promoImportante"> </section>
-<hr>
+      
         <section class="Productos_Interesar"> 
+
+          
+  
 
             <h3>Productos que podrían interesarte</h3>
     
@@ -148,52 +150,7 @@
 
       </main>
       <footer>
-        <div class="footer-contenido">
-          <div class="footer-contenido-logo">
-            <img src="/./images/logo3.jpg" width="80" alt="destacado">
-            <h4>Pinturerias Broch</h4>
-          </div>
-             
-              
-                  <div class="footer-container">
-                    <div class="footer-contenido">
-                        <ul class="links">
-                        <li><p>Quienes somos</p></li>
-                        <li><p>Hacia donde vamos</p></li>
-                        <li><p>Que queremos</p></li>
-                        <li><p>Está para una cerveza</p></li>
-                        <li><p>No me gusta</p></li>
-                        </ul>
-                    </div>
-                   </div> 
-
-
-                   <div class="footer-container">
-                    <div class="footer-contenido">
-                        <ul class="links">
-                        <li><p>sumbutrule</p></li>
-                        <li><p>Miami</p></li>
-                        <li><p>Basta chicos</p></li>
-                        <li><p>Sale vinito</p></li>
-                        <li><p>Bip bip Richie</p></li>
-                        </ul>
-                    </div>
-                   </div> 
-
-                   <div class="footer-container">
-                    <div class="footer-contenido">
-                        <ul class="links">
-                          <h4>Seguinos en las Redes</h4>
-                          <br>
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">Twitter</a></li>
-                        <li><a href="">Instagram</a></li>
-                        </ul>
-                    </div>
-                   </div> 
-          </div>
-          <div class="footer-bottom">
-            <div class="footer-bottom-contenido">
+        
               <p>Todos los derechos reservados.
                  Copyright 2020</p>
       </footer>
