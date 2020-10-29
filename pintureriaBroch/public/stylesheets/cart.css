@@ -64,6 +64,7 @@ padding: 1%;
 }
 
 main .Carrito .Carrito_Compras {
+
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -90,7 +91,7 @@ border-color:#EFEFEF;
 border-color:#EFEFEF;
       }
 
-   main .Carrito .Carrito_Compras .Compra .Resultado {   
+   main .Carrito .Carrito_Compras .Compra .Resultado { 
      align-items: center;
          display: flex;
         flex-direction: row;
@@ -119,7 +120,7 @@ padding: 2%;
             main .Carrito .Carrito_Compras .Compra_Total {
             background-color:#EFEFEF;
             text-align: center;
-            width: 20%;
+            width: auto;
             padding: 2%;
             display: flex;
             flex-direction: column;
@@ -213,5 +214,3 @@ height: auto;
     main .terciario .Productos_Interesar {
       font-size: large;
     }
-
-  }
