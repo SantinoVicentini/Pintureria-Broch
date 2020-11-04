@@ -143,6 +143,9 @@ padding-left:30px;
  }
 
  @media(max-width:426px){
+   .body{
+flex-direction: column;
+   }
   .footer-contenido{
     flex-direction:column;
   }
