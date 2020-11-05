@@ -1,40 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const indexController = require('../controllers/indexController')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
-});
 
-/* GET register page. */
-router.get('/register', function(req, res, next) {
-  res.render('register');
-});
-
-/* GET login page. */
-router.get('/login', function(req, res, next) {
-  res.render('login');
-});
-
-/* GET detail product page. */
-router.get('/productDetail', function(req, res, next) {
-  res.render('productDetail');
-});
-
-/* GET cart page. */
-router.get('/cart', function(req, res, next) {
-  res.render('cart');
-});
-
-/* GET admin page. */
-router.get('/admin', function(req, res, next) {
-  res.render('admin');
-});
-
-/* GET admin product page. */
-router.get('/productAdd', function(req, res, next) {
-  res.render('productAdd');
-});
-
+router.get('/',indexController.index); /* GET home page. */
+router.get('/register', indexController.register); /* GET register page. */
+router.get('/login', indexController.login); /* GET login page. */
+router.get('/productDetail', indexController.productDetail); /* GET detail product page. */
+router.get('/cart', indexController.cart); /* GET cart page. */
+router.get('/admin', indexController.admin); /* GET admin page. */
+router.get('/productAdd', indexController.productAdd); /* GET admin product page. */
 
 module.exports = router;
