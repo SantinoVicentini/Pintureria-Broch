@@ -111,7 +111,10 @@ article img{
   width: auto;
 }
 
+.destacadoDeLaSemana{
+  padding: 10px 10px;
 
+}
  /*FOOTER*/
  
  footer {
@@ -125,6 +128,10 @@ margin-left: 20px;
 /*Flexbox*/
 display:flex;
 
+}
+
+.container-aviso{
+  padding:10px 10px;
 }
 
 .footer-contenido-logo{
