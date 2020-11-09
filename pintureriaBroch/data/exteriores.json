@@ -1,0 +1,23 @@
+[
+	{
+		"id": 5,
+		"nombre": "Aguaplast para Maderas 125 ml",
+		"codigo": "SIAGUM20",
+		"resenia": "Gran capacidad de relleno. Mínima merma, sin fisuras. Muy flexible, se adapta a las deformaciones de la madera hasta un 20 %. Reforzado con fibra de vidrio. Excelente adherencia sobre todo tipo de maderas." 
+	},{
+		"id": 6,
+		"nombre": "Barniz sintetico Barniplast 20 Lt",
+		"codigo": "SIB0120",
+		"resenia": "Ideal para decoradores que quieren mantener la madera siempre como nueva. En sus tres presentaciones de brillo: brillante, mate o satinado, funciona en exterior o interior." 
+	},{
+		"id": 7,
+		"nombre": "Pintura p/piscinas caucho Sinteplast Celeste 10 lt",
+		"codigo": "SIPP1CEL10",
+		"resenia": "Producto de terminación destinado a impermeabilizar, proteger y decorar la superficie de las piscinas." 
+	},{
+		"id": 8,
+		"nombre": "Duralux Semi gloss Blanco 4 Lt",
+		"codigo": "SIDSGBCO04",
+		"resenia": "Ideal para construcciones sustentables, ya que al tener altos sólidos posee menos solventes nocivos para el medio ambiente" 
+	}
+]
