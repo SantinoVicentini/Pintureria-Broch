@@ -20,6 +20,7 @@ const indexController = {
     productAdd: function(req, res, next) {
         res.render('productAdd');
     }
+
       
 
 }
