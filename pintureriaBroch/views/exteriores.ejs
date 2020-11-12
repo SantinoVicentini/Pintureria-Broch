@@ -1,7 +1,18 @@
-<p>
-    La retrospectiva
-Ya con dos sprints terminados deberían empezar a marcarse tendencias. Se conocen un poco
-más entre ustedes, pudieron ver en cuáles aspectos el trabajo fluye y en cuáles no. También
-debería ser más evidente quién es más hábil para el código, quién para lo estético y quién para
-lo organizativo
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exteriores</title>
+</head>
+<body>
+    <% if(error){%>
+    <p><%= error + id %></p>
+    <%}else {%>
+    <p> Hola soy el producto <%= exteriores.id %></p><br>
+    <p><%= exteriores.nombre %></p><br>
+    <p><%= exteriores.codigo %></p><br>
+    <p><%= exteriores.resenia %></p>
+    <%}%>
+</body>
+</html>
