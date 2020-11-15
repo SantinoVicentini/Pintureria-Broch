@@ -70,7 +70,7 @@ button:hover{
 
 .register-container{
     background-color: white;
-    height: 65vh;
+    height: 90vh;
     width: 30%;
     padding: 20px 65px;
     position: absolute;
@@ -135,7 +135,7 @@ button:hover{
  @media (max-width: 768px) { 
     .register-container{
         background-color: white;
-        height: 65vh;
+        height: 90vh;
         width: 50%;
         padding: 0px 65px;
         position: absolute;
