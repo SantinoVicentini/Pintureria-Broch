@@ -6,8 +6,15 @@ const userController = {
         res.render('register');
     },
     perfil: function(req, res, next) {
-        res.render('login');
+        res.send('lEste es mi perfil');
+    },
+    create: function(req, res, next) {
+        let usuarioIngresado = {
+            nombre: req.body.fullName,
+            apellido: req.body.username,
+            email: req.body.email
+        }
+        res.send(usuarioIngresado);/*Acá iría un posible redireccionamiento*/
     }
-
 }
 module.exports = userController;
