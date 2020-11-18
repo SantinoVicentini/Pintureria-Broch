@@ -12,7 +12,9 @@ body{
 }
 
     /*header*/
-
+h1{
+    height: 70px;
+}/*hay un problema con el margin de --login--*/
 
    
 li, a, button{
@@ -133,26 +135,40 @@ button:hover{
  
 
  /*Tablet*/
-
- @media (max-width: 768px) { 
+ @media (min-width: 768px) and (max-width: 991px) { 
     .login-container{
         background-color: white;
-        height: 60vh;
-        width: 50%;
-        padding: 30px 65px;
+        height: 70vh;
+        width: 40%;
+        padding: 15px 45px;
         position: absolute;
         top: 25%;
         left: 25%;
         border-radius: 6px;
         box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
-  }
+  }}
 
-  /*mobile*/
-
-  @media (max-width: 576px) { 
+  /*mobile horizontal*/
+  @media (min-width: 576px) and (max-width: 767px)
+  { 
     .login-container{
         background-color: white;
-        height: 60vh;
+        height: 70vh;
+        width: 50%;
+        padding: 20px 30px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        border-radius: 6px;
+        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);}
+    }
+
+  /*mobile-vertical*/
+
+  @media (max-width: 575px) { 
+    .login-container{
+        background-color: white;
+        height: 70vh;
         width: 50%;
         padding: 1px 6px;
         position: absolute;
