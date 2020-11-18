@@ -7,7 +7,10 @@ router.get('/login',userController.login);
 router.get('/register',userController.register);
 router.post('/register',userController.create);
 router.get('/perfil',userController.perfil);
-
+router.get('/edit/:idUser',userController.edit);
+router.put('/edit', function(req, res, next) {
+  res.send('FUI POR PUT');
+});
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');

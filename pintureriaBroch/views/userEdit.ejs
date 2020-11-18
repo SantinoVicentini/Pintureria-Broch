@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Editar tu cuenta</title>
+</head>
+<body>
+   
+      <header>
+          <img src="/./images/logo3.jpg" width="40" alt="logo">
+          <nav>
+            <ul class="nav-links">
+                <li><a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></li>
+                <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </li>
+            </ul>
+           </nav>
+           <a href="/users/login"><button>Ingresar</button></a>
+     
+    </header>
+    <main>
+        <div class="register-container">
+            <form method="POST"  action="/users/edit?_method=PUT">
+                
+                    <h1>Cambiar tu nombre</h1>
+                    <div class="text-box">
+                      <i class="fas fa-user"></i>
+                        <input type="text" name="fullName" id="fullName" placeholder="Full Name" value = "<%= userToEdit.name%>">
+                    </div>
+
+                    <div class="btn">
+                    <input type="submit" value="Editar">
+                    </div>
+            </form>
+        </div>
+      </main>
+    <footer>
+     </footer>
+        
+</body>
+</html>

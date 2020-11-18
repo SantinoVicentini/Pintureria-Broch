@@ -15,6 +15,17 @@ const userController = {
             email: req.body.email
         }
         res.send(usuarioIngresado);/*Acá iría un posible redireccionamiento*/
-    }
+    },
+    edit: function(req, res, next) {
+        let idUser = req.params.idUser;
+let users = [
+    {id: 1, name: 'Santino'},
+    {id: 2, name: 'Luciano'},
+    {id: 3, name: 'Alexis'}
+];
+        let userToEdit = users[idUser];
+
+        res.render("userEdit",{userToEdit: userToEdit});
+    },
 }
 module.exports = userController;
