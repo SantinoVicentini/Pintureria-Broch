@@ -68,8 +68,8 @@ button:hover{
     background-color: rgb(230, 230, 230);
 }
 
-.register-container{
-    background-color: white;
+.register-container{ 
+   background-color: white;
     height: 90vh;
     width: 30%;
     padding: 20px 65px;
@@ -84,7 +84,7 @@ button:hover{
     float: left;
     font-size: 40px;
     border-bottom: 6px solid rgb(111, 111, 245);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding: 13px 0;
     color: rgb(61, 61, 61);
 }
@@ -129,7 +129,7 @@ button:hover{
 
  /*FOOTER*/
  
-
+/*ver querys de register*/
  /*Tablet*/
 
  @media (max-width: 768px) { 
@@ -147,7 +147,7 @@ button:hover{
 
   /*mobile*/
 
-  @media (max-width: 576px) { 
+  @media (max-width: 575px){ 
     .register-container{
         background-color: white;
         height: 90vh;
@@ -158,5 +158,11 @@ button:hover{
         left: 25%;
         border-radius: 6px;
         box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
-    }  
-  }
+    }  }
+
+    .register-container h1{
+        float: left;
+        font-size: 20px;
+        border-bottom: 6px solid rgb(111, 111, 245);
+        padding: 13px 0;
+        color: rgb(61, 61, 61);}}

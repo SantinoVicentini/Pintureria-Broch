@@ -8,7 +8,7 @@
  li, a, button{
   font-family: Roboto;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #edf0f1;
   text-decoration: none;
 }
@@ -38,7 +38,7 @@ header img{
 
 .nav-links li{
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 .nav-links li a{

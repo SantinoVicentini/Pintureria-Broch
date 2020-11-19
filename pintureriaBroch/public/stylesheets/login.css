@@ -43,7 +43,7 @@ header img{
 
 .nav-links li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
 
 .nav-links li a{
@@ -130,14 +130,28 @@ button:hover{
     cursor: pointer;
     margin: 12px 0;
 }
-
+.login-container p{
+    padding-top: 1px;
+  }
  /*FOOTER*/
  
-
- /*Tablet*/
- @media (min-width: 768px) and (max-width: 991px) { 
+ @media (min-width: 991px) and (max-width: 1023px) {
     .login-container{
         background-color: white;
+    height: 70vh;
+    width: 40%;
+    padding: 15px 45px;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 6px;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+  }
+ }
+ /*Tablet*/
+ @media (min-width: 768px) and (max-width: 990px) { 
+    .login-container{
+        background-color:white;
         height: 70vh;
         width: 40%;
         padding: 15px 45px;
@@ -160,16 +174,16 @@ button:hover{
         top: 25%;
         left: 25%;
         border-radius: 6px;
-        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);}
+        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
     }
-
+}
   /*mobile-vertical*/
 
   @media (max-width: 575px) { 
     .login-container{
         background-color: white;
         height: 70vh;
-        width: 50%;
+        width: 40%;
         padding: 1px 6px;
         position: absolute;
         top: 25%;
@@ -177,8 +191,12 @@ button:hover{
         border-radius: 6px;
         box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
   }
+  .login-container h1{
+    float: left;
+    font-size: 30px;
+    border-bottom: 6px solid rgb(111, 111, 245);
+    margin-bottom:20px;
+    padding: 13px 0;
+    color: rgb(61, 61, 61);}
 
-
-  .login-container p{
-    padding-top: 1px;
   }
