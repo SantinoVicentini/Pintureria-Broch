@@ -11,28 +11,34 @@
 
     <main>
         <div class="register-container">
-            <form action="/" method="GET">
+            <form action="/products" method="POST">
                 
                     <h1>Carga de productos</h1>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto">
-                    </div>
-                        <div class="text-box">
-                            <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="categoríaProducto" id="categoríaProducto" placeholder="Categoría">
-                    </div>
-                        <div class="text-box">
-                            <i class="fas fa-angle-double-right"></i>
-                        <input type="number" name="cantidadProducto" id="cantidadProducto" placeholder="Cantidad">
-                   
+                        <input type="text" name="id" id="id" placeholder="ID">
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="color" name="colorProducto" id="colorProducto" placeholder="Color">
+                        <input type="text" name="name" id="name" placeholder="Nombre del producto">
                     </div>
-                    
-                     
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="description" id="description" placeholder="Descripcion del producto">
+                    </div>
+                        <div class="text-box">
+                            <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="category" id="category" placeholder="Categoría">
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="image" id="image" placeholder="Imagen">
+                </div>
+                     <div class="text-box">
+                            <i class="fas fa-angle-double-right"></i>
+                        <input type="number" name="price" id=precioProducto" placeholder="Precio">
+                   
+                    </div>
 
                     <div class="btn">
                     <button type="submit">Confirmar</button>
