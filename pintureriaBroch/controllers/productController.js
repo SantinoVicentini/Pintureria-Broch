@@ -4,7 +4,7 @@ var products = JSON.parse(fs.readFileSync(__dirname + '/../data/products.json'))
 
 const productController = {
     listado: function(req, res, next) {
-        res.send('Lsitado de todos los productos');
+        res.render ("listado",{products});
     },
     id: function(req,res,next){
         let id = req.params.id;
@@ -35,6 +35,7 @@ const productController = {
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(__dirname + '/../data/products.json', productsJSON);
         return res.send('Producto creado');
+
     },
     edit: function(req,res,next){
         let idProduct = req.params.id;
