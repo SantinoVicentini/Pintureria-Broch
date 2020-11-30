@@ -9,6 +9,6 @@ router.post('/',productController.store);
 router.get('/:id',productController.id);
 router.get('/:id/edit',productController.edit);
 router.post('/:id/edit',productController.update);
-router.get('/eliminar',productController.eliminar);
+router.get('/:id/eliminar',productController.eliminar);
 
 module.exports = router;

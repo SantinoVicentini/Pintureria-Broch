@@ -67,6 +67,17 @@ const productController = {
         editProductsJSON = JSON.stringify(editProduct2);
         fs.writeFileSync(__dirname + '/../data/products.json', editProductsJSON);
         return res.send("Producto Modificado");
-    }
+    },
+    eliminar : function (req,res,next) {
+        let idProduct = req.params.id;
+        let productsEliminados = products.filter(function (products) {;
+        return products.id != idProduct;
+
+    });
+    productsEliminadosJSON = JSON.stringify(productsEliminados)
+    fs.writeFileSync(__dirname + "/../data/products.json", productsEliminadosJSON);
+    res.send ("Producto eliminado");
+}
+
 }
 module.exports = productController;
