@@ -6,6 +6,21 @@ const productController = {
     listado: function(req, res, next) {
         res.send('Lsitado de todos los productos');
     },
+    id: function(req,res,next){
+        let id = req.params.id;
+        let products1 = {};
+        for(let i = 0; i <products.length; i ++){
+            if(products[i].id == id){
+                products1 = products[i];
+                return res.render ("productDetail", { products1, error: ""});          
+        }
+
+    }  
+
+    return res.render ("productDetail", {error : "no se encontro el producto ", id});  
+
+},
+
     product: function(req, res, next) {
         res.render('index');
     },

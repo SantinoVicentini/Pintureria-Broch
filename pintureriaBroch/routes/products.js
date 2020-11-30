@@ -6,6 +6,7 @@ const productController = require('../controllers/productController')
 router.get('/listado',productController.listado);
 router.get('/create',productController.create);
 router.post('/',productController.store);
+router.get('/:id',productController.id);
 router.get('/:id/edit',productController.edit);
 router.post('/:id/edit',productController.update);
 router.get('/eliminar',productController.eliminar);

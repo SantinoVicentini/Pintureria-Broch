@@ -101,6 +101,7 @@ align-self: start;
 
 main .principal .Producto h1 {
   color: rgb(112, 136, 218);
+  font-size: 50px;
 }
 
 
@@ -209,7 +210,7 @@ main .principal .Información .Retiro_Gratis {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  padding-top: 20%;
+  /*padding-top: 20%;*/
   justify-content: space-around;
 
 }
@@ -322,17 +323,13 @@ main .secundario .Descripción-Producto ul {
  
 }
 
-}
+
 
 /* MAIN TERCIARIO */
 
-main .terciario .PromoImportante  {
-
-  
-}
 
 main .terciario .PromoImportante p {
-  padding-top: 10%;
+  /*padding-top: 10%;*/
   width: 100%;
   text-align: center;
 
@@ -345,7 +342,7 @@ main .terciario .PromoImportante p img {
 main .terciario .Productos_Interesar {
   text-align: center;
   font-size: xx-large;
-  margin: 10%;
+  margin: 5%;
 }
 
 
