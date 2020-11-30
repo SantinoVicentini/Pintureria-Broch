@@ -9,17 +9,9 @@
 </head>
 <body>
    
-      <header>
-          <img src="/./images/logo3.jpg" width="40" alt="logo">
-          <nav>
-            <ul class="nav-links">
-                <li><a href="/favoritos"><i class="far fa-star"></i> Favoritos </a></li>
-                <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Carrito</a> </li>
-            </ul>
-           </nav>
-           <a href="/users/login"><button>Ingresar</button></a>
-     
-    </header>
+          <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
     <main>
         <div class="register-container">
             <form method="POST"  action="/users/edit?_method=PUT">

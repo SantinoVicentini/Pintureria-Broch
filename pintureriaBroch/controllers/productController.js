@@ -6,6 +6,9 @@ const productController = {
     listado: function(req, res, next) {
         res.send('Lsitado de todos los productos');
     },
+    product: function(req, res, next) {
+        res.render('index');
+    },
     create: function(req, res, next) {
         res.render('productAdd');
     },
@@ -29,9 +32,25 @@ const productController = {
         }
 
         if(productFound){
-            res.render("edit",{productFound});
+            res.render("productEdit",{productFound});
         }else{
-        return res.send('Usuario invalido');}
+        return res.send('producto invalido');}
+    },
+    update: function(req,res,next){
+        let idProduct = req.params.id;
+        var editProduct2 = products.map(function(products){
+
+            if(products.id == idProduct){
+
+                let productEditado= req.body;
+                productEditado.id = idProduct;
+                return productEditado;
+            }
+            return products;
+        });
+        editProductsJSON = JSON.stringify(editProduct2);
+        fs.writeFileSync(__dirname + '/../data/products.json', editProductsJSON);
+        return res.send("Producto Modificado");
     }
 }
 module.exports = productController;

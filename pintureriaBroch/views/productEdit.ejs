@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/productAdd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Edición de productos</title>
+</head>
+<body>
+
+    <main>
+        <div class="register-container">
+            <form action="/products/<%= productFound.id %>/edit" method="POST">
+                
+                    <h1>Edición de productos</h1>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="id" id="id" value="<%= productFound.id %>">
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="name" id="name" value="<%= productFound.name %>">
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="description" id="description" value="<%= productFound.description %>" >
+                    </div>
+                        <div class="text-box">
+                            <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="category" id="category" value="<%= productFound.category %>">
+                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="image" id="image"  value="<%= productFound.image %>">
+                </div>
+                     <div class="text-box">
+                            <i class="fas fa-angle-double-right"></i>
+                        <input type="number" name="price" id=precioProducto" value="<%= productFound.price %>">
+                   
+                    </div>
+
+                    <div class="btn">
+                    <button type="submit">Editar</button>
+                    </div>
+            </form>
+        </div>
+      </main>
+        
+</body>
+</html>
