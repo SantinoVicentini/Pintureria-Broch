@@ -4,6 +4,16 @@ const userController = require('../controllers/userController');
 let multer = require('multer');
 let path = require ('path');
 
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'tmp/my-uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+  }
+})
+ 
+var upload = multer({ storage: storage })
 
 router.get('/login',userController.login);
 router.get('/register',userController.register);

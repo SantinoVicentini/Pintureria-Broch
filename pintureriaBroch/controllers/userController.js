@@ -19,7 +19,7 @@ const userController = {
             last_name: req.body.username,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
-            avatar: req.body.avatar
+            avatar: req.files[0].filename
         };
         users.push(users1);
        
