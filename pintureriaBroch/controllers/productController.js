@@ -31,7 +31,17 @@ const productController = {
         res.send('Eliminar un producto');
     },
     store: function(req,res,next){
-        products.push(req.body);
+ 
+        var products1 = {
+            id: req.body.id,
+            name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            price: req.body.price,
+            image:req.files[0].filename
+        };
+
+        products.push(products1);
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(__dirname + '/../data/products.json', productsJSON);
         return res.send('Producto creado');

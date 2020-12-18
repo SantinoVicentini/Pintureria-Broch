@@ -14,13 +14,14 @@ const userController = {
         res.send('Este es mi perfil');
     },
     create: function(req,res,next){
-        var users1 = {
+        var users1= {
             first_name: req.body.fullName,
             last_name: req.body.username,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
             avatar: req.files[0].filename
         };
+
         users.push(users1);
        
         let usersJSON = JSON.stringify(users);
