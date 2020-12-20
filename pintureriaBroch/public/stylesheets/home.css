@@ -9,7 +9,7 @@
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
-  color: #edf0f1;
+  color: black;/*#edf0f1;*/
   text-decoration: none;
 }
  
@@ -51,7 +51,7 @@ header img{
 .container-aviso article{
   display: flex;
   background-color: white;
- height: 120px;
+ height: 100px;
  width: 120px;
  text-align: center;
  padding: 10px;
@@ -79,7 +79,7 @@ button:hover{
 
 .responsive
 {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
@@ -89,9 +89,49 @@ section{
   justify-content: space-around;
   height: auto;
    }
-
-.container section article {
+.container-item{
+  padding-top:20px;
+}
+ .item-column-info img{
+  width:20%;}
+    .items{
+  margin:10px;
+}
+   .item-column-info{
+  display:flex;
+ flex-wrap:wrap;
+ padding-top:5px;
+   }
+   .item-column-info-title{
+ padding-left:5px;
+   }
+.container-item section article {
  background-color: white;
+ height: 80px;
+ width: 250px;
+ padding: 10px;
+ position: relative;
+ border-radius: 8px;
+ box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+/*FLEXBOX*/
+justify-content:center;
+}
+
+.container-category{
+  margin:20px 20px;
+  margin:30px 30px;
+}
+.category-info{
+  padding-left: 50px;
+  padding-right: 30px;*
+}
+.category-title-header {
+ /*background-color: white;*/
+padding-left: 60px;
+padding-bottom:30px;
+}
+.container-category section article {
+;background-color: white;
  height: 350px;
  width: 200px;
  padding: 30px;
@@ -100,7 +140,7 @@ section{
  border-radius: 8px;
  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
 /*FLEXBOX*/
-justify-content:center;
+/*justify-content:center*/;
 }
 article img{
   width:100%;
