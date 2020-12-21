@@ -42,6 +42,11 @@
                     <button type="submit">Registrarse</button>
                     </div>
             </form>
+                <% if (typeof errors != "undefined") {%>
+                  <% errors.forEach(function (error) {%>
+                        <li><%= error.msg%></li>
+                  <% }); %>
+              <% } %>
         </div>
       </main>
     <footer>
