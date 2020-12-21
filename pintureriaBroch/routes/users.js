@@ -25,8 +25,14 @@ router.post('/register',upload.any(),[
   check('email').isEmail().withMessage("Inhgrese un email correcto"),
   check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres"),
   body('email').custom(function(value){
-    
-  })
+    var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
+    for (let i=0; i<users.length;i++){
+      if (users[i].email == value){
+        return false;
+      }
+    }
+    return true;
+  }).withMessage("Usuario ya existente")
 ],userController.store);
 router.get('/perfil',userController.perfil);
 /*router.get('/edit/:idUser',userController.edit);
