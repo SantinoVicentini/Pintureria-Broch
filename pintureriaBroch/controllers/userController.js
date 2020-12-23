@@ -9,7 +9,29 @@ const userController = {
     login: function(req, res, next) {
         res.render('login');
     },
-    register: function(req, res, next) {
+    processlogin: function(req, res, next) {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+                                var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
+                                let usuarioALoguearse
+                                for (let i=0;i<users.length;i++){
+                                    if(users[i].email== req.body.email ){
+                                        if(bcrypt.compareSync(req.body.password, users[i].password)){
+                                            usuarioALoguearse = users[i];
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (usuarioALoguearse == undefined){
+                                res.render("login",{errors:[{msg:'Credenciales  Inválidas'}]});
+                                                                }
+                                req.session.userLogged = usuarioALoguearse;
+                                res.redirect('/');
+                  }else{
+                         res.render("login",{errors:errors.errors});
+                            }
+    },
+        register: function(req, res, next) {
         res.render('register');
     },
     perfil: function(req, res, next) {
@@ -17,9 +39,8 @@ const userController = {
     },
     store: function(req,res,next){
             let errors = validationResult(req);
-            console.log(errors);
             if(errors.isEmpty()){
-                                        var users1= {
+                                    var users1= {
                                                             first_name: req.body.fullName,
                                                             last_name: req.body.username,
                                                             email: req.body.email,

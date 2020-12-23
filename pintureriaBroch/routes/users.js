@@ -4,6 +4,8 @@ const userController = require('../controllers/userController');
 let multer = require('multer');
 let path = require ('path');
 let {check, validationResult,body}= require('express-validator');
+let guestMiddleware = require ('../middlewares/guestMiddleware');
+let authMiddleware = require ('../middlewares/authMiddleware');
 let fs = require ('fs');
 
 var storage = multer.diskStorage({
@@ -18,6 +20,9 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 router.get('/login',userController.login);
+router.post('/login',[
+check('email').isEmail().withMessage("Ingrese un email correcto")
+],userController.processlogin);
 router.get('/register',userController.register);
 router.post('/register',upload.any(),[
   check('fullName').isLength().withMessage("Nombre muy corto"),
@@ -34,7 +39,7 @@ router.post('/register',upload.any(),[
     return true;
   }).withMessage("Usuario ya existente")
 ],userController.store);
-router.get('/perfil',userController.perfil);
+router.get('/perfil',authMiddleware, userController.perfil);
 /*router.get('/edit/:idUser',userController.edit);
 router.put('/edit', function(req, res, next) {
   res.send('FUI POR PUT');
@@ -43,5 +48,11 @@ router.put('/edit', function(req, res, next) {
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
+router.get('/check',function(req,res,next){
+  if ( req.session.userLogged == undefined){
+    res.send("no estás logueado");
+  }else{
+    res.send("estas logueado con " + req.session.userLogged.email);
+  }
+});
 module.exports = router;
