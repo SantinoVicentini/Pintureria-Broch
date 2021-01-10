@@ -1,4 +1,4 @@
-# Retrospectiva Sprint-4 :
+# Retrospectiva Sprint-6 :
 
 
 <h2> Start Doing </h2>
@@ -7,12 +7,13 @@
 
 <h2> More Of </h2>
 
-* Más trabajo día a día.   
+* Más trabajo día a día. 
+* Uso de tablero de todo el equipo (Trello). 
 
 
 <h2> Keep Doing </h2>
 
-* Trabajar, dialogar en equipo y con respeto, uso de tablero para organizar las tareas (Trello).
+* Trabajar, dialogar en equipo y con respeto.
 
 <h2> Less Of </h2>
 
