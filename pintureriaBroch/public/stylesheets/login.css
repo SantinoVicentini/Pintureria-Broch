@@ -17,14 +17,6 @@ h1{
 }/*hay un problema con el margin de --login--*/
 
    
-li, a, button{
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-   
 header{
     display: flex;
     justify-content: flex-end;
@@ -130,9 +122,7 @@ button:hover{
     cursor: pointer;
     margin: 12px 0;
 }
-.login-container p{
-    padding-top: 1px;
-  }
+
  /*FOOTER*/
  
  @media (min-width: 991px) and (max-width: 1023px) {
