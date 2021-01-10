@@ -27,7 +27,7 @@ router.get('/register',userController.register);
 router.post('/register',upload.any(),[
   check('fullName').isLength().withMessage("Nombre muy corto"),
   check('userName').isLength().withMessage("Apellido muy corto"),
-  check('email').isEmail().withMessage("Inhgrese un email correcto"),
+  check('email').isEmail().withMessage("Ingrese un email correcto"),
   check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres"),
   body('email').custom(function(value){
     var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));

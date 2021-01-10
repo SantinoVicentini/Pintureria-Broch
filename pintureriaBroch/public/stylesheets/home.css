@@ -13,6 +13,13 @@
   text-decoration: none;
 }
  
+.Logueo{
+  background-color: #a90000;
+ text-align:right;
+ color:white;
+ padding-right: 150px;
+}
+
 header{
   display: flex;
   justify-content: center;

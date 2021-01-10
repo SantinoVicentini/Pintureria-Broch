@@ -7,7 +7,14 @@
     <link rel='stylesheet' href='/stylesheets/home.css' />
   </head>
   <body>
+   
     <div class="container">
+      
+    <% if (typeof errors != "undefined") {%>
+      <% errors.forEach(function (error) {%>
+            <div class="Logueo"><%= error.msg%></div>
+      <% }); %>
+  <% } %>
          <!-- Header -->
 	<%- include('partials/header') %>
 	<!-- /Header -->
@@ -16,7 +23,6 @@
 
       <main>
         <section class="banner"><img src="/./images/pintureria_sin_editar.jpg" alt="banner" class="responsive"></section>
-
         <div class="container-item">
           <section>
             <article class="items">

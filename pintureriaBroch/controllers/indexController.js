@@ -6,7 +6,12 @@ let datosExteriores = JSON.parse(datosJson);
 
 const indexController = {
     index: function(req, res, next) {
-        res.render('index');
+        if ( req.session.userLogged != undefined){
+            return res.render("index",{errors:[{msg:'Acabás de loguearte'}]});
+              }
+            else{
+               return  res.render("index",{errors:[{msg:'No estas logueado'}]});
+            }
     },
     productDetail: function(req, res, next) {
         res.render('productDetail');

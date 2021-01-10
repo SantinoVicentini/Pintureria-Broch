@@ -3,6 +3,7 @@ const fs = require('fs');
 var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
 let {check, validationResult,body}= require('express-validator');
 const { resourceUsage } = require('process');
+const { index } = require('./indexController');
 
 
 const userController = {
@@ -26,7 +27,11 @@ const userController = {
                                 res.render("login",{errors:[{msg:'Credenciales  Inválidas'}]});
                                                                 }
                                 req.session.userLogged = usuarioALoguearse;
-                                res.redirect('/');
+
+                                if(req.body.recordame !=undefined){
+                                    res.cookie('recordame',usuarioALoguearse.email,{maxAge:60000})
+                                }
+                                res.redirect('../');
                   }else{
                          res.render("login",{errors:errors.errors});
                             }

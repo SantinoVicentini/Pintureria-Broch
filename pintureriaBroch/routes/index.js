@@ -9,6 +9,6 @@ router.get('/productDetail', indexController.productDetail); /* GET detail produ
 router.get('/cart', indexController.cart); /* GET cart page. */
 router.get('/admin', indexController.admin); /* GET admin page. */
 router.get('/productAdd', indexController.productAdd); /* GET admin product page. */
-router.get('/exteriores/:id', indexController.id)
+router.get('/exteriores/:id', indexController.id);
 
 module.exports = router;
