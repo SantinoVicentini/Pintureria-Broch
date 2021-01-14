@@ -1,6 +1,5 @@
 const fs = require('fs');
 var products = JSON.parse(fs.readFileSync(__dirname + '/../data/products.json'));
-let db = require ('../database/models')
 
 
 const productController = {
@@ -89,23 +88,7 @@ const productController = {
     fs.writeFileSync(__dirname + "/../data/products.json", productsEliminadosJSON);
     res.send ("Producto eliminado");
 },
-   crear: function (req,res) {
-    db.Product.findAll ()
-    .then(function(products){
-        return res.render("listado", {products: products})
-    })
-
-   },
-   guardado: function (req,res) {
-       db.Product.create({
-           name: req.body.name ,
-           description: req.body.description ,
-           price: req.body.price,
-           image: req.body.image,
-           category_id: req.body.category_id ,
-           trademark_id: req.body.trademark_id,
-       })
-   }
+   
 
 }
 module.exports = productController;

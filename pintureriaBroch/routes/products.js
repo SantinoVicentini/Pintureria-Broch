@@ -23,8 +23,7 @@ router.get('/:id',productController.id);
 router.get('/:id/edit',authMiddleware,productController.edit);
 router.post('/:id/edit',authMiddleware,productController.update);
 router.get('/:id/eliminar',authMiddleware,productController.eliminar);
-router.get ('/crear', productController.crear);
-router.post ('/crear', productController.guardado);
+
 
 
 module.exports = router;
