@@ -1,16 +1,110 @@
 let bcrypt = require('bcryptjs');
+const { name } = require('ejs');
 const fs = require('fs');
-var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
-let {check, validationResult,body}= require('express-validator');
-const { resourceUsage } = require('process');
-const { index } = require('./indexController');
+//const user = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
+//let {check, validationResult,body}= require('express-validator');
+//const { resourceUsage } = require('process');
+//const { index } = require('./indexController');
+const db = require("../database/models");
+
 
 
 const userController = {
-    login: function(req, res, next) {
-        res.render('login');
-    },
-    processlogin: function(req, res, next) {
+
+  // COMIENZO CRUD BASE DE DATOS
+  index : function(req,res,next) {
+    db.User.findAll()
+    .then(function(users){
+      res.render('userList',{users:users})
+  
+    }).catch(function (error){
+      console.log(error),
+      res.send("Error de la página")
+  
+    })
+  },
+
+  showRegisterForm : (req, res, next) => {
+    res.render('register');
+  },
+
+  register : (req, res, next) => {
+    db.User.create(req.body),
+    res.send("Bienvenido a la familia de Pinturería Broch")
+  },
+
+  showProfile : (req,res, next) => {
+    db.User.findByPk(req.params.id)
+    .then(function (users) {
+      res.render('userProfile', {users});
+    }).catch(function (error) {
+      console.log(error),
+        res.send("Error de la página");
+
+    });
+
+  },
+
+  showLoginForm : (req,res, next) => {
+  res.render('login');
+  },
+
+  login : (req,res, next) => {
+    db.User.findOne({
+      where: {
+        email: req.body.email,
+      }
+    })
+    .then(function (users) {
+      if (!users) {
+        res.redirect ("/users/register")
+      }
+      res.render('userProfile', {users});
+    }).catch(function (error) {
+      console.log(error),
+        res.send("Error de la página");
+
+    });
+
+  },
+
+  edit: function (req,res,next) {
+  db.User.findByPk (req.params.id)
+    .then(function(resultado) {
+        res.render ("edicionUsuario", {resultado:resultado})
+    })
+
+},
+
+update: function (req,res,next) {
+    db.User.update ({
+        name: req.body.name,
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+        avatar: req.body.avatar,
+    }, {
+        where: {
+            id: req.params.id,
+        }
+    });
+    res.redirect("/users/edit/" + req.params.id);
+},
+
+delete: function (req,res,next) {
+  db.User.destroy ({
+    where: {
+      id: req.params.id,
+    }
+  });
+
+  res.redirect("/users/register");
+},
+
+  // FIN CRUD BASE DE DATOS
+/* 
+
+   processlogin: function(req, res, next) {
         let errors = validationResult(req);
         if(errors.isEmpty()){
                                 var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
@@ -36,31 +130,25 @@ const userController = {
                          res.render("login",{errors:errors.errors});
                             }
     },
-        register: function(req, res, next) {
-        res.render('register');
-    },
-    perfil: function(req, res, next) {
-        res.send('Este es mi perfil');
-    },
     store: function(req,res,next){
             let errors = validationResult(req);
             if(errors.isEmpty()){
                                     var users1= {
-                                                            first_name: req.body.fullName,
-                                                            last_name: req.body.username,
-                                                            email: req.body.email,
-                                                            password: bcrypt.hashSync(req.body.password,10),
-                                                            avatar: req.files[0].filename
-                                                    };
-
-                                          users.push(users1);
-       
-                                            let usersJSON = JSON.stringify(users);
-                                            fs.writeFileSync(__dirname + '/../data/users.json', usersJSON);
-                                            return res.redirect('/');                               
-                                }       
-            else
-                                            {return res.render('register',{errors: errors.errors});}
-                                }              
-};                        
+first_name: req.body.fullName,
+last_name: req.body.username,
+email: req.body.email,
+password: bcrypt.hashSync(req.body.password,10),
+avatar: req.files[0].filename
+};
+ users.push(users1);
+let usersJSON = JSON.stringify(users);
+ fs.writeFileSync(__dirname + '/../data/users.json', usersJSON);
+ return res.redirect('/');                               
+}       
+ else
+ {return res.render('register',{errors: errors.errors});}
+},
+                        
+*/
+};
 module.exports = userController;

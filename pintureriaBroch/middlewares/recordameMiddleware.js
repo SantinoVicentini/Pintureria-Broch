@@ -2,7 +2,7 @@ let fs = require('fs');
 
 function recordameMiddleware(req,res,next){
     if(req.cookies.recordame !=undefined && req.session.userLogged == undefined){
-        var users = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
+        var users = db.User;
                                 let usuarioALoguearse
                                 for (let i=0;i<users.length;i++){
                                     if(users[i].email== req.cookies.recordame){

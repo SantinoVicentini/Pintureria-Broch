@@ -1,18 +1,73 @@
 const fs = require('fs');
+const { sequelize } = require('../database/models');
 var products = JSON.parse(fs.readFileSync(__dirname + '/../data/products.json'));
+const db = require("../database/models");
 
 
 const productController = {
-    listado: function(req, res, next) {
-        res.render ("listado",{products});
+    list: function(req, res,next) {
+        db.product.findAll()
+         .then(function(product) {
+            return res.render('listadoProductos', {product: product});
+        });
     },
+
+
+    create: function (req,res,next) {
+        db.product.findAll()
+        .then (function (productos) {
+            return res.render ('cargaProductos', {productos: productos})
+        })
+    },
+
+    save: function (req,res,next) {
+        db.product.create ({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.body.image,
+        });
+        res.redirect("/products");
+    },
+
+    detail: function (req,res,next) {
+        db.product.findByPk(req.params.id)
+        .then (function (producto) {
+            res.render("detalleProducto", {producto:producto})
+
+        })
+    },
+
+    edit: function (req,res,next) {
+        let pedidoProducto = db.product.findAll()
+        .then(function(resultado) {
+            res.render ("edicionProducto", {resultado:resultado})
+        })
+
+    },
+
+    update: function (req,res,next) {
+        db.product.create ({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.body.image,
+        }, {
+            where: {
+                id: req.params.id,
+            }
+        });
+        res.redirect("/products/" + req.params.id);
+    },
+    /*
+
     id: function(req,res,next){
         let id = req.params.id;
-        let products1 = {};
+        let products = {};
         for(let i = 0; i <products.length; i ++){
             if(products[i].id == id){
-                products1 = products[i];
-                return res.render ("productDetail", { products1, error: ""});          
+                products = products[i];
+                return res.render ("productDetail", { products, error: ""});          
         }
 
     }  
@@ -21,12 +76,33 @@ const productController = {
 
 },
 
-    product: function(req, res, next) {
-        res.render('index');
+    //product: function(req, res, next) {
+      //  res.render('index');
+    //},
+    //create: function(req, res, next) {
+      //  res.render('productAdd');
+       create: function(req,res,next) {
+       res.render('productAdd');
+
     },
-    create: function(req, res, next) {
-        res.render('productAdd');
-    },
+
+    save: function(req,res) {
+        console.log(req.body);
+        db.product.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.body.image,
+            category_id: req.body.category,
+            color_id: req.body.color,
+            trademark_id: req.body.trademark,
+
+        });
+        
+        res.redirect("/");
+        
+         },
+
     eliminar: function(req, res, next) {
         res.send('Eliminar un producto');
     },
@@ -89,6 +165,6 @@ const productController = {
     res.send ("Producto eliminado");
 },
    
-
+*/
 }
 module.exports = productController;

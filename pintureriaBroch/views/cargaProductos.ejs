@@ -16,10 +16,6 @@
                     <h1>Carga de productos</h1>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="id" id="id" placeholder="ID">
-                    </div>
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
                         <input type="text" name="name" id="name" placeholder="Nombre del producto">
                     </div>
                     <div class="text-box">
@@ -36,27 +32,7 @@
                         <input type="file" name="image" id="image" placeholder="Imagen" >
                     </div>
 
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
-                    <select name= "Category"> 
-                        <%for (let i = 0, i < Category.length, i++) {
-                            <option value= "<%= Category[i].id %>">
-                                <%= Category[i].name%>
-                            </option>
-                            <% } %>
-                         </select>
-                </div>
-
-                <div class="text-box">
-                    <i class="fas fa-angle-double-right"></i>
-                <select name= "Trademark"> 
-                    <%for (let i = 0, i < Trademark.length, i++) {
-                        <option value= "<%= Trademark[i].id %>">
-                            <%= Trademark[i].name%>
-                        </option>
-                        <% } %>
-                     </select>
-            </div>
+                  
 
 
                     <div class="btn">

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>Detalle de Producto</title>
@@ -20,10 +20,10 @@
         <div class="principal">
         
           <section class="Producto">
-            <h1><%= products1.name %></h1> 
+            <h1><%= product.name %></h1> 
             <br>
             <br>
-          <img src="../images/interior/albalatex_interior_10.jpg" alt="200px"> 
+          <img src="<%= product.image %>" alt="200px"> 
             
   
           </section>
@@ -43,7 +43,7 @@
       </div>
  
 <div class="Precio_Promo"> 
-        <article class="Precio"> <%= products1.price %> </article>
+        <article class="Precio"> <%= product.price %> </article>
         <hr>
         <article class="Promo"> Con la compra de 2 unidades, 10% OFF  </article>
       </div>
@@ -91,7 +91,7 @@
           <br>
         <section class="Descripción-Producto">
           <p>
-            <h2><%=products1.description %></h2>
+            <h2><%=products.description %></h2>
           </p>
           <br>
        

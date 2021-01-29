@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <title>Crea tu cuenta</title>
+    <title>Creá tu cuenta</title>
 </head>
 <body>
   
@@ -15,28 +15,28 @@
          
     <main>
         <div class="register-container">
-            <form method="POST"  action="/users/register" enctype="multipart/form-data">
+            <form action="/users/register" method="POST" /*enctype="multipart/form-data*/ ">
                 
-                    <h1>Create Account</h1>
+                    <h1>Creá tu cuenta</h1>
                     <div class="text-box">
                       <i class="fas fa-user"></i>
-                        <input type="text" name="fullName" id="fullName" placeholder="Full Name">
+                        <input type="text" name="name" id="name" placeholder="Nombre completo">
                     </div>
                         <div class="text-box">
                           <i class="fas fa-user"></i>
-                    <input type="text" name="username" id="username" placeholder="username">
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario">
                     </div>
                     <div class="text-box">
                       <i class="fas fa-at"></i>
-                      <input type="email" name="email" id="email" placeholder="email">
+                      <input type="email" name="email" id="email" placeholder="Mail">
                     </div>
                     <div class="text-box">
                        <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" placeholder="password">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
                     </div>
                     <div>
                      <label for="">Avatar</label>
-                       <input type="file" name="avatar" id="avatar">
+                       <input type="file" name="avatar" id="Avatar">
                      </div>
                     <div class="btn">
                     <button type="submit">Registrarse</button>

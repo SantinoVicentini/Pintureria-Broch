@@ -8,6 +8,21 @@ let guestMiddleware = require ('../middlewares/guestMiddleware');
 let authMiddleware = require ('../middlewares/authMiddleware');
 let fs = require ('fs');
 
+
+// empieza CRUD base de datos
+router.get('/', userController.index); 
+router.get('/userList', userController.index); 
+router.get('/login',userController.showLoginForm);
+router.post('/login',userController.login);
+router.get('/register',userController.showRegisterForm);
+router.post('/register',userController.register);
+router.get('/:id',userController.showProfile);
+router.get('/edit/:id',userController.edit);
+router.post('/edit/:id',userController.update);
+router.post('/delete/:id', userController.delete);
+
+// fin CRUD base de datos
+/*
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'tmp/my-uploads')
@@ -19,7 +34,6 @@ var storage = multer.diskStorage({
  
 var upload = multer({ storage: storage })
 
-router.get('/login',userController.login);
 router.post('/login',[
 check('email').isEmail().withMessage("Ingrese un email correcto")
 ],userController.processlogin);
@@ -39,15 +53,12 @@ router.post('/register',upload.any(),[
     return true;
   }).withMessage("Usuario ya existente")
 ],userController.store);
-router.get('/perfil',authMiddleware, userController.perfil);
+router.get('/perfil', userController.perfil);
 /*router.get('/edit/:idUser',userController.edit);
 router.put('/edit', function(req, res, next) {
   res.send('FUI POR PUT');
 });*/
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
 router.get('/check',function(req,res,next){
   if ( req.session.userLogged == undefined){
     res.send("no estás logueado");

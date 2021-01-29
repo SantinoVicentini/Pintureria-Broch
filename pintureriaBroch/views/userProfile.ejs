@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= users.username %></title>
+    <link rel='stylesheet' href='/stylesheets/productDetail.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
+  
+</head>
+<body>
+      <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+   
+
+  <h1>¡Hola <%= users.username%>!</h1>
+
+  <h3>Estos son tus datos </h3>
+
+  <ul>
+    <li> <%= users.name%> </li>
+    <li> <%= users.username%> </li>
+    <li> <%= users.email%> </li>
+    <li> <%= users.password.encrypted%> </li>
+    <li> <%= users.avatar%> </li>
+    
+</ul>
+
+<a href="edit/<%= users.id%>">
+<button type="submit">Editar</button>
+</a>
+
+
+<form action="/users/delete/<%= users.id%>" method="POST">
+  <button type="submit">Eliminar</button>
+</form>
+
+
+
+
+  <!-- footer -->
+  <%- include('partials/footer') %>
+  <!-- /footer -->
+
+</body>
+</html>

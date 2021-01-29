@@ -11,32 +11,32 @@
 
     <main>
         <div class="register-container">
-            <form action="/products/<%= productFound.id %>/edit" method="PUT">
+            <form action="/products/edit/<%= product.id %>" method="POST">
                 
                     <h1>Edición de productos</h1>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="id" id="id" value="<%= productFound.id %>">
+                        <input type="text" name="id" id="id" value="<%= product.id %>">
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="name" id="name" value="<%= productFound.name %>">
+                        <input type="text" name="name" id="name" value="<%= product.name %>">
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="description" id="description" value="<%= productFound.description %>" >
+                        <input type="text" name="description" id="description" value="<%= product.description %>" >
                     </div>
                         <div class="text-box">
                             <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="category" id="category" value="<%= productFound.category %>">
+                        <input type="text" name="category" id="category" value="<%= product.category %>">
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                    <input type="file" name="image" id="image"  value="<%= productFound.image %>">
+                    <input type="file" name="image" id="image"  value="<%= product.image %>">
                 </div>
                      <div class="text-box">
                             <i class="fas fa-angle-double-right"></i>
-                        <input type="number" name="price" id=precioProducto" value="<%= productFound.price %>">
+                        <input type="number" name="price" id=precioProducto" value="<%= product.price %>">
                    
                     </div>
 

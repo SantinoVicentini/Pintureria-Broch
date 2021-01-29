@@ -1,11 +1,10 @@
-module.exports =
-
-{
+module.exports = {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "PintureriaBroch",
-    "host": "localhost",
+    "password": "root",
+    "database": "pintureriaBroch",
+    "host": "127.0.0.1",
+    "port": "8889",
     "dialect": "mysql"
   },
   "test": {

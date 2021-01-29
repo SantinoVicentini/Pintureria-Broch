@@ -1,0 +1,15 @@
+
+    
+      <% product.forEach (function (product){ %>
+
+        <li> ID: <%= product.id %> - 
+            NOMBRE: <%= product.name %> - 
+            PRECIO: <%= product.price %> - 
+            DESCRIPCIÓN: <%= product.description %> - 
+            CATEGORIA: <%= product.category %> - 
+            IMAGEN: <%= product.image %> 
+            <a href="/products/<%= product.id %>/edit"> EDITAR </a> - <a href="/products/<%= product.id %>/eliminar"> ELIMINAR</a>
+        </li>
+
+      <% }); %> 
+ 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/productAdd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Listado de productos</title>
+
+</head>
+<body>
+    <h1>Listado de productos</h1>
+
+    <ul>
+        <%for(let i = 0; i < product.length; i++) { %>
+            <li>
+                <a href="/products/<%product[i].id%>"></a>
+                <%=product[i].name%>
+            </li>
+
+            <% } %>
+    </ul>
+
+</body>
+</html>
