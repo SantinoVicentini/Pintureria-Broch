@@ -1,4 +1,6 @@
 CREATE DATABASE pintureriaBroch;
+USE `pintureriaBroch`;
+
 CREATE TABLE user(
 id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 name VARCHAR(50) NOT NULL,
