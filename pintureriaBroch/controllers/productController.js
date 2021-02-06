@@ -6,32 +6,37 @@ const db = require("../database/models");
 
 const productController = {
     list: function(req, res,next) {
-        db.product.findAll()
+        db.Product.findAll()
          .then(function(product) {
             return res.render('listadoProductos', {product: product});
-        });
+        }).catch(function (error){
+            console.log(error),
+            res.send("Error de la página")});
     },
 
 
     create: function (req,res,next) {
-        db.product.findAll()
+       /* db.product.findAll()
         .then (function (productos) {
             return res.render ('cargaProductos', {productos: productos})
-        })
+        })*/return res.render ('cargaProductos');
     },
 
     save: function (req,res,next) {
-        db.product.create ({
+        db.Product.create ({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             image: req.body.image,
+            category_id: req.body.category_id,
+            color_id: req.body.color_id,
+            trademark_id: req.body.trademark_id
         });
-        res.redirect("/products");
+        res.send("Listo");
     },
 
     detail: function (req,res,next) {
-        db.product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
         .then (function (producto) {
             res.render("detalleProducto", {producto:producto})
 

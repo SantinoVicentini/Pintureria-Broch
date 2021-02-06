@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detalle de Producto</title>
+    <link rel='stylesheet' href='/stylesheets/productDetail.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  </head>
+  <body>
+
+     <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+      <main>
+        <br>
+        <hr>
+        <br>
+      
+        <div class="principal">
+        
+          <section class="Producto">
+            <h1><%= products1.name %></h1>
+            <br>
+            <br>
+          <img src="../images/interior/albalatex_interior_10.jpg" alt="200px"> 
+            
+  
+          </section>
+
+          <section class="Información">
+            <div class="Color">
+        <h3> Colores disponibles:</h3>
+        <div class="Colores_Disponibles">
+        <p class="Rojo"><input type="button" value="Color"></p>
+          <p class="Azul"> <input type="button" value="Color"></p>
+          <p class="Verde"><input type="button" value="Color"></p>
+          <p class="Amarillo"><input type="button" value="Color"></p>
+          <p class="Marron"><input type="button" value="Color"></p>
+        </div>
+
+        
+      </div>
+ 
+<div class="Precio_Promo"> 
+        <article class="Precio"> <%= products1.price %> </article>
+        <hr>
+        <article class="Promo"> Con la compra de 2 unidades, 10% OFF  </article>
+      </div>
+        <hr>
+
+        <div class="Retiro_Gratis">
+            
+          <a href="/donde-estamos">
+            
+         <h3>¡RETIRO GRATIS EN SUCURSALES!</h3> 
+         <br>
+         <p><i class="fas fa-store-alt"></i> Ver Sucursales disponibles</p>
+          </a>
+        </div>
+
+          </section>
+
+          <section class="Acciones">
+<div class="Carrito">
+
+ <input type="number" min="0" name="CantidadDeProductos">
+ <p class="Boton"> <a href="/cart">  <i class="fas fa-shopping-cart"></i> Agregar al carrito </a> </p> 
+</div>
+          <br>
+          <br>
+
+          <div class="Pago_Extra">
+            <p class="Pagos"> <a href="/payment"> <i class="fas fa-credit-card"></i> </a> <a href="/payment"> Medios de Pago </a> </p>
+            <br>
+            <br>
+             <p class="Envíos"> <a href="/shipping"><i class="fas fa-shipping-fast"></i> </a> <a href="/shipping"> Calcular envío </a> </p>
+
+          </div>
+
+          
+           
+          </section>
+
+        </div>
+        <br>
+        <hr>
+        <div class="secundario">
+
+          <br>
+          <br>
+        <section class="Descripción-Producto">
+          <p>
+            <h2><%=products1.description %></h2>
+          </p>
+          <br>
+       
+        </section> 
+        <br>
+
+        <div class="video">
+          <iframe width="100%" height="468" src="https://www.youtube.com/embed/NFnQesw9E7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+        </div>
+
+        </div>
+
+       <div class="terciario">
+
+        <section class="PromoImportante"> 
+        <a href="https://www.cybermonday.com.ar/"><p><img src="/images/promoImportante.jpg" alt="PromoImportante"></p></a>
+        </section>
+
+      
+        <section class="Productos_Interesar"> 
+            <h3>Productos que podrían interesarte</h3>
+        <br>
+        <br>
+
+        <div class="Imagenes_Interesar"> 
+      <img src="../images/interior/enduido_pasta_interior_25kg.jpg" alt="enduido_interior">
+      <img src="../images/interior/latex_interior_king_blanco_10.jpg" alt="latex_interior_king">
+        <img src="../images/interior/latex_profesional_interior_blanco_10lt.jpg" alt="latex_profesional_interior">
+        </div> 
+      </section> 
+
+      </div>
+
+
+      </main>
+                <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+
+    </div>
+    
+  </body>
+</html>

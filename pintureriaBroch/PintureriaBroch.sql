@@ -1,4 +1,6 @@
 CREATE DATABASE pintureriaBroch;
+USE `pintureriaBroch`;
+
 CREATE TABLE user(
 id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 name VARCHAR(50) NOT NULL,
@@ -26,7 +28,10 @@ id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 name VARCHAR(50) NOT NULL,
 description text NOT NULL,
 price INT NOT NULL,
-image VARCHAR(50) NOT NULL
+image VARCHAR(50) NOT NULL,
+category_id INT NOT NULL,
+color_id INT NOT NULL,
+trademark_id INT NOT NULL
 );
 
 DROP TABLE IF EXISTS pintureriaBroch.cart;

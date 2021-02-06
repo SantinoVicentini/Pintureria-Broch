@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     
-    let alias = "product";
+    let alias = "Product";
 
     let cols = {
         id: {
@@ -11,24 +11,27 @@ module.exports = function (sequelize, DataTypes) {
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false,
 
         },
         description: {
             type: DataTypes.STRING,
-            allowNull: false,
 
         },
         price: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-
         },
         image: {
             type: DataTypes.STRING,
-            allowNull: false,
-
         },
+        category_id: {
+            type: DataTypes.INTEGER,
+        }, 
+        color_id: {
+            type: DataTypes.INTEGER,
+        }, 
+        trademark_id: {
+            type: DataTypes.INTEGER,
+        }
     };
 
     let config = {
@@ -38,7 +41,25 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let product = sequelize.define(alias, cols, config);
+/*
+    Product.associate = function(models) {
+        Product.belongsTo(models.Categoria,{
+            as: "categoria",
+            foreignKey:"category_id"
+        });
+        Product.belongsTo(models.Color,{
+            as: "color",
+            foreignKey:"color_id"
+        });
 
+       Product.belongsTo(models.Marca,{
+            as: "trademark",
+            foreignKey:"trademark_id"
+        });
+    
+    }
+
+    */
 
     return product;
 }
