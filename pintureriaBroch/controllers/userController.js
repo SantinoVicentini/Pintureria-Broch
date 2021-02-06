@@ -8,7 +8,6 @@ const fs = require('fs');
 const db = require("../database/models");
 
 
-
 const userController = {
 
   // COMIENZO CRUD BASE DE DATOS
