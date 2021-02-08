@@ -16,32 +16,40 @@
                     <h1>Edición de productos</h1>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="id" id="id" value="<%= product.id %>">
-                    </div>
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
                         <input type="text" name="name" id="name" value="<%= product.name %>">
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
                         <input type="text" name="description" id="description" value="<%= product.description %>" >
                     </div>
-                        <div class="text-box">
-                            <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="category" id="category" value="<%= product.category %>">
-                    </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                    <input type="file" name="image" id="image"  value="<%= product.image %>">
+                    <input type="text" name="price" id="price" value="<%= product.price %>">
                 </div>
-                     <div class="text-box">
-                            <i class="fas fa-angle-double-right"></i>
-                        <input type="number" name="price" id=precioProducto" value="<%= product.price %>">
-                   
-                    </div>
+                    <div class="text-box">
+                        <i class="fas fa-angle-double-right"></i>
+                    <input type="file" name="image" id="image" value="<%= product.image %>" >
+                </div>
+                
+                <div class="text-box">
+                    <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="category_id" id="category_id" value="<%= product.category_id %>">
+                </div>
+
+                <div class="text-box">
+                    <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="color_id" id="color_id" value="<%= product.color_id %>">
+                </div>
+
+                <div class="text-box">
+                    <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="trademark_id" id="trademark_id" value="<%= product.trademark_id %>">
+                </div>
+        
 
                     <div class="btn">
                     <button type="submit">Editar</button>
+
                     </div>
             </form>
         </div>

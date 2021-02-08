@@ -1,6 +1,5 @@
 const fs = require('fs');
 const { sequelize } = require('../database/models');
-var products = JSON.parse(fs.readFileSync(__dirname + '/../data/products.json'));
 const db = require("../database/models");
 
 
@@ -23,46 +22,42 @@ const productController = {
     },
 
     save: function (req,res,next) {
-        db.Product.create ({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image: req.body.image,
-            category_id: req.body.category_id,
-            color_id: req.body.color_id,
-            trademark_id: req.body.trademark_id
-        });
-        res.send("Listo");
+        db.Product.create(req.body);
+        console.log(req.body);
+        res.send("has registrado el producto");
     },
 
     detail: function (req,res,next) {
         db.Product.findByPk(req.params.id)
-        .then (function (producto) {
-            res.render("detalleProducto", {producto:producto})
+        .then (function (product) {
+            res.render("detalleProducto", {product:product})
 
         })
     },
 
     edit: function (req,res,next) {
-        let pedidoProducto = db.product.findAll()
-        .then(function(resultado) {
-            res.render ("edicionProducto", {resultado:resultado})
+        db.Product.findByPk (req.params.id)
+        .then(function(product) {
+            res.render ("edicionProducto", {product:product})
         })
 
     },
 
     update: function (req,res,next) {
-        db.product.create ({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image: req.body.image,
-        }, {
+        db.Product.update (req.body, {
             where: {
                 id: req.params.id,
             }
         });
         res.redirect("/products/" + req.params.id);
+    },
+    delete: function (req,res,next) {
+        db.Product.destroy({
+            where: {
+                id: req.params.id,
+            }
+        });
+        res.redirect("/products/");/* ESTA HECHO EL CONTROLADOR, NO LA OPCION EN LA VISTA*/
     },
     /*
 

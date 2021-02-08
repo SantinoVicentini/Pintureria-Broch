@@ -11,26 +11,31 @@ module.exports = function (sequelize, DataTypes) {
         },
         name: {
             type: DataTypes.STRING,
-
+            allowNull: false
         },
         description: {
             type: DataTypes.STRING,
-
+            allowNull: false
         },
         price: {
             type: DataTypes.INTEGER,
+            allowNull: false
         },
         image: {
             type: DataTypes.STRING,
+            allowNull: false
         },
         category_id: {
             type: DataTypes.INTEGER,
+            allowNull: false
         }, 
         color_id: {
             type: DataTypes.INTEGER,
+            allowNull: false
         }, 
         trademark_id: {
             type: DataTypes.INTEGER,
+            allowNull: false
         }
     };
 
