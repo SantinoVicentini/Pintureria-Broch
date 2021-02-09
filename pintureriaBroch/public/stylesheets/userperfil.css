@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+  }
+  
+body{
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    
+}
+
+    /*header*/
+h1{
+    height: 70px;
+    color:white;
+}/*hay un problema con el margin de --login--*/
+
+   
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgb(112, 136, 218);
+}
+
+header img{
+    margin-right: auto;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+/*fin del header*/
+
+.container-profile{
+    /*background-color:blue;*/
+    height: 500px;
+ width: 1440px;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ margin:20px;
+}
+       
+
+.profile-info{
+    background-color: rgb(75, 75, 75);
+    height: 450px;
+ width: 1440px;
+ padding-left: 50px;
+ padding-top: 20px;
+ padding-right: 50px;
+ padding-bottom: 20px;
+}
+          
+.info-greeting{
+    height: 50px;
+ width: 500px;
+
+}
+           
+.info-profile{
+    display: flex;
+    /*background-color: rgb(114, 111, 111);*/
+    height: 300px;
+}
+.info-actividad{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+ width: 950px;
+ padding-left:50px;
+ padding-right:50px;
+ margin-left: 30px;
+ padding-top: 10px;
+ border-radius: 10px;
+ box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+}
+.info-username{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+ width:300px;
+ padding:20px;
+ border-radius: 10px;
+ box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+}
+.username-name {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.username-tarjetas{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.username-direcciones{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.info-carrito {
+    background-color: rgb(128, 0, 100);
+    height: 100px;
+ width:850px;
+ margin:10px;
+ text-align: center;
+ justify-content:center;
+ 
+}
+.h4
+{
+    text-align: center;
+    padding-top: 10px;
+    
+}
+
+.info-compras {
+    background-color: rgb(128, 0, 100);
+    height: 100px;
+ width:850px;
+ margin:10px;
+ text-align: center;
+}
+
+
+/*Footer*/
+footer {
+    background-color: rgb(111, 111, 245);
+    height: auto;
+    text-align: center;
+   }
+  .footer-contenido{
+  padding:20px;
+  margin-left: 20px;
+  /*Flexbox*/
+  display:flex;
+  
+  }
+  
+  .container-aviso{
+    padding:10px 10px;
+  }
+  
+  .footer-contenido-logo{
+  padding-top:30px;
+  padding-left:30px;
+    }
+  
+    .footer-bottom{
+      text-align: center;
+      padding:30px;
+    }
+   .footer-bottom-contenido
+   {
+     padding:20px;
+     color:white;
+   }
+   @media(max-width:426px){
+    .body{
+ flex-direction: column;
+    }
+   .footer-contenido{
+     flex-direction:column;
+   }
+  section .promo{
+     width:30%;
+  }
+ 
+ }
+  
+ @media(max-width:768px){
+   .marcas{
+     display:none;
+   }
+ }
