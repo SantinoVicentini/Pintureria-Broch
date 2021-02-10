@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Detalle de Producto</title>
-    <link rel='stylesheet' href='/stylesheets/productDetail.css' />
+    <link rel='stylesheet' href='/stylesheets/productDetail copy.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -20,10 +20,10 @@
         <div class="principal">
         
           <section class="Producto">
-            <h1><%= products1.name %></h1>
+            <h1><%= product.name %></h1>
             <br>
             <br>
-          <img src="../images/interior/albalatex_interior_10.jpg" alt="200px"> 
+          <img src="<%= product.image %>" alt="200px"> 
             
   
           </section>
@@ -43,7 +43,7 @@
       </div>
  
 <div class="Precio_Promo"> 
-        <article class="Precio"> <%= products1.price %> </article>
+        <article class="Precio"> <%= product.price %> </article>
         <hr>
         <article class="Promo"> Con la compra de 2 unidades, 10% OFF  </article>
       </div>
@@ -91,7 +91,7 @@
           <br>
         <section class="Descripción-Producto">
           <p>
-            <h2><%=products1.description %></h2>
+            <h2><%=product.description %></h2>
           </p>
           <br>
        
@@ -109,19 +109,6 @@
         <section class="PromoImportante"> 
         <a href="https://www.cybermonday.com.ar/"><p><img src="/images/promoImportante.jpg" alt="PromoImportante"></p></a>
         </section>
-
-      
-        <section class="Productos_Interesar"> 
-            <h3>Productos que podrían interesarte</h3>
-        <br>
-        <br>
-
-        <div class="Imagenes_Interesar"> 
-      <img src="../images/interior/enduido_pasta_interior_25kg.jpg" alt="enduido_interior">
-      <img src="../images/interior/latex_interior_king_blanco_10.jpg" alt="latex_interior_king">
-        <img src="../images/interior/latex_profesional_interior_blanco_10lt.jpg" alt="latex_profesional_interior">
-        </div> 
-      </section> 
 
       </div>
 

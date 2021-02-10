@@ -30,7 +30,7 @@ const productController = {
     detail: function (req,res,next) {
         db.Product.findByPk(req.params.id)
         .then (function (product) {
-            res.render("detalleProducto", {product:product})
+            res.render("productDetail", {product:product})
 
         })
     },

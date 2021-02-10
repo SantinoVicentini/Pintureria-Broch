@@ -1,6 +1,7 @@
 let bcrypt = require('bcryptjs');
 const { name } = require('ejs');
 const fs = require('fs');
+const saltRounds = 10;
 //const user = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
 //let {check, validationResult,body}= require('express-validator');
 //const { resourceUsage } = require('process');
@@ -28,8 +29,25 @@ const userController = {
   },
 
   register : (req, res, next) => {
-    db.User.create(req.body),
+
+   bcrypt.hash(req.body.password, saltRounds, function (err,hash) {
+      db.User.create({
+        name: req.body.name,
+        username: req.body.username,
+        email: req.body.email,
+        password: hash,
+        avatar:req.body.avatar,
+        }).then(function(data) {
+         if (data) {
+         res.redirect('/');
+         }
+       });
+      });
+
+
+   /* db.User.create(req.body),
     res.send("Bienvenido a la familia de Pinturería Broch")
+    console.log(req.body);*/
   },
 
   showProfile : (req,res, next) => {
@@ -58,7 +76,16 @@ const userController = {
       if (!users) {
         res.redirect ("/users/register")
       }
-      res.render('userProfile', {users});
+      else{
+        bcrypt.compare(req.body.password, users.password, function (err, result) {
+          if (result == true) {
+              res.redirect('/');
+          } else {
+           res.redirect('/users/login');
+          }
+        });
+      }
+     /* res.render('userProfile', {users});*/
     }).catch(function (error) {
       console.log(error),
         res.send("Error de la página");
@@ -87,7 +114,7 @@ update: function (req,res,next) {
             id: req.params.id,
         }
     });
-    res.redirect("/users/edit/" + req.params.id);
+    res.redirect("/users/" + req.params.id);
 },
 
 delete: function (req,res,next) {
