@@ -2,17 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Roboto', Times, serif;
 }
 
 /*HEADER*/
-
+i{
+  font-size: 20px;
+}
    
 body header li, a, button{
   font-family: Roboto;
   font-weight: 500;
-  font-size: 16px;
-  color: #edf0f1;
+  font-size: 15px;
+  color: #2705bd;
   text-decoration: none;
 }
  
@@ -60,309 +62,128 @@ button:hover{
 
 /*MAIN*/
 
-main {
-  width: 100%;
-  font-family: Roboto;
-  font-variant: small-caps;
-  /* me gustó small caps pero bueno, a decidir */ 
-}
-
-/* MAIN PRINCIPAL */
-
-main .principal {
-  width: 100%;
+.container{
+  /*background-color: red;*/
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  background-color:white;
-
- 
 }
 
-
-
-main .principal .Producto {
-  width: 32%;
+.imageproduct
+{
+  height: 500px;
+  width:900px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-
-
-}
-
-main .principal .Producto img {
-height: 30vw;
-align-self: start;
-
-}
-
-
-main .principal .Producto h1 {
-  color: rgb(112, 136, 218);
-  font-size: 50px;
-}
-
-
-
-main .principal .Información {
-  width: 32%;
-padding: 10px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: space-around;
-  box-sizing: border-box;
-  border-style: solid;
-  border-color:  rgb(112, 136, 218);
- 
-}
-
-main .principal .Información .Color {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  color: black;
-  text-decoration: underline;
-  flex-wrap: wrap;
-text-align: center;
-
-  
-}
-
-
-
-
-main .principal .Información .Color .Colores_Disponibles {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-top: 2%;
-}
-
-main .principal .Información .Color .Colores_Disponibles .Rojo input {
-  background-color: red;
-color: red;
-margin:5px;
-
-}
-
-main .principal .Información .Color .Colores_Disponibles .Azul input {
-  background-color: blue;
-color: blue;
-margin:5px;
-
-
-}
-
-main .principal .Información .Color .Colores_Disponibles .Verde input {
   background-color: green;
-color: green;
-margin:5px;
-
+  padding:30px;
 }
 
-main .principal .Información .Color .Colores_Disponibles .Amarillo input {
-  background-color: yellow;
-color: yellow;
-margin:5px;
-
+.infoproduct{
+  /*background-color: red;*/
+  width: 500px;
+  height: 500px;
+  padding:25px;
 }
 
-main .principal .Información .Color .Colores_Disponibles .Marron input {
-  background-color: brown;
-color: brown;
-margin:5px;
+/*.nameproduct, .cardproduct, .generalproduct, .selectproduct{
+  background-color: blue;
+}/*para detectarlos*/
 
+.nameproduct{
+  /*background-color: yellow;*/
+  padding-top:25px;
+  padding-left:25px;
+  padding-right:25px;
+  margin-bottom:20px;
+}
+
+.paymentproduct{
+ /* background-color:pink;*/
+ padding:25px;
+}
+
+.presentation{
+background-color: cadetblue;
+padding:20px;
+margin-bottom:20px;
+}
+
+.prescontainer{
+  background-color: white ;
+  display:flex;
+}
+.medidas, 
+.color {
+  padding-left: 30px;
+  padding-right:30px;
 }
 
 
-
-
-main .principal .Información .Precio {
-  color: cadetblue;
-  font-size: xx-large;
+.price{
+/*background-color: blueviolet;*/
+margin-bottom:20px;
 }
 
 
-main .principal .Acciones {
-  width: 32%;
-  padding: 40px;
+.buy{margin-bottom:20px;
+
+}
+.buycontainer{
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-around;
-  box-sizing: border-box;
-  flex-wrap: wrap;
 
+  height: 40px;
 
-}
-
-main .principal .Acciones .Carrito {
-  display: flex;
-}
-
-main .principal .Información .Retiro_Gratis {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  /*padding-top: 20%;*/
-  justify-content: space-around;
-
-}
-
-main .principal .Información .Retiro_Gratis a {
-  color: rgb(112, 136, 218);
-  text-decoration: none;
-}
-
-
-
-main .principal .Acciones input {
-  width: 15%;
-  background-color:  rgb(112, 136, 218);;
-  margin-right: 5%;
-  color: white;
-  text-align: center;
-  font-size: medium;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border-radius: 4px;
-  border-color: black;
-}
-
-main .principal .Acciones a:focus {
-  border-bottom: 1px solid;
-  background: #BAE498;
-}
-
-main .principal .Acciones a:hover {  
-  transition: background-color .10s; 
-  background-color: rgba(0,0,0, 0.19);
-}
-
-main .principal .Acciones .Pago_Extra a:hover {
-background-color: white;
-}
-
-
-main .principal .Acciones .Carrito a {
-  color:whitesmoke;
-  text-decoration: none;
-  width: 100%;
-}
-
-main .principal .Acciones .Pago_Extra a {
-  color:black;
-  text-decoration: none;
-}
-
-main .principal .Acciones .Pago_Extra a i {
-  font-size: xx-large;
-  color: rgb(112, 136, 218);
-  text-decoration: none;
-}
-
-
-main .principal .Acciones .Carrito .Boton {
-  width: 80%;
-height: 50px;
-line-height: 54px;
-display: block;
-background-color:  rgb(112, 136, 218);
-color: #FFF;
-border-radius: 4px;
-}
-
-main .principal .Acciones .Pago_Extra {
-  display: flex;
-}
-
-main .principal .Acciones .Pago_Extra .Pagos {
-  display: flex;
-  flex-direction: column;
-}
-
-main .principal .Acciones .Pago_Extra .Envíos {
-  display: flex;
-  flex-direction: column;
-
-}
-
-main .principal .Acciones .Pago_Extra .Pagos {
-  width: 49%;
-}
-
-main .principal .Acciones .Pago_Extra .Envíos {
-  width: 49%;
-}
-
-
-/* MAIN SECUNDARIO */
-
-main .secundario .Descripción-Producto {
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  padding-top: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: large;
-}
-
-main .secundario .Descripción-Producto p {
-  text-align: center;
-}
-
-main .secundario .Descripción-Producto ul {
-  padding: 0px 15%;
  
 }
-
-
-
-/* MAIN TERCIARIO */
-
-
-main .terciario .PromoImportante p {
-  /*padding-top: 10%;*/
-  width: 100%;
-  text-align: center;
+.quantity{
+  background-color: chocolate;
+width: 35%;
+padding-left: 35px;
+align-items: center;
 
 }
+.buyinfo{
+  display:flex;
+  width: 65%;
+  padding-left: 30px;
+  background-color: rgb(255, 187, 0);
+  align-items: center;
 
-main .terciario .PromoImportante p img {
+}
+.pickupcontainerinfo{
+  /*background-color: blueviolet;*/
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #e3e3e3;
+
+}
+.method,
+.pick{
+  padding-left: 15px;
   width: 50%;
 }
-
-main .terciario .Productos_Interesar {
-  text-align: center;
-  font-size: xx-large;
-  margin: 5%;
-}
-
-
-
-main .terciario .Productos_Interesar .Imagenes_Interesar {
-  box-sizing: border-box;
-  border-color: black;
-  border-style: groove;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.methodinfo,
+.pickinfo{
+  display:flex;
   align-items: center;
-  padding: 5%;
-}
-
-main .terciario .Productos_Interesar .Imagenes_Interesar img {
-  width: 30%;
-height: auto;
+  width: 100%;
 
 }
+
+.textinfo{
+  padding-left: 10px;
+}
+
+/*SECTION INFORMATION*/
+
+.descriptionproduct{
+  margin-top:30px;
+  padding: 20px;
+  margin-bottom:30px;
+}
+
+
+
+
 
 
  /*FOOTER*/

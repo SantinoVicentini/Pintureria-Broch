@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Detalle de Producto</title>
-    <link rel='stylesheet' href='/stylesheets/productDetail copy.css' />
+    <link rel='stylesheet' href='/stylesheets/productDetail.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -16,81 +16,96 @@
         <br>
         <hr>
         <br>
-      
-        <div class="principal">
+      <div class="product">
+              <div class="container">
+                        <div class= "imageproduct">
+                          <img src="<%= product.image %>" alt="200px"> 
+                        </div>
+                        <div class="infoproduct">
+                                  
+                                    <div class= "nameproduct">
+                                      <h1><%= product.name %></h1>
+                                    </div>
+                                    <div class="paymentproduct">
+
+                                      <div class="presentation">
+                                        <div class="prescontainer">
+                                                          <div class="medidas"> 
+                                                            <div class="medidasinfo">
+                                                                  <h4>Medidas</h4>
+                                                                  <h4>kg o litro o  colores</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="color">
+                                                            <div class="colorinfo">
+                                                            <h4>Color: no tiene</h4>
+                                                            </div>
+                                                        </div>
+                                          </div>
+                                      </div>
+    
+                                      <div class="price">
+                                              <div class="productprice">
+                                                <h3>  Precio</h3>
+                                                <h1> $  <%= product.price %>  </h1>
+
+                                              </div>
+
+                                      </div>
+                                <div class="buy">
+                                       <div class="buycontainer">
+                                        <div class="quantity"> 
+                                          <div class="textinfo">
+                                            <h3>-  1  +</h3>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="buyinfo">
+                                          <i class="fas fa-shopping-cart"></i>
+                                            <div class="textinfo">
+                                              <h3>Agregar al carrito</h3>
+                                              
+                                            </div>
+                                        </div>
+                                        </div>
+                              </div>
+
+                                              <div class="pickupcontainer">
+                                                <div class="pickupcontainerinfo">
+                                                        <div class="method"> 
+                                                        <div class="methodinfo">
+                                                             <i class="far fa-credit-card"></i>
+                                                                      <div class="textinfo">
+                                                                        <h4>Medios de pago</h4>
+                                                                         <h4><a href="">Ver promociones</a></h4>
+                                                                         
+
+                                                                        </div> 
+                                                                    </div>
+                                                             </div>
+                                                        <div class="pick">
+                                                                <div class="pickinfo">
+                                                                         <i class="fas fa-shopping-bag"></i>
+                                                                             <div class="textinfo">
+                                                                              <h4>Retirá gratis en nuestras sucursales</h4>
+                                                                                    
+                                                                              </div>
+                                                                             </div>
+                                                                  </div>
+                                                    
+                                              </div>
+                                              </div>
+                          
+                                  </div>
+                                    
+                          </div>
+              </div> 
         
-          <section class="Producto">
-            <h1><%= product.name %></h1>
-            <br>
-            <br>
-          <img src="<%= product.image %>" alt="200px"> 
-            
-  
-          </section>
 
-          <section class="Información">
-            <div class="Color">
-        <h3> Colores disponibles:</h3>
-        <div class="Colores_Disponibles">
-        <p class="Rojo"><input type="button" value="Color"></p>
-          <p class="Azul"> <input type="button" value="Color"></p>
-          <p class="Verde"><input type="button" value="Color"></p>
-          <p class="Amarillo"><input type="button" value="Color"></p>
-          <p class="Marron"><input type="button" value="Color"></p>
-        </div>
-
-        
-      </div>
- 
-<div class="Precio_Promo"> 
-        <article class="Precio"> <%= product.price %> </article>
-        <hr>
-        <article class="Promo"> Con la compra de 2 unidades, 10% OFF  </article>
-      </div>
-        <hr>
-
-        <div class="Retiro_Gratis">
-            
-          <a href="/donde-estamos">
-            
-         <h3>¡RETIRO GRATIS EN SUCURSALES!</h3> 
-         <br>
-         <p><i class="fas fa-store-alt"></i> Ver Sucursales disponibles</p>
-          </a>
-        </div>
-
-          </section>
-
-          <section class="Acciones">
-<div class="Carrito">
-
- <input type="number" min="0" name="CantidadDeProductos">
- <p class="Boton"> <a href="/cart">  <i class="fas fa-shopping-cart"></i> Agregar al carrito </a> </p> 
-</div>
-          <br>
-          <br>
-
-          <div class="Pago_Extra">
-            <p class="Pagos"> <a href="/payment"> <i class="fas fa-credit-card"></i> </a> <a href="/payment"> Medios de Pago </a> </p>
-            <br>
-            <br>
-             <p class="Envíos"> <a href="/shipping"><i class="fas fa-shipping-fast"></i> </a> <a href="/shipping"> Calcular envío </a> </p>
-
-          </div>
-
-          
-           
-          </section>
-
-        </div>
-        <br>
-        <hr>
-        <div class="secundario">
-
-          <br>
-          <br>
-        <section class="Descripción-Producto">
+     
+        <section class="descriptionproduct">
           <p>
+            <h1>Descripcion</h1>
             <h2><%=product.description %></h2>
           </p>
           <br>

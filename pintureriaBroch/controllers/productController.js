@@ -3,6 +3,7 @@ const { sequelize } = require('../database/models');
 const db = require("../database/models");
 
 
+
 const productController = {
     list: function(req, res,next) {
         db.Product.findAll()

@@ -3,10 +3,11 @@ const { name } = require('ejs');
 const fs = require('fs');
 const saltRounds = 10;
 //const user = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
-//let {check, validationResult,body}= require('express-validator');
+let {check, validationResult,body}= require('express-validator');
 //const { resourceUsage } = require('process');
 //const { index } = require('./indexController');
 const db = require("../database/models");
+
 
 
 const userController = {
@@ -67,34 +68,47 @@ const userController = {
   },
 
   login : (req,res, next) => {
-    db.User.findOne({
-      where: {
-        email: req.body.email,
-      }
-    })
-    .then(function (users) {
-      if (!users) {
-        res.redirect ("/users/register")
-      }
-      else{
-        bcrypt.compare(req.body.password, users.password, function (err, result) {
-          if (result == true) {
-              res.redirect('/');
-          } else {
-           res.redirect('/users/login');
-          }
-        });
-      }
-     /* res.render('userProfile', {users});*/
-    }).catch(function (error) {
-      console.log(error),
-        res.send("Error de la página");
+    let errors = validationResult(req);
+    if(errors.isEmpty()){
 
-    });
 
-  },
+                              db.User.findOne({
+                                where: {
+                                  email: req.body.email,
+                                }
+                              })
+                              .then(function (users) 
+                              {
+                                                      if (!users) {
+                                                        res.render("login",{errors:[{msg:'Email no registrado'}]});
+                                                        /*res.redirect ("/users/register")*/
+                                                                  }
+                                else{    
 
-  edit: function (req,res,next) {
+/*LA CONTRASEÑA DE LOGUEADO NO ESTA HASHEADA*/
+                                          
+
+bcrypt.compare(req.body.password, users.password, function (err, result) {
+  if (result == true) {
+      res.redirect('/');
+  } else {
+   res.redirect('/users/login');
+  }
+});
+}
+                              /* res.render('userProfile', {users});*/
+                              }).catch(function (errors) {
+                                console.log(errors),
+                                  res.send("Error de la página");
+
+                              });
+                      }else{
+                        res.render("login",{errors:errors.errors});
+                        }
+                  
+},
+
+  edit: function(req,res,next) {
   db.User.findByPk (req.params.id)
     .then(function(resultado) {
         res.render ("edicionUsuario", {resultado:resultado})
