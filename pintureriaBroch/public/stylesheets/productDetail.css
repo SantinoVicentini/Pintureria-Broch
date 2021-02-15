@@ -218,69 +218,77 @@ padding-left:30px;
 
 
  /* Media Queries */
- @media(max-width:426px){
+ @media (min-width: 1024px)
+ { 
+  .footer-contenido{
+    flex-direction:row;
+  }
 
-footer .footer-container .footer-contenido {
+  .container{
+    width:auto;
+   }
+   .imageproduct{
+    flex-direction:column;
+    width:60%;
+   }
+
+
+
+ @media (min-width: 768px)and (max-width: 1023px)
+ { 
+  .footer-contenido{
+    flex-direction:row;
+  }
+
+  .container{
+    width:auto;
+   }
+   .imageproduct{
+    flex-direction:column;
+    width:auto;
+   }
+}
+ @media (min-width: 426px) and (max-width: 767px)
+ { 
+  .footer-contenido{
     flex-direction:column;
   }
 
-  main .principal .Producto {
-   width: 40%;
-   align-content: flex-start;
-   align-self: flex-start;
-   align-items: flex-start;
-   text-align: start;
-
- 
-  }
-
-  main .principal .Información {
-    width: 40%;
-    align-content: flex-end;
-    align-self: flex-end;
-    align-items: flex-end;
-    text-align: center;
-    font-size: small;
-
-  
+  .container{
+    flex-direction:column;
+    width:auto;
    }
-
-   main .principal .Información .Precio {
-     font-size: large;
+   .imageproduct{
+    flex-direction:column;
+    width:auto;
    }
-
-   main .principal .Acciones {
-    width: 100%;
-  
-   }
-
-   main .terciario .Productos_Interesar {
-    font-size: small;
-  }
-
-  main .secundario .Descripción-Producto {
-    font-size: medium;
-  }
 }
 
-@media(max-width:768px){
-
-  main .principal .Información {
-text-align: center;
-  }
 
 
-main .principal .Información .Retiro_Gratis {
-display: none;
-}
 
-  main .principal .Acciones {
-    width: 100%;
+
+
+
+ @media(max-width:42px){
+
   
-   }
-
-   main .terciario .Productos_Interesar {
-    font-size: large;
+    .container{
+      flex-direction:column;
+      width:auto;
+     }
+     .imageproduct{
+      flex-direction:column;
+      width:auto;
+     }
+      .footer-contenido{
+        flex-direction:column;
+      }
+      .PromoImportante{
+        display:none;
+      }
+      .infoproduct{
+        width: auto;
+      }
   }
 
-}

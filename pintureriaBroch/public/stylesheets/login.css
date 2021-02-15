@@ -125,6 +125,19 @@ button:hover{
 
  /*FOOTER*/
  
+ @media (min-width: 1024px){
+    .login-container{
+        background-color: white;
+    height: 70vh;
+    width: 40%;
+    padding: 15px 45px;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 6px;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+  }
+ }
  @media (min-width: 991px) and (max-width: 1023px) {
     .login-container{
         background-color: white;
@@ -142,12 +155,11 @@ button:hover{
  @media (min-width: 768px) and (max-width: 990px) { 
     .login-container{
         background-color:white;
-        height: 70vh;
+        height: 60vh;
         width: 40%;
         padding: 15px 45px;
         position: absolute;
         top: 25%;
-        left: 25%;
         border-radius: 6px;
         box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
   }}
@@ -173,11 +185,11 @@ button:hover{
     .login-container{
         background-color: white;
         height: 70vh;
-        width: 40%;
+        width: 70%;
         padding: 1px 6px;
         position: absolute;
         top: 25%;
-        left: 25%;
+        left: 15%;
         border-radius: 6px;
         box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
   }
