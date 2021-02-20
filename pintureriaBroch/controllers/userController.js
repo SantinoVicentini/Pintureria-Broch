@@ -1,7 +1,7 @@
 let bcrypt = require('bcryptjs');
 const { name } = require('ejs');
 const fs = require('fs');
-/*const saltRounds = 10;*/
+const saltRounds = 10;
 //const user = JSON.parse(fs.readFileSync(__dirname + '/../data/users.json'));
 let {check, validationResult,body}= require('express-validator');
 //const { resourceUsage } = require('process');
@@ -40,7 +40,7 @@ const userController = {
         avatar:req.body.avatar,
         }).then(function(data) {
          if (data) {
-         res.redirect('/');
+          res.redirect("/");
          }
        });
       });
@@ -68,10 +68,13 @@ const userController = {
   },
 
   login : (req,res, next) => {
+    
     let errors = validationResult(req);
     if(errors.isEmpty()){
 
-        db.User.findOne({
+
+                              db.User.findOne({
+      
                                 where: {
                                   email: req.body.email,
                                 }
@@ -83,26 +86,26 @@ const userController = {
                                                         /*res.redirect ("/users/register")*/
                                                                   }
                                 else{    
-
 /*LA CONTRASEÑA DE LOGUEADO NO ESTA HASHEADA*/                            
-                         bcrypt.compare(req.body.password, users.password, function (err, result) {
-                                          if (result == true) {
-                                              res.redirect('/');
-                                          } else {
-                                          res.redirect('/users/login');
-                                          }
-                                        });
-}
-                              /* res.render('userProfile', {users});*/
-                              }).catch(function (errors) {
-                                console.log(errors),
-                                  res.send("Error de la página");
+                  bcrypt.compare(req.body.password, users.password, function (err, result) {
+                    if (result == true) {
+                        res.redirect('/');
+                        console.log(result);
 
-                              });
-                      }else{
-                        res.render("login",{errors:errors.errors});
-                        }
-                  
+                    } else {
+                      res.render("login",{errors:[{msg:'Credenciales Invalidas'}]});
+                    }
+                  });
+                  }
+                  /* res.render('userProfile', {users});*/
+                  }).catch(function (errors) {
+                  console.log(errors),
+                  res.send("Error de la página");
+                  });
+                  }else{
+                  res.render("login",{errors:errors.errors});
+                  }
+
 },
 
   edit: function(req,res,next) {
