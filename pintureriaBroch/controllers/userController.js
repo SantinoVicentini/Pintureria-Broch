@@ -31,20 +31,25 @@ const userController = {
 
   register : (req, res, next) => {
 
-   bcrypt.hash(req.body.password, saltRounds, function (err,hash) {
-      db.User.create({
-        name: req.body.name,
-        username: req.body.username,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        avatar:req.body.avatar,
-        }).then(function(data) {
-         if (data) {
-          res.redirect("/");
-         }
-       });
-      });
+    let errors = validationResult(req);
+    if(errors.isEmpty()){
 
+                        bcrypt.hash(req.body.password, saltRounds, function (err,hash) {
+                            db.User.create({
+                              name: req.body.name,
+                              username: req.body.username,
+                              email: req.body.email,
+                              password: bcrypt.hashSync(req.body.password, 10),
+                              avatar:req.body.avatar,
+                              }).then(function(data) {
+                              if (data) {
+                                res.redirect("/");
+                              }
+                            });
+                            });
+                          }else{
+                            return res.render("register",{errors:errors.errors});
+                          }
 
    /* db.User.create(req.body),
     res.send("Bienvenido a la familia de Pinturería Broch")

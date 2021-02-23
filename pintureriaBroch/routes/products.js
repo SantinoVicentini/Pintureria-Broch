@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const productController = require('../controllers/productController')
+const productController = require('../controllers/productController');
+let {check, validationResult,body}= require('express-validator');
 //let multer = require('multer');
 //let path = require ('path');
 //let authMiddleware = require ('../middlewares/authMiddleware');
@@ -21,7 +22,8 @@ router.get('/',productController.list);
 
 // CREACIÓN 
 router.get('/create',productController.create);
-router.post('/create',productController.save);
+router.post('/create',[check('name').isLength({min:5}).withMessage("Nombre muy corto"),
+check('description').isLength({min:20}).withMessage("Descripcion muy corta")],productController.save);
 
 // DETALLE 
 router.get('/:id',productController.detail);

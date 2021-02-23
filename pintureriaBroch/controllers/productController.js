@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { sequelize } = require('../database/models');
 const db = require("../database/models");
-
+let {check, validationResult,body}= require('express-validator');
 
 
 const productController = {
@@ -23,9 +23,16 @@ const productController = {
     },
 
     save: function (req,res,next) {
+        let errors = validationResult(req);
+    if(errors.isEmpty()){
+        
         db.Product.create(req.body);
         console.log(req.body);
         res.send("has registrado el producto");
+
+    }else{
+        return res.render("cargaProductos",{errors:errors.errors});
+    }
     },
 
     detail: function (req,res,next) {

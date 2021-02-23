@@ -5,7 +5,7 @@ let multer = require('multer');
 let path = require ('path');
 let {check, validationResult,body}= require('express-validator');
 let guestMiddleware = require ('../middlewares/guestMiddleware');
-let authMiddleware = require ('../middlewares/authMiddleware');
+
 let fs = require ('fs');
 
 
@@ -13,9 +13,28 @@ let fs = require ('fs');
 router.get('/', userController.index); 
 router.get('/userList', userController.index); 
 router.get('/login',userController.showLoginForm);
-router.post('/login',userController.login);
+router.post('/login',[check('email').isEmail().withMessage("Ingrese un email correcto")],userController.login);
 router.get('/register',userController.showRegisterForm);
-router.post('/register',userController.register);
+router.post('/register',[
+  check('name').isLength({min:5}).withMessage("Nombre muy corto"),
+  check('username').isLength({min:5}).withMessage("Nombre de usuario muy corto"),
+  check('email').isEmail().withMessage("Ingrese un email correcto"),
+  check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres")],userController.register);
+  /*body('email').custom(function(value){
+    db.User.findOne({
+      
+      where: {
+        email: req.body.email,
+      }
+    })
+    .then(function (users) 
+    {
+                            if (req.body.email == value) {
+                              return false;
+                                               }
+                          });
+                
+                        }).withMessage("Usuario ya existente")],*/
 router.get('/:id',userController.showProfile);
 router.get('/edit/:id',userController.edit);
 router.post('/edit/:id',userController.update);

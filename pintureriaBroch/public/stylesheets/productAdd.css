@@ -87,7 +87,9 @@ button:hover{
     cursor: pointer;
     margin: 12px 0;
 }
-
+.errores{
+    color: red;
+}
  /*FOOTER*/
  
 
