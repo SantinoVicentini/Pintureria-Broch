@@ -126,9 +126,10 @@ button:hover{
     cursor: pointer;
     margin: 12px 0;
 }
-.errores{
+.errores li{
     color: red;
 }
+
  /*FOOTER*/
  
 /*ver querys de register*/
