@@ -8,6 +8,19 @@ let guestMiddleware = require ('../middlewares/guestMiddleware');
 
 let fs = require ('fs');
 
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'tmp/my-uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+  }
+})
+ 
+var upload = multer({ storage: storage })
+
+
+
 
 // empieza CRUD base de datos
 router.get('/', userController.index); 
@@ -16,10 +29,10 @@ router.get('/login',userController.showLoginForm);
 router.post('/login',[check('email').isEmail().withMessage("Ingrese un email correcto")],userController.login);
 router.get('/register',userController.showRegisterForm);
 router.post('/register',[
-  check('name').isLength({min:5}).withMessage("Nombre muy corto"),
-  check('username').isLength({min:5}).withMessage("Nombre de usuario muy corto"),
+  check('name').isLength().withMessage("Nombre muy corto"),
+  check('username').isLength().withMessage("Nombre de usuario muy corto"),
   check('email').isEmail().withMessage("Ingrese un email correcto"),
-  check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres")],userController.register);
+  check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres")],upload.any(),userController.register);
   /*body('email').custom(function(value){
     db.User.findOne({
       

@@ -26,8 +26,18 @@ const productController = {
         let errors = validationResult(req);
     if(errors.isEmpty()){
         
-        db.Product.create(req.body);
-        console.log(req.body);
+        db.Product.create({
+            name:req.body.name,
+            description:req.body.description,
+            price:req.body.price,
+            image:req.files[0].filename,
+            category_id:req.body.category_id,
+            color_id:req.body.color_id,
+            trademark_id:req.body.trademark_id
+        }
+        
+        );
+        {console.log(req.files)}
         res.send("has registrado el producto");
 
     }else{
@@ -52,11 +62,17 @@ const productController = {
     },
 
     update: function (req,res,next) {
-        db.Product.update (req.body, {
+        db.Product.update ({ name:req.body.name,
+            description:req.body.description,
+            price:req.body.price,
+            image:req.files[0].filename,
+            category_id:req.body.category_id,
+            color_id:req.body.color_id,
+            trademark_id:req.body.trademark_id}, {
             where: {
                 id: req.params.id,
             }
-        });
+         } );
         res.redirect("/products/" + req.params.id);
     },
     delete: function (req,res,next) {
