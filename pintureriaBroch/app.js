@@ -28,7 +28,6 @@ app.use(methodOverride("_method"));
 app.use(session({secret:"secreto"}));
 app.use(recordameMiddleware);
 
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

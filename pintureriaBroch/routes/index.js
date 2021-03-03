@@ -10,5 +10,12 @@ router.get('/cart', indexController.cart); /* GET cart page. */
 router.get('/admin', indexController.admin); /* GET admin page. */
 router.get('/productAdd', indexController.productAdd); /* GET admin product page. */
 router.get('/exteriores/:id', indexController.id);
+router.get('/check',function(req,res,next){
+  if ( req.session.userLogged == undefined){
+    res.send("no estás logueado");
+  }else{
+    res.send("estas logueado con " + req.session.userLogged);
+  }
+});
 
 module.exports = router;

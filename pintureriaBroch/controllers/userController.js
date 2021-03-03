@@ -95,13 +95,17 @@ const userController = {
                   bcrypt.compare(req.body.password, users.password, function (err, result) {
                     if (result == true) {
                         res.redirect('/');
-                        console.log(result);
-
                     } else {
                       res.render("login",{errors:[{msg:'Credenciales Invalidas'}]});
                     }
                   });
                   }
+                  req.session.userLogged = req.body.email;
+                        console.log(req.session.email);
+
+                        if(req.body.recordame != undefined){
+                          res.cookie('recordame', req.body.email, {maxAge:60000*60*24*7*365});
+                      };
                   /* res.render('userProfile', {users});*/
                   }).catch(function (errors) {
                   console.log(errors),
@@ -145,6 +149,7 @@ delete: function (req,res,next) {
 
   res.redirect("/users/register");
 },
+
 
   // FIN CRUD BASE DE DATOS
 /* 

@@ -91,11 +91,4 @@ router.put('/edit', function(req, res, next) {
   res.send('FUI POR PUT');
 });*/
 /* GET users listing. */
-router.get('/check',function(req,res,next){
-  if ( req.session.userLogged == undefined){
-    res.send("no estás logueado");
-  }else{
-    res.send("estas logueado con " + req.session.userLogged.email);
-  }
-});
 module.exports = router;
