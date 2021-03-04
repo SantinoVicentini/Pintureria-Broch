@@ -17,7 +17,7 @@ module.exports = function (sequelize, dataTypes) {
     }
     
        let Categoria = sequelize.define(alias,cols,config);
-/*
+
        Categoria.associate = function(models) {
         Categoria.hasMany(models.Product,{
             as: "productos",
@@ -25,7 +25,6 @@ module.exports = function (sequelize, dataTypes) {
         })
     }
 
-*/
    
     return Categoria;
    

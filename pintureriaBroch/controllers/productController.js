@@ -16,14 +16,14 @@ const productController = {
 
 
     create: function (req,res,next) {
-       /* db.product.findAll()
-        .then (function (productos) {
-            return res.render ('cargaProductos', {productos: productos})
-        })*/return res.render ('cargaProductos');
+       db.Product.findAll()
+        .then (function (product) {
+            return res.render('cargaProductos', {product: product});/*,categoria: category_id, color_id : color,  trademark_id: trademark}*/
+        })/*return res.render ('cargaProductos',{product:product});*/
     },
 
     save: function (req,res,next) {
-        let errors = validationResult(req);
+         let errors = validationResult(req);
     if(errors.isEmpty()){
         
         db.Product.create({
