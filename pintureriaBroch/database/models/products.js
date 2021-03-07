@@ -57,7 +57,7 @@ module.exports = function (sequelize, DataTypes) {
             foreignKey:"idcolor"
         });
 
-       Product.HasMany(models.Marca,{
+       Product.hasMany(models.Marca,{
             as: "trademark",
             foreignKey:"idtrademark"
         });

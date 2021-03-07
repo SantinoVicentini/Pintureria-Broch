@@ -58,7 +58,7 @@ module.exports = function (sequelize, DataTypes) {
     };
 
 
-    let user = sequelize.define(alias, cols, config);
+    let User = sequelize.define(alias, cols, config);
     
     User.associate = function(models) {
         User.hasMany(models.Cart, {
@@ -67,5 +67,5 @@ module.exports = function (sequelize, DataTypes) {
         });
     }
 
-    return user;
+    return User;
 }
