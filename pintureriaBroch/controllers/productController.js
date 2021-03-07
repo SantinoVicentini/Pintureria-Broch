@@ -35,13 +35,13 @@ const productController = {
             description:req.body.description,
             price:req.body.price,
             image:req.files[0].filename,
-            idcategory:req.body.idcategory,
+            idcategory:req.body.categorias,
             idcolor:req.body.idcolor,
             idtrademark:req.body.idtrademark
         }
         
         );
-        {console.log(req.files)}
+        {console.log(req.body.idcategory)}
         res.send("has registrado el producto");
 
     }else{
