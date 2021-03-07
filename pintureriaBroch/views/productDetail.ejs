@@ -60,13 +60,21 @@
                                             
                                           </div>
                                         </div>
-                                        <div class="buyinfo">
-                                          <i class="fas fa-shopping-cart"></i>
-                                            <div class="textinfo">
-                                              <h3>Agregar al carrito</h3>
-                                              
+                                          
+                                            
+                                             
+                                              <div id="cart-options">
+                                                <form action="/cart/addProduct/<%= product.id %>" method="POST">
+                                                 
+                                                  <button type="submit" class="btn">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                    Agregar al carrito
+
+                                                  </button>
+                                                </form>
                                             </div>
-                                        </div>
+                                          
+                                        
                                         </div>
                               </div>
 
@@ -113,19 +121,7 @@
         </section> 
         <br>
 
-        <div class="video">
-          <iframe width="100%" height="468" src="https://www.youtube.com/embed/NFnQesw9E7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
-        </div>
-
-        </div>
-
-       <div class="terciario">
-
-        <section class="PromoImportante"> 
-        <a href="https://www.cybermonday.com.ar/"><p><img src="/images/promoImportante.jpg" alt="PromoImportante"></p></a>
-        </section>
-
-      </div>
+        
 
 
       </main>

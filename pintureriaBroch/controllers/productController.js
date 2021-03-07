@@ -41,7 +41,7 @@ const productController = {
         }
         
         );
-        {console.log(req.body.idcategory)}
+        {console.log(req.body.categorias)}
         res.send("has registrado el producto");
 
     }else{

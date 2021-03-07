@@ -1,9 +1,6 @@
 const path = require('path');
 const fs = require ('fs');
 
-let datosJson = fs.readFileSync(path.resolve(__dirname,"../data/exteriores.json"),"utf-8");
-let datosExteriores = JSON.parse(datosJson);
-
 const indexController = {
     index: function(req, res, next) {
         if ( req.session.userLogged != undefined){
