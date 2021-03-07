@@ -15,7 +15,9 @@ module.exports = function (sequelize, DataTypes) {
         status: {
             type: DataTypes.FLOAT,
             allowNull: false
-        }}
+        }
+        
+    }
 
         let config = {
             tablename:"cart",
@@ -23,15 +25,22 @@ module.exports = function (sequelize, DataTypes) {
         };
         
         let Cart = sequelize.define(alias,cols,config);
-    /*
-           Cart.associate = function(models) {
-            Categoria.hasMany(models.Product,{
-                as: "productos",
-                foreignKey:"category_id"
-            })
-        }*/
+
+        Cart.associate = function(models) {
+            Cart.belongsToMany(models.Products, {
+                as: "products",
+                through: "cart_product",
+                foreignKey: "cart_id",
+                otherKey: "product_id",
+            });
+
+
+        Cart.belongsTo(models.User, {
+            as: "users",
+            foreignKey: "user_id"
+        });
     
-       
+    }
         return Cart;
        
-       }
+    }

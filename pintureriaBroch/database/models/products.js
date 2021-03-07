@@ -25,15 +25,15 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        category_id: {
+        idtrademark: {
             type: DataTypes.INTEGER,
             allowNull: false
         }, 
-        color_id: {
+        idcategory: {
             type: DataTypes.INTEGER,
             allowNull: false
         }, 
-        trademark_id: {
+        idcolor: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
@@ -50,16 +50,16 @@ module.exports = function (sequelize, DataTypes) {
     Product.associate = function(models) {
         Product.belongsTo(models.Categoria,{
             as: "categoria",
-            foreignKey:"category_id"
+            foreignKey:"idcategory"
         });
-        Product.belongsTo(models.Color,{
+        Product.hasMany(models.Color,{
             as: "color",
-            foreignKey:"color_id"
+            foreignKey:"idcolor"
         });
 
-       Product.belongsTo(models.Marca,{
+       Product.HasMany(models.Marca,{
             as: "trademark",
-            foreignKey:"trademark_id"
+            foreignKey:"idtrademark"
         });
     
     }

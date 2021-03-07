@@ -30,7 +30,22 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
 
         },
-        avatar: {
+        address: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        
+        },
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        
+        },
+        province: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        
+        },
+        country: {
             type: DataTypes.STRING,
             allowNull: false,
         
@@ -44,7 +59,13 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let user = sequelize.define(alias, cols, config);
-
+    
+    User.associate = function(models) {
+        User.hasMany(models.Cart, {
+            as: "cart",
+            foreignKey: "user_id"
+        });
+    }
 
     return user;
 }
