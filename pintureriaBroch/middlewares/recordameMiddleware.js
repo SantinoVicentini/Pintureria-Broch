@@ -11,7 +11,7 @@ function recordameMiddleware(req,res,next){
                     email: req.cookies.recordame
                 }
             }).then(users => {
-                req.session.uerLogged= users
+                req.session.userLogged= users;
             });
     }
 

@@ -103,11 +103,10 @@ const userController = {
                     }
                   });
                   }
-                  req.session.userLogged = req.body.email;
-                        console.log(req.session.email);
+                  req.session.userLogged = users;
 
                         if(req.body.recordame != undefined){
-                          res.cookie('recordame', req.body.email, {maxAge:60000*60*24*7*365});
+                          res.cookie('recordame', req.session.userLogged.email, {maxAge:60000*60*24*7});
                       };
                   /* res.render('userProfile', {users});*/
                   }).catch(function (errors) {
