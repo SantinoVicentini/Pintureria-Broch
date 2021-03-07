@@ -48,8 +48,8 @@ module.exports = function (sequelize, DataTypes) {
     let Product = sequelize.define(alias,cols,config);
 
     Product.associate = function(models) {
-        Product.belongsTo(models.Categoria,{
-            as: "categoria",
+        Product.belongsTo(models.Category,{
+            as: "category",
             foreignKey:"idcategory"
         });
         Product.hasMany(models.Color,{

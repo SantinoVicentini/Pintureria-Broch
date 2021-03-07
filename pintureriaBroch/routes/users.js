@@ -32,7 +32,11 @@ router.post('/register',[
   check('name').isLength().withMessage("Nombre muy corto"),
   check('username').isLength().withMessage("Nombre de usuario muy corto"),
   check('email').isEmail().withMessage("Ingrese un email correcto"),
-  check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres")],upload.any(),userController.register);
+  check('password').isLength({min:8}).withMessage("La clave debe ser mayor a 8 caracteres"),
+  check('address').isLength().withMessage("Dirección incompleta"),
+  check('location').isLength().withMessage("Localidad incompleta"),
+  check('country').isLength().withMessage("País incompleto"),
+],upload.any(),userController.register);
   /*body('email').custom(function(value){
     db.User.findOne({
       

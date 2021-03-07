@@ -14,31 +14,35 @@
             <form action="/users/edit/<%= resultado.id %>" method="POST" class="reservation">
                 
                     <h1>Editar tu usuario</h1>
+
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="id" id="id" value="<%= resultado.id %>">
+                        <input type="text" name="name" id="name" value="<%= resultado.name %>"> "nombre"
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="name" id="name" value="<%= resultado.name %>">
-                    </div>
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="username" id="username" value="<%= resultado.username %>" >
+                        <input type="text" name="username" id="username" value="<%= resultado.username %>" > "nombre de usuario"
                     </div>
                         <div class="text-box">
                             <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="email" id="email" value="<%= resultado.email %>">
+                        <input type="password" name="email" id="email" value="<%= resultado.email %>"> "email"
                     </div>
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                    <input type="text" name="password" id="password"  value="<%= resultado.password %>">
+                    <input type="text" name="address" id="address"  value="<%= resultado.address %>"> "direccion"
                 </div>
-                     <div class="text-box">
-                            <i class="fas fa-angle-double-right"></i>
-                        <input type="file" name="avatar" id=avatar" value="<%= resultado.avatar %>">
-                   
-                    </div>
+                <div class="text-box">
+                    <i class="fas fa-angle-double-right"></i>
+                <input type="text" name="location" id="location"  value="<%= resultado.location %>"> "localidad"
+            </div>
+            <div class="text-box">
+                <i class="fas fa-angle-double-right"></i>
+            <input type="text" name="province" id="province"  value="<%= resultado.province %>"> "provincia"
+        </div>   
+        <div class="text-box">
+            <i class="fas fa-angle-double-right"></i>
+        <input type="text" name="country" id="country"  value="<%= resultado.country %> " > "pais"
+    </div>   
 
                     <div class="btn">
                     <button type="submit">Editar</button>

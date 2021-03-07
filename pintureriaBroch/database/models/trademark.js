@@ -13,8 +13,11 @@ module.exports = function (sequelize, dataTypes) {
     }
     let config = {
         tablename:"trademark",
-        timestamps: false
+        timestamps: false,
+        freezeTableName: true,
     }
+   
+
     
        let Marca = sequelize.define(alias,cols,config);
 

@@ -40,7 +40,10 @@ const userController = {
                               username: req.body.username,
                               email: req.body.email,
                               password: bcrypt.hashSync(req.body.password, 10),
-                              avatar:req.body.avatar,
+                              address: req.body.address,
+                              location: req.body.location,
+                              province: req.body.province,
+                              country: req.body.country,
                               }).then(function(data) {
                               if (data) {
                                 res.redirect("/");
@@ -131,7 +134,10 @@ update: function (req,res,next) {
         username: req.body.username,
         email: req.body.email,
         password: req.body.password,
-        avatar: req.body.avatar,
+        address: req.body.address,
+        location: req.body.location,
+        province: req.body.province,
+        country: req.body.country,
     }, {
         where: {
             id: req.params.id,

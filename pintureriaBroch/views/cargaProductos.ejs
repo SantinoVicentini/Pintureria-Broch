@@ -39,19 +39,25 @@
                             <i class="fas fa-angle-double-right"></i>
                         <input type="file" name="image" id="image" placeholder="Imagen" >
                     </div>
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="category_id" id="category_id" placeholder="Categoria del producto">
+
+
+                    <div>
+                        <label for=""> Categoria </label>
+                        <select name="Cate">
+                        <% for (let h = 0; h < categorias.length; h++) { %>
+                            <option value= "<%= categorias[h].id%>"> <%= categorias[h].name %> </option>
+                            <% }  %>
+                        </select>
                     </div>
 
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="color_id" id="color_id" placeholder="Color del producto">
+                        <input type="text" name="idcolor" id="idcolor" placeholder="Color del producto">
                     </div>
 
                     <div class="text-box">
                         <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="trademark_id" id="trademark_id" placeholder="Marca del producto">
+                        <input type="text" name="idtrademark" id="idtrademark" placeholder="Marca del producto">
                     </div>
             
                     <div class="btn">

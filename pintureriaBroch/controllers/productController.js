@@ -16,10 +16,14 @@ const productController = {
 
 
     create: function (req,res,next) {
-       db.Product.findAll()
-        .then (function (product) {
-            return res.render('cargaProductos', {product: product});/*,categoria: category_id, color_id : color,  trademark_id: trademark}*/
-        })/*return res.render ('cargaProductos',{product:product});*/
+   // db.Product.findAll()
+     //  .then (function (products) {
+        db.Category.findAll()
+      .then(function(categorias) {
+
+                return res.render('cargaProductos', {categorias:categorias});/*,categoria: category_id, color_id : color,  trademark_id: trademark}*/
+            })
+      // })/*return res.render ('cargaProductos',{product:product});*/
     },
 
     save: function (req,res,next) {
@@ -31,9 +35,9 @@ const productController = {
             description:req.body.description,
             price:req.body.price,
             image:req.files[0].filename,
-            category_id:req.body.category_id,
-            color_id:req.body.color_id,
-            trademark_id:req.body.trademark_id
+            idcategory:req.body.idcategory,
+            idcolor:req.body.idcolor,
+            idtrademark:req.body.idtrademark
         }
         
         );
@@ -66,9 +70,9 @@ const productController = {
             description:req.body.description,
             price:req.body.price,
             image:req.files[0].filename,
-            category_id:req.body.category_id,
-            color_id:req.body.color_id,
-            trademark_id:req.body.trademark_id}, {
+            idcategory:req.body.idcategory,
+            idcolor:req.body.idcolor,
+            idtrademark:req.body.idtrademark,
             where: {
                 id: req.params.id,
             }

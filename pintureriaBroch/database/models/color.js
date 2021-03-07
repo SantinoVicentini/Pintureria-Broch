@@ -13,7 +13,9 @@ module.exports = function (sequelize, dataTypes) {
  }
  let config = {
      tablename:"color",
-     timestamps: false
+     timestamps: false,
+     freezeTableName: true,
+
  }
  
     let Color = sequelize.define(alias,cols,config);

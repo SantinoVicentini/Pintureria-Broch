@@ -21,7 +21,7 @@ USE `pintureriabroch` ;
 -- Table `pintureriabroch`.`user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`user` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `username` VARCHAR(45) NULL DEFAULT NULL,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   `email` VARCHAR(60) NULL DEFAULT NULL,
@@ -39,7 +39,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `pintureriabroch`.`cart`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`cart` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `status` VARCHAR(45) NOT NULL,
   `total` VARCHAR(45) NOT NULL,
   `user_id` INT(11) NOT NULL,
@@ -57,7 +57,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `pintureriabroch`.`category`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`category` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -68,7 +68,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `pintureriabroch`.`color`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`color` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -79,7 +79,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `pintureriabroch`.`trademark`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`trademark` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -90,7 +90,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `pintureriabroch`.`product`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`product` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `description` LONGTEXT NOT NULL,
   `price` FLOAT NOT NULL,
@@ -122,7 +122,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `pintureriabroch`.`cart_product`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`cart_product` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT NOT NULL,
   `carrito_id` INT(11) NULL DEFAULT NULL,
   `product_id` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
