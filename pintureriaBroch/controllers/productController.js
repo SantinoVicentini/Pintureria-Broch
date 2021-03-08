@@ -16,14 +16,22 @@ const productController = {
 
 
     create: function (req,res,next) {
-   // db.Product.findAll()
-     //  .then (function (products) {
-        db.Category.findAll()
-      .then(function(categorias) {
-
-                return res.render('cargaProductos', {categorias:categorias});/*,categoria: category_id, color_id : color,  trademark_id: trademark}*/
+    db.Product.findAll()
+    .then (function (products) {
+    db.Category.findAll()
+    .then(function(categorias) {
+    db.Trademark.findAll()
+       .then(function(marcas) {
+        db.Color.findAll()
+        .then(function(colores) {
+                return res.render('cargaProductos', {products:products, categorias:categorias, marcas:marcas, colores:colores});/*,categoria: category_id, color_id : color,  trademark_id: trademark}*/
             })
-      // })/*return res.render ('cargaProductos',{product:product});*/
+        })
+       })
+    }).catch(function (error){
+        console.log(error),
+        res.send("Error de la página")});
+        /*return res.render ('cargaProductos',{product:product});*/
     },
 
     save: function (req,res,next) {
@@ -36,8 +44,8 @@ const productController = {
             price:req.body.price,
             image:req.files[0].filename,
             idcategory:req.body.categorias,
-            idcolor:req.body.idcolor,
-            idtrademark:req.body.idtrademark
+            idcolor:req.body.colores,
+            idtrademark:req.body.marcas,
         }
         
         );
@@ -60,9 +68,18 @@ const productController = {
     edit: function (req,res,next) {
         db.Product.findByPk (req.params.id)
         .then(function(product) {
-            res.render ("edicionProducto", {product:product})
+            db.Category.findByPk()
+            .then(function(categorias) {
+            db.Trademark.findByPk()
+               .then(function(marcas) {
+                db.Color.findByPk()
+                .then(function(colores) {
+                    
+            res.render ("edicionProducto", {product:product, categorias:categorias, marcas:marcas, colores:colores})
         })
-
+    })
+})
+})
     },
 
     update: function (req,res,next) {
@@ -70,9 +87,9 @@ const productController = {
             description:req.body.description,
             price:req.body.price,
             image:req.files[0].filename,
-            idcategory:req.body.idcategory,
-            idcolor:req.body.idcolor,
-            idtrademark:req.body.idtrademark,
+            idcategory:req.body.categorias,
+            idcolor:req.body.colores,
+            idtrademark:req.body.marcas,
             where: {
                 id: req.params.id,
             }

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = "Marca";
+    let alias = "Trademark";
    
     let cols = {
         id:{
@@ -19,15 +19,15 @@ module.exports = function (sequelize, dataTypes) {
    
 
     
-       let Marca = sequelize.define(alias,cols,config);
+       let Trademark = sequelize.define(alias,cols,config);
 
-      Marca.associate = function(models) {
-        Marca.hasMany(models.Product,{
-            as: "productos",
+      Trademark.associate = function(models) {
+        Trademark.hasMany(models.Product,{
+            as: "marcas_productos",
             foreignKey:"idtrademark"
         })
     }
    
-    return Marca;
+    return Trademark;
    
    }

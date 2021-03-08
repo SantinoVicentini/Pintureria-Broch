@@ -50,14 +50,21 @@
                         </select>
                     </div>
 
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="idcolor" id="idcolor" placeholder="Color del producto">
+                    <div>
+                        <label for="idcolor"> Color </label>
+                        <select name="colores">
+                        <% for (let h = 0; h < colores.length; h++) { %>
+                            <option value= "<%= colores[h].id%>"> <%= colores[h].name %> </option>
+                            <% }  %>
+                        </select>
                     </div>
-
-                    <div class="text-box">
-                        <i class="fas fa-angle-double-right"></i>
-                        <input type="text" name="idtrademark" id="idtrademark" placeholder="Marca del producto">
+                    <div>
+                        <label for="idtrademark"> Marca </label>
+                        <select name="marcas">
+                        <% for (let h = 0; h < marcas.length; h++) { %>
+                            <option value= "<%= marcas[h].id%>"> <%= marcas[h].name %> </option>
+                            <% }  %>
+                        </select>
                     </div>
             
                     <div class="btn">

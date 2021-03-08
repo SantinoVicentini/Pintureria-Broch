@@ -35,7 +35,7 @@ module.exports = function (sequelize, DataTypes) {
         }, 
         idcolor: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
         }
     };
 
@@ -49,16 +49,16 @@ module.exports = function (sequelize, DataTypes) {
 
     Product.associate = function(models) {
         Product.belongsTo(models.Category,{
-            as: "category",
+            as: "categoriasProductos",
             foreignKey:"idcategory"
         });
-        Product.hasMany(models.Color,{
-            as: "color",
+        Product.belongsTo(models.Color,{
+            as: "coloresProductos",
             foreignKey:"idcolor"
         });
 
-       Product.hasMany(models.Marca,{
-            as: "trademark",
+       Product.belongsTo(models.Trademark,{
+            as: "marcasProductos",
             foreignKey:"idtrademark"
         });
     
