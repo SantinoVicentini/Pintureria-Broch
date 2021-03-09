@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         status: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.INT,
             allowNull: false
         }
         
@@ -21,7 +21,8 @@ module.exports = function (sequelize, DataTypes) {
 
         let config = {
             tablename:"cart",
-            timestamps: false
+            timestamps: false,
+            freezeTableName: true
         };
         
         let Cart = sequelize.define(alias,cols,config);

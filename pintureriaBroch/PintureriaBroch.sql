@@ -40,8 +40,8 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pintureriabroch`.`cart` (
   `id` INT(11) AUTO_INCREMENT NOT NULL,
-  `status` VARCHAR(45) NOT NULL,
-  `total` VARCHAR(45) NOT NULL,
+  `status` INT(11) NOT NULL,
+  `total` FLOAT NOT NULL,
   `user_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `user`

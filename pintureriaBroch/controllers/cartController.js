@@ -7,47 +7,53 @@ const { info } = require('console');
 
 const cartController = {
 
-addProduct:function(req, res,next) {
-console.log(req.params.id);
+addProduct:function(req, res,next) {   
 res.send("Llego algo")
-            /*Ponemos el id del usuario que quiere agregar un prodcuto al carrito*/
-             var userid = req.session.userLogged.id;
-
-             /*Si el carrito esta activo. Esto es para una persona que ya se le creo un carrito*/
-
-
-            db.Cart.findOne({
-                where:
-                {
-                    user_id: userid,
-                    status:"activo"
+            /*Buscamos el id del usuario*/
+            db.User.findOne({
+                where: {
+                    email: req.session.userLogged.email
                 }
-            }).then(resp=>{         
-                 if(resp){   /*ALGO CON CART PRODUCT*/ }
-                 else{
-                    /*creamos el carrito*/
-                 }
-                 db.Cart.create(
-                    {
-                        user_id : userId,
-                        status: "activo"
-                    })
-                .then(resp => {
-                    /* Agregamos el producto al nuevo carrito creado*/
+            }).then(function(result){
+                req.session.userid = result.id;
+                db.Cart.findOne({
+                    where:{
+                        user_id: req.session.userid,
+                        status:1
+                    }
+                }).then((result)=>{
+                    // Si el carrito está creado, agrega el producto
+                    if(result != null){
+                        console.log(result);
+                        
+                    //Si no es asi, crealo el carrito y tenemos que agregar el producto al carrito
+                    } else {
 
-                    req.session.carrito_id = response.id;
-                    db.CartProduct.create(
-                        {
-                            carrito_id : resp.id,
-                            producto_id : req.body,/*el id del producto*/
-                        })
-                    .then((data) => {
-                        return res.json(data)
-                    })
-                })      
-            })
-            },
-deleteProductCart:function(req, res,next) {
+                    console.log('Estas creando el carrito!');
+                        db.Cart.create({
+                            user_id: req.session.userid,
+                            status: 1,
+                            total: 0
+                        }).then(function(result){
+                            db.Cart_Product.create({
+                                cart_id: result.id,
+                                product_id: req.params.id
+                            })
+                            db.Product.findByPk(req.params.id)
+                            .then(function(product){
+                                db.Cart.update({total: product.price}, {
+                                    where:{
+                                      user_id: req.session.userid
+                                    }
+                                })
+                            })
+                            return res.redirect("/products");
+                        }) 
+                    }
+                })
+            })  
+        },
+deleteProductCart:function(req, res,next) {res.send( "delete")
 },
 viewCart : function(req, res, next){
     res.render('cart');
