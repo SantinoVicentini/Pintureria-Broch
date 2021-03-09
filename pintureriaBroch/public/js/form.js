@@ -5,10 +5,9 @@ window.addEventListener("load", function () {
     formulario.addEventListener("submit", function(e){
         let errores = [];
 
-        console.log("Funciona el JS")
         let campoNombre = document.querySelector("input.name");
         if (campoNombre.value == "") {
-        errores.push("El campo 'Nombre' tiene que estar completo");
+            errores.push("El campo 'Nombre' tiene que estar completo");
         } else if (campoNombre.value.length < 3) {
             errores.push("El Nombre tiene que tener mínimamente 3 caracteres");
 
@@ -35,10 +34,6 @@ window.addEventListener("load", function () {
 
         }
 
-        let campoAvatar = document.querySelector("input.avatar");
-        if (campoAvatar.value == "") {
-            errores.push("Debes ingresar una imagen para tu Avatar");
-        } 
 
         if (errores.length > 0) {
             e.preventDefault();
@@ -48,7 +43,8 @@ window.addEventListener("load", function () {
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>"+ errores[i] + "</li>"
             }
-        }
+        
 
-    })
+    }
+})
 });

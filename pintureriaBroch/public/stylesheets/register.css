@@ -127,7 +127,10 @@ button:hover{
     margin: 12px 0;
 }
 .errores li{
+    background-color: whitesmoke;
+    padding: 5px;
     color: red;
+
 }
 
  /*FOOTER*/
