@@ -17,5 +17,5 @@ router.get('/check',function(req,res,next){
     res.send("estas logueado con " + req.session.userLogged.email);
   }
 });
-
+router.get('/search', indexController.search);
 module.exports = router;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+
+</head>
+<body>
+ <!-- Header -->
+ <%- include('partials/header') %>
+ <!-- /Header -->
+
+
+<div class="result_search">
+<aside class="search_sidebar">
+            <div class="termino_search">
+                            Filtrar Por
+            </div>
+            <div class="cantidad_search">
+                                        tantos resultados
+            </div>
+
+</aside>
+<section class="search_results">
+<div class="estosson">
+    Estos son los resultados para :
+</div>
+<div class="lotarticles">
+
+<%for(let i = 0; i < product.length; i++) { %>
+<div class="articulos">
+    
+    <div class="info-articulos">
+            <div class="imagen-articulo">
+                <img src="/./images/interior/albalatex_interior_10.jpg" style="height: 200px;">
+            </div>
+            <hr>
+            <div class="infoart">
+                <div class="infoart-name">
+                    <a href="/products/<%=product[i].id%>">
+                        <%=product[i].name%></a>
+
+                </div>
+                <hr>
+                <div class="infoart-price">
+                    <div class="preciodelista">
+                        Precio de lista $ (<%=(product[i].price)%> * 3 )
+                    </div>
+                   
+
+                    <div class="preciooferta">
+                        Oferta : $ <%=product[i].price%>
+                    </div>
+
+                </div>
+                
+            
+                
+            </div>
+    </div>
+    
+       
+</div>
+<% } %>  
+</div>       
+</section>
+</div>
+<!-- footer -->
+<%- include('partials/footer') %>
+<!-- /footer -->
+
+
+</body>
+</html>
