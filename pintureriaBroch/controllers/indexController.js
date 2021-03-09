@@ -17,9 +17,6 @@ const indexController = {
     productDetail: function(req, res, next) {
         res.render('productDetail');
     },
-    cart: function(req, res, next) {
-        res.render('cart');
-    },
     admin: function(req, res, next) {
         res.render('admin');
     },
@@ -42,61 +39,21 @@ const indexController = {
 },
 search: function(req, res, next) {
     let term = req.query;
-
-    db.Product.findAll(
-        
-        {[Op.or]: [
-        {
-          name: {
-            [Op.like]: '%' +term +'%'
-          }
-        },
-        {
-          description: {
-            [Op.like]:'%' +term +'%'
-          }
-        }]
-    }
-       /* {[Op.like]:'%' +term +'%'}*/
-       
-    )
+    let termi = Object.values(term);
+    let termino = termi.toString();
+    db.Product.findAll({
+        /*where:{name:{[Op.like]: '%' +termino +'%'}}*/
+        where: {
+            [Op.or]: [
+                {name:{[Op.like]: '%' +termino +'%'}},
+                {description:{[Op.like]: '%' +termino +'%'}}
+            ]
+        }
+    })
     .then (function (product){
         res.render('buscarproductos',{product})})
     .catch(err => console.log(err)); 
-},
-
-    pinturerias: function (req, res, next) {
-        db.Product.findAll({where:{idcategory: 2}
-        }).then(function(products){
-        return res.render("buscarproductos", {products});
-    })
-},
-    accesorios: function (req, res, next) {
-        db.Product.findAll({where:{idcategory: 3}
-        }).then(function(products){
-            return res.render("buscarproductos", {products});
-        }).catch(function(error){
-            console.log(error);
-        })
-    },
-    revestimientos: function (req, res, next) {
-        db.Product.findAll({where:{idcategory: 4}
-        }).then(function(products){
-            return res.render("buscarproductos", {products});
-        })
-    },
-    herramientas: function (req, res, next) {
-        db.Product.findAll({where:{idcategory: 5}
-        }).then(function(products){
-            return res.render("buscarproductos", {products});
-        })}
-
-
-
-
-
-
-
+}
 
 
 

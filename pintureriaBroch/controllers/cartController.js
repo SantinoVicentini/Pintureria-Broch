@@ -50,7 +50,8 @@ res.send("Llego algo")
 deleteProductCart:function(req, res,next) {
 },
 viewCart : function(req, res, next){
-    db.Cart.findOne({
+    res.render('cart');
+   /* db.Cart.findOne({
         where:
         {
             user_id: userid,
@@ -65,7 +66,7 @@ viewCart : function(req, res, next){
             res.render("/cart")
         }
     })
-
+*/
 },
 }
 

@@ -36,5 +36,9 @@ router.get('/edit/:id',productController.edit);
 router.post('/edit/:id',productController.update);
 
 router.post('/delete/:id',productController.delete);
+router.get('/categoria/pintureria', productController.pintureria);
+router.get('/categoria/accesorios', productController.accesorios);
+router.get('/categoria/revestimientos', productController.revestimientos);
+router.get('/categoria/herramientas', productController.herramientas);
 
 module.exports = router;

@@ -104,6 +104,40 @@ const productController = {
         });
         res.redirect("/products/");/* ESTA HECHO EL CONTROLADOR, NO LA OPCION EN LA VISTA*/
     },
+    pintureria:function(req, res, next){
+        db.Product.findAll({
+            where:{idcategory:2}
+        })
+        .then (function (product){
+            res.render('buscarproductos',{product})})
+        .catch(function (error){ console.log(error)}); 
+    },
+    accesorios:function(req, res, next){
+        db.Product.findAll({
+            where:{idcategory:3}
+        })
+        .then (function (product){
+            res.render('buscarproductos',{product})})
+        .catch(function (error){ console.log(error)}); 
+    },
+    revestimientos:function(req, res, next){
+        db.Product.findAll({
+            where:{idcategory:4}
+        })
+        .then (function (product){
+            res.render('buscarproductos',{product})})
+        .catch(function (error){ console.log(error)}); 
+    },
+    herramientas:function(req, res, next){
+        db.Product.findAll({
+            where:{idcategory:5}
+        })
+        .then (function (product){
+            res.render('buscarproductos',{product})})
+        .catch(function (error){ console.log(error)}); 
+    }
+    
+
     /*
 
     id: function(req,res,next){
