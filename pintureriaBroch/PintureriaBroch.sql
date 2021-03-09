@@ -63,7 +63,11 @@ CREATE TABLE IF NOT EXISTS `pintureriabroch`.`category` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-
+INSERT INTO `pintureriabroch`.`category` (`id`, `name`) VALUES ('1', 'No tiene');
+INSERT INTO `pintureriabroch`.`category` (`id`, `name`) VALUES ('2', 'Pinturas');
+INSERT INTO `pintureriabroch`.`category` (`id`, `name`) VALUES ('3', 'Accesorios');
+INSERT INTO `pintureriabroch`.`category` (`id`, `name`) VALUES ('4', 'Revestimientos');
+INSERT INTO `pintureriabroch`.`category` (`id`, `name`) VALUES ('5', 'Herramientas');
 -- -----------------------------------------------------
 -- Table `pintureriabroch`.`color`
 -- -----------------------------------------------------
@@ -73,6 +77,16 @@ CREATE TABLE IF NOT EXISTS `pintureriabroch`.`color` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
+
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('1', 'Sin color');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('2', 'Neutros');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('3', 'Rojos');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('4', 'Amarillos');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('5', 'Blanco Naturales');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('6', 'Azules');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('7', 'Verdes');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('8', 'Naranja');
+INSERT INTO `pintureriabroch`.`color` (`id`, `name`) VALUES ('9', 'Violetas');
 
 
 -- -----------------------------------------------------
@@ -85,6 +99,26 @@ CREATE TABLE IF NOT EXISTS `pintureriabroch`.`trademark` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('1', 'Sin Categoría');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('2', 'Black Decker');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('3', 'Dewalt');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('4', 'Lüsqtoff');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('5', 'Bosch');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('6', 'Skil');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('7', 'Pretul');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('8', 'Truper');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('9', 'Fullcover');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('10', 'Venier');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('11', 'Revear');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('12', 'Vadex');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('13', 'Sherwin Williams');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('14', 'Alba');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('15', 'Tersuave');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('16', 'Sinteplat');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('17', 'Plavicon');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('18', 'Sika');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('19', 'Casablanca');
+INSERT INTO `pintureriabroch`.`trademark` (`id`, `name`) VALUES ('20', 'Polacrin');
 
 -- -----------------------------------------------------
 -- Table `pintureriabroch`.`product`
