@@ -66,19 +66,34 @@ button:hover{
   /*background-color: red;*/
   display: flex;
 }
-
+.imagen{
+  height:400px;
+  width: 400px;
+}
+.imagenproductcontainer{
+  padding-left: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-right-width: 100px;
+  width: 400px;
+  padding-left: 125px;
+  padding-right: 125px;
+}
 .imageproduct
 {
   height: 500px;
-  width:900px;
+  width:50%;
   display: flex;
   /*background-color: green*/
   padding:30px;
+  padding-left: 100px;
+  margin-left: 100px;
+  padding-right: 100px;
 }
 
 .infoproduct{
   /*background-color: red;*/
-  width: 500px;
+  width: 50%;
   height: 500px;
   padding:25px;
 }
@@ -176,12 +191,19 @@ align-items: center;
 /*SECTION INFORMATION*/
 
 .descriptionproduct{
-  margin-top:30px;
-  padding: 20px;
-  margin-bottom:30px;
+  margin-left:100px;
+  margin-right:100px;
+  padding: 50px;
 }
 
-
+.descriptiontitulo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.descriptioninfo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 
 

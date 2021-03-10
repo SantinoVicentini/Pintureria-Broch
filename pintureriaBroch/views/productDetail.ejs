@@ -19,7 +19,9 @@
       <div class="product">
               <div class="container">
                         <div class= "imageproduct">
-                          <img src="/images/<%= product.image %>">
+                          <div class="imageproductcontainer">
+                            <img class="imagen" src="/images/<%= product.image %>">
+                          </div>
                         </div>
                         <div class="infoproduct">
                                   
@@ -112,12 +114,20 @@
 
      
         <section class="descriptionproduct">
-          <p>
-            <h1>Descripcion</h1>
-            <h2><%=product.description %></h2>
-          </p>
-          <br>
-       
+          <div class="infodescription">
+
+              <div class="descriptiontitulo">
+                <h1>Descripcion</h1>
+
+            
+              </div>
+              <div class="descriptioninfo">
+
+                <h2><%=product.description %></h2>
+            
+              </div>
+
+          </div>
         </section> 
         <br>
 
