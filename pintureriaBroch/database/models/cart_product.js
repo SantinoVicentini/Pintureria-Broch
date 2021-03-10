@@ -6,10 +6,10 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        product_id: {
+        carrito_id: {
             type: dataTypes.INTEGER
         },
-        cart_id: {
+        product_id: {
             type: dataTypes.INTEGER
         },
         createdAt: {

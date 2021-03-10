@@ -21,10 +21,24 @@ res.send("Llego algo")
                         user_id: req.session.userid,
                         status:1
                     }
-                }).then((result)=>{
-                    // Si el carrito está creado, agrega el producto
-                    if(result != null){
-                        console.log(result);
+                }).then(resp=>{
+                    // Si el carrito está creado, agrega el product*/
+                    if(resp != null){
+                        db.Cart_Product.create({
+                            carrito_id: resp.id,
+                            product_id: req.params.id
+                        })
+                        console.log(resp.id);
+                        console.log(req.params.id);/*SEGUIR DESDE ACA */
+                        /*        console.log(resp.id);
+                        db.Product.findByPk(req.params.id)
+                            .then(function(prod){
+                                db.Cart.update({total: result.total + prod.price}, {
+                                    where: {
+                                      id: result.id
+                                    }
+                                })
+                        });*/
                         
                     //Si no es asi, crealo el carrito y tenemos que agregar el producto al carrito
                     } else {
@@ -35,8 +49,9 @@ res.send("Llego algo")
                             status: 1,
                             total: 0
                         }).then(function(result){
+                            console.log(result);
                             db.Cart_Product.create({
-                                cart_id: result.id,
+                                carrito_id: result.id,
                                 product_id: req.params.id
                             })
                             db.Product.findByPk(req.params.id)
@@ -46,9 +61,9 @@ res.send("Llego algo")
                                       user_id: req.session.userid
                                     }
                                 })
-                            })
-                            return res.redirect("/products");
-                        }) 
+                                                })
+                            
+                                }) 
                     }
                 })
             })  
