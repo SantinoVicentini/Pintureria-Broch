@@ -8,7 +8,6 @@ const { info } = require('console');
 const cartController = {
 
 addProduct:function(req, res,next) {   
-res.send("Llego algo")
             /*Buscamos el id del usuario*/
             db.User.findOne({
                 where: {
@@ -21,29 +20,27 @@ res.send("Llego algo")
                         user_id: req.session.userid,
                         status:1
                     }
-                }).then(resp=>{
+                }).then(result=>{
                     // Si el carrito está creado, agrega el product*/
-                    if(resp != null){
+                    if(result != null){
                         db.Cart_Product.create({
-                            carrito_id: resp.id,
+                            carrito_id: result.id,
                             product_id: req.params.id
                         })
-                        console.log(resp.id);
-                        console.log(req.params.id);/*SEGUIR DESDE ACA */
-                        /*        console.log(resp.id);
+                        
                         db.Product.findByPk(req.params.id)
-                            .then(function(prod){
-                                db.Cart.update({total: result.total + prod.price}, {
+                            .then(function(product){
+                                db.Cart.update({total: result.total + product.price}, {
                                     where: {
                                       id: result.id
                                     }
                                 })
-                        });*/
+                        });
                         
                     //Si no es asi, crealo el carrito y tenemos que agregar el producto al carrito
                     } else {
 
-                    console.log('Estas creando el carrito!');
+                    console.log('Llegaste acá!');
                         db.Cart.create({
                             user_id: req.session.userid,
                             status: 1,
@@ -66,29 +63,45 @@ res.send("Llego algo")
                                 }) 
                     }
                 })
-            })  
+            })
+            res.render("/carts");  
         },
-deleteProductCart:function(req, res,next) {res.send( "delete")
+deleteProductCart:function(req, res,next) {
+    db.CartProduct.destroy(
+        {
+            where :
+                {
+                    producto_id : req.body.product_id,
+                    carrito_id : req.session.carrito_id
+                }
+        })/*redirigir a la misma pagina*/
 },
 viewCart : function(req, res, next){
-    res.render('cart');
-   /* db.Cart.findOne({
+    db.Cart.findAll()
+    .then(function(cart) {
+            return res.render('cart', {cart:cart});
+        })
+
+
+/*db.Cart.findOne({
         where:
         {
-            user_id: userid,
-            status:"activo"
+            user_id: req.session.userLogged.id,
+         status: 1
         },
     })
-    .then( info => {
-        if(info){
-        req.session.carrito_id = info.id;
-        res.render("/cart", {info: info})
+    .then( data => {
+        if(data){
+        req.session.carrito_id = data.id;
+        res.render("/cart", {data: data})
         } else {
-            res.render("/cart")
+            return res.render('cart')
         }
     })
+    
+    }
 */
-},
+}
 }
 
 module.exports = cartController;

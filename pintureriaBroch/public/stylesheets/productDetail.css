@@ -86,17 +86,8 @@ button:hover{
   display: flex;
   /*background-color: green*/
   padding:30px;
-  padding-left: 100px;
-  margin-left: 100px;
-  padding-right: 100px;
 }
 
-.infoproduct{
-  /*background-color: red;*/
-  width: 50%;
-  height: 500px;
-  padding:25px;
-}
 
 /*.nameproduct, .cardproduct, .generalproduct, .selectproduct{
   background-color: blue;
@@ -223,6 +214,10 @@ display:flex;
 
 }
 
+.container-aviso{
+  padding:10px 10px;
+}
+
 .footer-contenido-logo{
 padding-top:30px;
 padding-left:30px;
@@ -238,79 +233,56 @@ padding-left:30px;
    color:white;
  }
 
-
  /* Media Queries */
- @media (min-width: 1024px)
- { 
-  .footer-contenido{
-    flex-direction:row;
+
+ @media(max-width:425px){
+  header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(112, 136, 218);
   }
 
-  .container{
-    width:auto;
-   }
-   .imageproduct{
-    flex-direction:column;
-    width:60%;
-   }
-
-
-
- @media (min-width: 768px)and (max-width: 1023px)
- { 
-  .footer-contenido{
-    flex-direction:row;
+  .infoproduct{
+    max-width: 425px;
   }
 
-  .container{
-    width:auto;
-   }
-   .imageproduct{
-    flex-direction:column;
-    width:auto;
-   }
+.container{
+  flex-direction: column;
 }
- @media (min-width: 426px) and (max-width: 767px)
- { 
-  .footer-contenido{
-    flex-direction:column;
-  }
+.imagen{
+  height: 300px;
+  width: 300px;
+}
 
-  .container{
-    flex-direction:column;
-    width:auto;
-   }
-   .imageproduct{
-    flex-direction:column;
-    width:auto;
-   }
+.imageproduct
+{
+  height:40%;
+  display: flex;
+  /*background-color: green*/
+  padding-left: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+}
+
+.infoproduct{
+  max-width: 425px;
 }
 
 
 
 
-
-
-
- @media(max-width:42px){
-
-  
-    .container{
-      flex-direction:column;
-      width:auto;
-     }
-     .imageproduct{
-      flex-direction:column;
-      width:auto;
-     }
+.descriptionproduct{
+  margin-left:10px;
+  margin-right:10px;
+  padding: 10px;
+}
+}
+/*footer*/
+  .body{
+    flex-direction: column;
+       }
       .footer-contenido{
         flex-direction:column;
       }
-      .PromoImportante{
-        display:none;
-      }
-      .infoproduct{
-        width: auto;
-      }
-    }}
-

@@ -68,11 +68,11 @@ const productController = {
     edit: function (req,res,next) {
         db.Product.findByPk (req.params.id)
         .then(function(product) {
-            db.Category.findByPk()
+            db.Category.findAll()
             .then(function(categorias) {
-            db.Trademark.findByPk()
+            db.Trademark.findAll()
                .then(function(marcas) {
-                db.Color.findByPk()
+                db.Color.findAll()
                 .then(function(colores) {
                     
             res.render ("edicionProducto", {product:product, categorias:categorias, marcas:marcas, colores:colores})
