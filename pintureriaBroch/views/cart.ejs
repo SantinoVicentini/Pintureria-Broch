@@ -59,7 +59,7 @@
 <div class="Total">
 <h2>Total</h2>
 <br>
-<p>$<%= cart.total %>  </p>
+<p></p>
 </div>
 
 </div>
@@ -69,29 +69,28 @@
 
 <br>
 
-
-    <section class="Productos_Interesar"> 
-
-          
+<%for(let i = 0; i < productos.length; i++) { %>
   
+                          <%=productos[i].name%>
+  
+                          Precio de lista $ <%=(productos[i].price * 1.05)%> 
+                      
+                     
+  
+                      
+                          Oferta : $ <%=productos[i].price%>
+                
+  
+            
+                  
+              
+                  
+            
 
-      <h3>Productos que podrían interesarte</h3>
+      
+  <% } %>  
 
-    
-    
-
-  <br>
-  <br>
-
-  <div class="Imagenes_Interesar"> 
-<img src="images/interior/enduido_pasta_interior_25kg.jpg" alt="enduido_interior">
-<img src="images/interior/latex_interior_king_blanco_10.jpg" alt="latex_interior_king">
-  <img src="images/interior/latex_profesional_interior_blanco_10lt.jpg" alt="latex_profesional_interior">
-  </div> 
-</section> 
-    
-
-
+<div>
 <br>
 
 

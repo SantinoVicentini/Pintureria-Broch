@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `pintureriabroch`.`user` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
+INSERT INTO `pintureriabroch`.`user` (`id`,`username`,`name`,`email`,`password`,`address`,`location`,`province`,`country`) VALUES (1,'Admininstrador','Administrador','administrador@broch.com','$2a$10$5E4uEigJbWQ/bS6vEr2gV..qqj.c.hT0YKYYijUjGSnBqNMPRZmnO','-','-','-','-');
 
 -- -----------------------------------------------------
 -- Table `pintureriabroch`.`cart`

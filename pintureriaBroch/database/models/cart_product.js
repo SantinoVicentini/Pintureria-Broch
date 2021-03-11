@@ -13,15 +13,21 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         createdAt: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE(),
+            "allowNull" : false
+
         },
         updatedAt: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE(),
+            "allowNull" : false
+
         }
+
     };
     let config = {
         tableName: "cart_product",
-        timestamps: false
+        timestamps: true
+
     };
 
 let Cart_Product = sequelize.define(alias, cols, config);
@@ -29,9 +35,16 @@ let Cart_Product = sequelize.define(alias, cols, config);
      Cart_Product.associate = function (models) {
       Cart_Product.belongsTo(models.Cart, {
         as: 'carts',
-        foreignKey: 'cart_id',
+        foreignKey: 'carrito_id',
       });
     };
+    
+    Cart_Product.associate = function (models) {
+        Cart_Product.belongsTo(models.Product, {
+          as: 'products',
+          foreignKey: 'product_id',
+        });
+      };
 
     return Cart_Product;
 }
