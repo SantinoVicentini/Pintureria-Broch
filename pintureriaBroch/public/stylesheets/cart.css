@@ -63,111 +63,85 @@ button:hover{
 padding: 1%;  
 }
 
-main .Carrito .Carrito_Compras {
+.lotarticles{
+  display:flex;
+   flex-wrap:wrap;
+   flex-direction: column;
+   align-items: flex-start;
 
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  margin: 5%;
 }
 
-  main .Carrito .Carrito_Compras .Compra {
-    margin: 5%;
-    width: 70%;
-display: flex;
-flex-direction: column;
-box-sizing: border-box;
-border-style: solid;
+.info-articulos{
+  display:flex;
+}
 
-border-color:#EFEFEF;
+.imagen-articulo{
+ height: 80px;
+ width: 80px;
+}
+.articulos {
+
+   background-color: white;
+   height: 100px;
+   width:800px;
+   padding: 10px;
+   margin: 20px;
+   position: relative;
+   border-radius: 5px;
+   /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+   filter: drop-shadow(0 0 15px #333);
+   padding-top: 10px;
+  /*FLEXBOX*/
+  display: flex; 
   }
-
-  main .Carrito .Carrito_Compras .Compra .Descripción{
-        display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    box-sizing: border-box;
-    border-style: solid;
-border-color:#EFEFEF;
-      }
-
-   main .Carrito .Carrito_Compras .Compra .Resultado { 
-     align-items: center;
-         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        box-sizing: border-box;
-        border-style: none;
-border-color:#EFEFEF;
-padding: 2%;
-          }
-
-          main .Carrito .Carrito_Compras .Compra .Resultado .nombre img {
-            height: 150px;
-          }
-          main .Carrito .Carrito_Compras .Compra .Resultado input { 
-            align-self: center;
-            width: 15%;
-            background-color: rgb(112, 136, 218);
-            margin-right: 5%;
-            text-align: center;
-            font-size: medium;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            border-radius: 4px;
-            border-color: #EFEFEF;
-            }
-
-            main .Carrito .Carrito_Compras .Compra_Total {
-            background-color:#EFEFEF;
-            text-align: center;
-            width: auto;
-            padding: 2%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            box-sizing: border-box;
-            border-style: solid;
-          }
-
-          main .Carrito .Carrito_Compras .Compra_Total .Subtotal {
-            font-style: italic;
-            color: rgb(112, 136, 218);
-            padding: 10%;
-            margin-bottom: 10%;
-          }
-
-          main .Carrito .Carrito_Compras .Compra_Total .Total {
-            font-style: italic;
-            color: rgb(112, 136, 218);
-            padding: 10%;
-          }
-
-
-
-main .Productos_Interesar {
-  text-align: center;
-  font-size: xx-large;
-  margin: 10%;
+.infoart{
+  display: flex; 
+}
+  .infoart-name {
+    width: 300px;
+    height: 80px;
+   padding: 10px;
 }
 
 
+  .infoart-name a{
+   font: size 75px;;
+}
 
-main  .Productos_Interesar .Imagenes_Interesar {
-  box-sizing: border-box;
-  border-color: black;
-  border-style: groove;
+.infoart-price{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5%;
 }
 
-main  .Productos_Interesar .Imagenes_Interesar img {
-  width: 30%;
-height: auto;
+
+.preciodelista{
+  width: 100px;
+   padding: 10px;
+   text-decoration: line-through;
+   font-size:75%;
+   justify-content: center;
+   text-align:center;
+
 
 }
+.preciooferta {
+  width: 150px;
+   padding: 10px;
+   font-size: 75%;
+   justify-content: center;
+   text-align:center;
+}
+
+.infoeliminar{
+  width: 150px;
+   padding: 10px;
+   font-size: 75%;
+   justify-content: center;
+   text-align:center;
+}
+
+
+
+
 
 
 /*FOOTER*/

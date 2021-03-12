@@ -20,47 +20,8 @@
 
 <div class="Carrito_Compras">
 
-  <div class="Compra">
-<div class="Descripción">
-  <p>Producto</p>
-  <p>Envio</p>
-  <p>Precio</p>
-  <p>Cantidad</p>
-  <p>Total</p>
-</div>
-
-  <div class="Resultado">
-    <div class="nombre">
-  <img src="images/interior/albalatex_interior_10.jpg" alt="producto1">
-  <p>Albalatex Interior 10 Litros</p>
-</div>
-  <p> <a href="/Envios"> Calcular Envío</p></a>
-  <p>$ 4.585,70</p>
-  <input type="number" min="0" name="CantidadDeProductos">
-  <p>$ 4.585,70</p>
 
 
-
-</div>
-
-
-</div>
-
-
-<div class="Compra_Total">
-<div class="Subtotal">
-  <h2>  Subtotal</h2>
-  <br>
-<p>$ 4.585,70</p>
-<br>
-<p>Calcular costos de envío</p>
-</div>
-<hr>
-<div class="Total">
-<h2>Total</h2>
-<br>
-<p></p>
-</div>
 
 </div>
 
@@ -69,26 +30,46 @@
 
 <br>
 
-<%for(let i = 0; i < productos.length; i++) { %>
-  
-                          <%=productos[i].name%>
-  
-                          Precio de lista $ <%=(productos[i].price * 1.05)%> 
+  <section class="lotarticles">
+    <div class="container-articulos">
+                <%for(let i = 0; i < productos.length; i++) { %>
+                <div class="articulos">
+                    
+                    <div class="info-articulos">
+                            <div class="imagen-articulo">
+                                <img class="imageart" src="/images/<%=productos[i].image%>" style="height: 50px;">
+                            </div>
+                            <hr>
+                            <div class="infoart">
+                                      <div class="infoart-name">
+                                          <a href="/products/<%=productos[i].id%>">
+                                              <%=productos[i].name%></a>
                       
-                     
-  
-                      
-                          Oferta : $ <%=productos[i].price%>
-                
-  
-            
-                  
-              
-                  
-            
+                                      </div>
+                                      <hr>
+                                      <div class="infoart-price">
+                                                <div class="preciodelista">
+                                                $ <%=(productos[i].price * 1.05)%> 
+                                              </div>
+                                              <hr>
+                                                  <div class="preciooferta">
+                                                    $ <%=productos[i].price%>
+                                                  </div>
+                                              <hr>
+                                      </div> 
+                            <div class="infoeliminar">
 
-      
-  <% } %>  
+                              <form class="formBorrarProducto" action="/carts/deleteProduct/<%=productos[i].id%>" method="POST">
+                                <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                            </div>
+                                      
+                            </div>
+                      </div>
+                  </div>
+                  <% } %> 
+                </div>
+  </section>  
 
 <div>
 <br>

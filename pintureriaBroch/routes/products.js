@@ -40,5 +40,5 @@ router.get('/categoria/pintureria', productController.pintureria);
 router.get('/categoria/accesorios', productController.accesorios);
 router.get('/categoria/revestimientos', productController.revestimientos);
 router.get('/categoria/herramientas', productController.herramientas);
-
+router.get('/cargados/ultimos', productController.ultimoscargados);
 module.exports = router;

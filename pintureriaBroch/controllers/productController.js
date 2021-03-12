@@ -135,9 +135,15 @@ const productController = {
         .then (function (product){
             res.render('buscarproductos',{product})})
         .catch(function (error){ console.log(error)}); 
-    }
-    
-
+    },
+    ultimoscargados:function(req, res, next){
+        db.Product.findAll({
+            order:[['id', 'DESC']], limit: 10 
+        })
+        .then (function (product){
+            res.render('buscarproductos',{product})})
+        .catch(function (error){ console.log(error)}); 
+        }
     /*
 
     id: function(req,res,next){
