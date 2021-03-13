@@ -32,19 +32,16 @@ module.exports = (sequelize, dataTypes) => {
 
 let Cart_Product = sequelize.define(alias, cols, config);
 
-     Cart_Product.associate = function (models) {
+    /* Cart_Product.associate = function (models) {
       Cart_Product.belongsTo(models.Cart, {
         as: 'carts',
         foreignKey: 'carrito_id',
-      });
-    };
-    
-    Cart_Product.associate = function (models) {
+      }),
         Cart_Product.belongsTo(models.Product, {
           as: 'products',
           foreignKey: 'product_id',
-        });
-      };
-
+            });
+       };
+*/
     return Cart_Product;
 }

@@ -32,34 +32,34 @@
 
   <section class="lotarticles">
     <div class="container-articulos">
-                <%for(let i = 0; i < productos.length; i++) { %>
+                <%for(let i = 0; i < products.length; i++) { %>
                 <div class="articulos">
                     
                     <div class="info-articulos">
                             <div class="imagen-articulo">
-                                <img class="imageart" src="/images/<%=productos[i].image%>" style="height: 50px;">
+                                <img class="imageart" src="/images/<%=products[i].image%>" style="height: 50px;">
                             </div>
                             <hr>
                             <div class="infoart">
                                       <div class="infoart-name">
-                                          <a href="/products/<%=productos[i].id%>">
-                                              <%=productos[i].name%></a>
+                                          <a href="/products/<%=products[i].id%>">
+                                              <%=products[i].name%></a>
                       
                                       </div>
                                       <hr>
                                       <div class="infoart-price">
                                                 <div class="preciodelista">
-                                                $ <%=(productos[i].price * 1.05)%> 
+                                                $ <%=(products[i].price * 1.05)%> 
                                               </div>
                                               <hr>
                                                   <div class="preciooferta">
-                                                    $ <%=productos[i].price%>
+                                                    $ <%=products[i].price%>
                                                   </div>
                                               <hr>
                                       </div> 
                             <div class="infoeliminar">
 
-                              <form class="formBorrarProducto" action="/carts/deleteProduct/<%=productos[i].id%>" method="POST">
+                              <form class="formBorrarProducto" action="/carts/deleteProduct/<%=products[i].id%>" method="POST">
                                 <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
                                     </form>
                             </div>

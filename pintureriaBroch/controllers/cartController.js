@@ -47,6 +47,7 @@ addProduct:function(req, res,next) {
                             status: 1,
                             total: 0
                         }).then(function(result){
+                            req.session.cartid = result.id,
                             db.Cart_Product.create({
                                 carrito_id: result.id,
                                 product_id: req.params.id
@@ -102,18 +103,29 @@ deleteProduct:function(req, res,next) {
 ,
 viewCart : function(req, res, next){
     let userLogged= req.session.userLogged;
+    db.Cart.findOne ({
+        where: { user_id: userLogged.id, status: 1 }
+    })
+    .then(function(cart) {
+      cart.getProducts()
+        .then (function(products){
+            res.render('cart', {products:products});
+        })
+    })
 
 
-    db.Product.findAll({
-        include: [ { association: 'carts', where: { user_id: userLogged.id, status: 1 } }]
+
+  /*  db.Product.findAll({
+        include: [ { association: 'carts', , attributes: ["product_id"]} ]
       }).then((products) => {
           
+        return res.json(products)
         //Muestra los productos
         res.render('cart', { productos : products, userLogged: userLogged });
       });
-  }
+  } */
     
 }
-
+}
 
 module.exports = cartController;
