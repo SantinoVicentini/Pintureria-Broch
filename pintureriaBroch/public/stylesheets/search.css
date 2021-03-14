@@ -13,29 +13,16 @@
    text-decoration: none;
  }
   
- .Logueo{
-   background-color: #a90000;
-  text-align:right;
-  color:white;
-  padding-right: 150px;
- }
  
- header{
+ .infoheader{
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 30px 10%;
    background-color: rgb(112, 136, 218);
+   padding:10px;
+   
  }
- 
- .header-container{
-   display: flex;
-   justify-content: space-around;
- }
- 
- header img{
-   margin-right: auto;
- }
+
  
  
  
@@ -200,58 +187,3 @@ font-size:125%;
     padding:20px;
     color:white;
   }
-  @media(min-width:1024px){
-    .body{
-      flex-direction: row;
-         }
-        .footer-contenido{
-          flex-direction:row;
-        }
-  }
-  @media(max-width:1024px){}
-
- 
-  @media(max-width:426px){
-
-.infoarticulos{
-  display:flex;
-}
-.preciodelista{
-  display:none;
-}
-.imagen-articulo{
-padding-left: 30px;
-padding-right: 30px;
-}
-
-.result_search{
-  display:flex;
-    margin:20px;
-}
-
-/*IMAGEN*/
-    .imageart{
-      height:180px;
-      max-width: 200px;
-   }
-
-
-
-    .body{
- flex-direction: column;
-    }
-   .footer-contenido{
-     flex-direction:column;
-   }
-  section .promo{
-     width:30%;
-  }
- 
- }
-  
- @media(max-width:768px){
-   .marcas{
-     display:none;
-   }
- }
- 

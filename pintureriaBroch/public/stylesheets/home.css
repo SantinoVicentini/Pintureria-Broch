@@ -9,61 +9,40 @@
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
-  color: black;/*#edf0f1;*/
+  color:white;/*#edf0f1;*/
   text-decoration: none;
 }
  
-.Logueo{
-  background-color: #a90000;
- text-align:right;
- color:white;
- padding-right: 150px;
-}
-
-header{
+.infoheader{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 10%;
   background-color: rgb(112, 136, 218);
+  padding:10px;
+  flex-direction: column;
 }
 
-.header-container{
+.search{
+  justify-content: center;
+}
+
+.infoheader .logosearch{
   display: flex;
-  justify-content: space-around;
+  padding-left:50px;
+  padding-right:50px;
 }
 
-header img{
-  margin-right: auto;
-}
-
-
-
-.nav-links{
-  list-style: none;
-}
-
-.nav-links li{
-  display: inline-block;
-  padding: 0px 10px;
-}
-
-.nav-links li a{
-  transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover{
-  color: #0088a9;
-}
-.container-aviso article{
+.infoheader .linksheader{
   display: flex;
-  background-color: white;
- height: 100px;
- width: 120px;
- text-align: center;
- padding: 10px;
-
+  padding-left:20px;
+  padding-right:20px;
 }
+
+.search-form{
+  display: flex;
+  flex-direction: column;
+}
+
 button{
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
@@ -153,17 +132,28 @@ article img{
   width:100%;
 
 }
-.marcas{
+
+.cointainer section article {
+
+  background-color: white;
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
   position: relative;
-  width: auto;
-}
+  border-radius: 5px;
+  /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+  filter: drop-shadow(0 0 15px #333);
+  padding-top: 10px;
+ /*FLEXBOX*/
+ display: flex;  
+ }
 
-.destacadoDeLaSemana{
-  padding: 10px 10px;
 
-}
  /*FOOTER*/
  
+
+
  footer {
   background-color: rgb(111, 111, 245);
   height: auto;
