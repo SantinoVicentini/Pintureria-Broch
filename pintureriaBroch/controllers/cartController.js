@@ -35,7 +35,8 @@ addProduct:function(req, res,next) {
                                     where: {
                                       id: result.id
                                     }
-                                })
+                                })    ;                    return res.redirect("/carts")
+
                         });
                         
                     //Si no es asi, crealo el carrito y tenemos que agregar el producto al carrito
@@ -54,11 +55,15 @@ addProduct:function(req, res,next) {
                             })
                             db.Product.findByPk(req.params.id)
                             .then(function(product){
-                                db.Cart.update({total: product.price}, {
+                                db.Cart.update({total: product.price}, 
+                                    {
                                     where:{
                                       user_id: req.session.userid
                                     }
-                                })
+
+                                })                       
+
+
                                                 })
                             
                                 }) 
