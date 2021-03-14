@@ -3,30 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/productAdd.css">
+    <link rel="stylesheet" href="/stylesheets/productsAdmin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Listado de productos</title>
 
 </head>
 <body>
+
+       <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+    
     <h1>Listado de productos</h1>
 
-    <ul>
+    <div class="lotarticles">
+
+    
         <%for(let i = 0; i < product.length; i++) { %>
-            <li>
-                <a href="/products/<%=product[i].id%>"><%=product[i].name%></a>
-                <a href="/products/edit/<%= product[i].id%>">
-                  <button type="submit">Editar</button>
-                  </a>
-                  
-                  
-                  <form action="/products/delete/<%= product[i].id%>" method="POST">
-                    <button type="submit">Eliminar</button>
-                  </form>
-            </li>
+         
+ <div class="articulos">
+     <div class="info-articulos">
+
+                <div class="imagen-articulo">
+                    <img class="imageart" src="/images/<%=product[i].image%>" >
+                </div>
+                <div class="infoart">
+                                <div class="infoart-name">
+                                    <a href="/products/<%=product[i].id%>">
+                                        <%=product[i].name%></a>
+
+                                </div>
+
+                                <hr>
+                                <div class="infoart-price">
+                                    <div class="preciodelista">
+                                        Precio de lista $ <%=(product[i].price * 1.05)%> 
+                                    </div>
+
+                                    <div class="preciooferta">
+                                        Oferta : $ <%=product[i].price%>
+                                    </div>
+                                </div>
+                
+
+
+                            <div class="opciones">
+                                <div class="botoneditar">
+                                    <a href="/products/edit/<%= product[i].id%>">
+                                    <button type="submit">Editar</button></a>
+
+                                </div>
+                                        
+                                <div class="botoneliminar">  
+                                            <form action="/products/delete/<%= product[i].id%>" method="POST">
+                                            <button type="submit">Eliminar</button>
+                                        </form>
+                                </div> 
+                            </div>
+                 </div>
+
+        </div>
+ </div>
+                
+  
 
             <% } %>
-    </ul>
-
+</div>
 </body>
 </html>
