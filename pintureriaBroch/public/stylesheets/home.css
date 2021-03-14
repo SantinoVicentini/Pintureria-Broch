@@ -12,6 +12,15 @@
   color:white;/*#edf0f1;*/
   text-decoration: none;
 }
+.errores{
+  justify-content: center;
+  margin-top:100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.errores a{
+  color:black;
+}
  
 .infoheader{
   display: flex;
@@ -55,7 +64,7 @@ button{
 button:hover{
   background-color: rgba(0, 136, 169, 0.8);
 }
- 
+ /* main*/ 
  main{
    background-color:white;
    width: 100%;
@@ -133,11 +142,29 @@ article img{
 
 }
 
-.cointainer section article {
+.link-categoria{
+  color:black
+}
+
+.lotarticles{
+  display:flex;
+   flex-wrap:wrap;
+   flex-direction: row;
+   align-items: flex-start;
+
+}
+
+
+.imageart{
+  padding-left: 20px;
+  height:60px;
+  padding-right: 20px;
+}
+.articulos {
 
   background-color: white;
-  height: 400px;
-  width: 300px;
+  height: 100px;
+  width: 90%;
   padding: 10px;
   margin: 20px;
   position: relative;
@@ -148,8 +175,46 @@ article img{
  /*FLEXBOX*/
  display: flex;  
  }
+ .imagen-articulo{
+ padding: 10px;width: 40%;
+ justify-content: center;
+ }
+.infoart{
+  width: 70%;
+}
+ .info-articulos{
+   display:flex
+ }
+
+ .infoart .infoart-name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.infoart .infoart-price {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ .infoart-name a{
+  font-size:70%;
+  color:black
+}
+.preciodelista{
+  text-decoration: line-through;
+  font-size:75%;
+  justify-content: center;
 
 
+}
+.preciooferta {
+  font-size: 75%;
+  justify-content: center;
+
+
+}
+.username-name h3 {
+  color:black;
+}
  /*FOOTER*/
  
 
@@ -199,8 +264,191 @@ flex-direction: column;
 
 }
  
-@media(max-width:768px){
-  .marcas{
-    display:none;
+@media(min-width:426px)and (max-width:768px){
+  .infoheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(112, 136, 218);
+    padding:10px;
+    flex-direction: row;
   }
+  
+  .search{
+    justify-content: center;
+  }
+  
+  .infoheader .logosearch{
+    display: flex;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  
+  .infoheader .linksheader{
+    display: flex;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  
+  .search-form{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+ 
+ 
+ 
+  .footer-contenido{
+
+    flex-direction:column;
+  }
+
+ .imageart{
+  padding-left: 0px;
+  height: 40px;
+  padding-right: 0px;
+
+}
+
+  .articulos {
+ 
+     background-color: white;
+     height: 100px;
+     width: 150px;
+     padding: 10px;
+     margin: 20px;
+     position: relative;
+     border-radius: 5px;
+     /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+     filter: drop-shadow(0 0 15px #333);
+     padding-top: 10px;
+    /*FLEXBOX*/
+    display: flex;  
+    }
+ 
+    .infoart .infoart-name {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+ 
+    .infoart-name a{
+     font-size:25%;
+ }
+ .preciodelista{
+     text-decoration: line-through;
+     font-size:50%;
+     justify-content: center;
+  
+ 
+ }
+ .preciooferta {
+     font-size: 50%;
+     justify-content: center;
+  
+ 
+ }
+
+}
+@media(min-width:768px){
+  .infoheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(112, 136, 218);
+    padding:10px;
+    flex-direction: row;
+  }
+  
+  .search{
+    justify-content: center;
+  }
+  
+  .infoheader .logosearch{
+    display: flex;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  
+  .infoheader .linksheader{
+    display: flex;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  
+  .search-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+  .lotarticles{
+
+
+    display:flex;
+     flex-wrap:wrap;
+     flex-direction: row;
+     align-items: flex-start;
+ 
+ }
+
+ .imageart{
+  padding-left: 0px;
+  height: 90px;
+  padding-right: 0px;
+
+}
+
+  .articulos {
+ 
+     background-color: white;
+     height: 400px;
+     width: 250px;
+     padding: 10px;
+     margin: 20px;
+     position: relative;
+     border-radius: 5px;
+     /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
+     filter: drop-shadow(0 0 15px #333);
+     padding-top: 10px;
+    /*FLEXBOX*/
+    display: flex; 
+    justify-content: space-between; 
+    }
+ 
+
+    .info-articulos{
+      display:flex;
+      flex-direction: column; 
+    
+    }
+    .infoart-name {
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+ 
+ .infoart{
+   width: 100%;
+ }
+    .infoart-name a{
+     font-size:125%;
+ }
+ .preciodelista{
+     padding-top: 10px;
+     padding-bottom: 10px;
+     text-decoration: line-through;
+     font-size:125%;
+     justify-content: center;
+  
+ 
+ }
+ .preciooferta {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     font-size: 150%;
+     justify-content: center;
+  
+ 
+ }
 }

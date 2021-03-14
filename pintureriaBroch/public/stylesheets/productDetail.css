@@ -2,62 +2,58 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', Times, serif;
-}
-
-/*HEADER*/
-i{
-  font-size: 20px;
-}
-   
-body header li, a, button{
   font-family: Roboto;
-  font-weight: 500;
-  font-size: 15px;
-  color: #2705bd;
-  text-decoration: none;
-}
- 
-header{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 30px 10%;
-  background-color: rgb(112, 136, 218);
 }
 
-header img{
-  margin-right: auto;
+li, a, button{
+ font-family: Roboto;
+ font-weight: 500;
+ font-size: 14px;
+ color:white;/*#edf0f1;*/
+ text-decoration: none;
 }
 
-.nav-links{
-  list-style: none;
+.infoheader{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgb(112, 136, 218);
+ padding:10px;
+ flex-direction: column;
 }
 
-.nav-links li{
-  display: inline-block;
-  padding: 0px 20px;
+.search{
+ justify-content: center;
 }
 
-.nav-links li a{
-  transition: all 0.3s ease 0s;
+.infoheader .logosearch{
+ display: flex;
+ padding-left:50px;
+ padding-right:50px;
 }
 
-.nav-links li a:hover{
-  color: #0088a9;
+.infoheader .linksheader{
+ display: flex;
+ padding-left:20px;
+ padding-right:20px;
+}
+
+.search-form{
+ display: flex;
+ flex-direction: column;
 }
 
 button{
-  padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+ padding: 9px 25px;
+ background-color: rgba(0, 136, 169, 1);
+ border: none;
+ border-radius: 50px;
+ cursor: pointer;
+ transition: all 0.3s ease 0s;
 }
 
 button:hover{
-  background-color: rgba(0, 136, 169, 0.8);
+ background-color: rgba(0, 136, 169, 0.8);
 }
 
 /*MAIN*/

@@ -16,48 +16,36 @@
   <div class="container-profile">
         <div class="profile-info">
               <div class="info-greeting">
-                    <h1>¡Hola <%= users.username%>!</h1>
+                    <h3>¡Hola <%= users.username%>!</h3>
                     
               </div>
               <div class="info-profile">
                     <div class="info-username">
+                          <div class="username-left">
+                              <div class="username-name">
+                                <h5> Nombre: <%= users.name%> </h5>
+                                <h5> Nombre de Usuario: <%= users.username%> </h5>
+                                <h5> <%= users.email%> </h5>
+                              </div>
+                              <div class="username-tarjetas">
+                                <h4>Tus tarjetas</h4>
+                                <h5> VISA </h5>
+                              </div>
+                    </div>
 
-                      <div class="username-name">
-                        <li> Nombre: <%= users.name%> </li>
-                        <li> Nombre de Usuario: <%= users.username%> </li>
-                        <li> <%= users.email%> </li>
-                      </div>
-                      <div class="username-tarjetas">
-                        <h4>Tus tarjetas</h4>
-                        <li> VISA </li>
-                      </div>
+
+
                       <div class="username-direcciones">
                         <h4>Domicilios de envío</h4>
-                        <li> <%= users.address%> </li>
-                        <li> <%= users.location%> </li>
-                        <li> <%= users.province%> </li>
-                        <li> <%= users.country%> </li>
+                        <h5> <%= users.address%> </h5>
+                        <h5> <%= users.location%> </h5>
+                        <h5> <%= users.province%> </h5>
+                        <h5> <%= users.country%> </h5>
 
                       </div>
                       
-                   </div>
-                      <div class="info-actividad">
-                        <div class="actividad-carrito">
-                                <h3>Tu Carrito</h3>
-                                  <div class="info-carrito">
-                                  <h4>¡Todavía no agregaste nada al carrito!</h4>
-                                  </div>
-                        </div>  
-                        <div class="actividad-compras">
-                                  <h3>Compras realizadas</h3>
-                                    <div class="info-compras">
-                                      <h4>¡Todavía no hiciste una compra!</h4>
-                                    </div>
-                         </div>           
-                        </div>           
-                      </div>
-
-                      <a href="edit/<%= users.id%>">
+                      <div class="opciones">
+                        <a href="edit/<%= users.id%>">
                         <button type="submit">Editar</button>
                         </a>
                         
@@ -65,9 +53,19 @@
                         <form action="/users/delete/<%= users.id%>" method="POST">
                           <button type="submit">Eliminar</button>
                         </form> 
-              </div>
+
+                  </div>
+
+
+                   </div>
+                     
+
+                      
+              </div> 
+                 
+                     
          </div>
-  
+                        
   </div>
 
   <!-- footer -->

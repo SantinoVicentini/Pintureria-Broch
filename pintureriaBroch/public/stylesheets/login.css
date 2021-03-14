@@ -4,60 +4,57 @@
     box-sizing: border-box;
     font-family: Roboto;
   }
+ 
+  li, a, button{
+   font-family: Roboto;
+   font-weight: 500;
+   font-size: 14px;
+   color:white;/*#edf0f1;*/
+   text-decoration: none;
+ }
   
-body{
-    width: 100%;
-    background-color: rgb(230, 230, 230);
-    
-}
-
-    /*header*/
-h1{
-    height: 70px;
-}/*hay un problema con el margin de --login--*/
-
-   
-header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: rgb(112, 136, 218);
-}
-
-header img{
-    margin-right: auto;
-}
-
-.nav-links{
-    list-style: none;
-}
-
-.nav-links li{
-    display: inline-block;
-    padding: 0px 10px;
-}
-
-.nav-links li a{
-    transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover{
-    color: #0088a9;
-}
-
-button{
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover{
-    background-color: rgba(0, 136, 169, 0.8);
-}
+ .infoheader{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(112, 136, 218);
+   padding:10px;
+   flex-direction: column;
+ }
+ 
+ .search{
+   justify-content: center;
+ }
+ 
+ .infoheader .logosearch{
+   display: flex;
+   padding-left:50px;
+   padding-right:50px;
+ }
+ 
+ .infoheader .linksheader{
+   display: flex;
+   padding-left:20px;
+   padding-right:20px;
+ }
+ 
+ .search-form{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ button{
+   padding: 9px 25px;
+   background-color: rgba(0, 136, 169, 1);
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+ }
+ 
+ button:hover{
+   background-color: rgba(0, 136, 169, 0.8);
+ }
 
 .login-container{
     background-color: white;
