@@ -4,7 +4,8 @@ const userController = require('../controllers/userController');
 let multer = require('multer');
 let path = require ('path');
 let {check, validationResult,body}= require('express-validator');
-let guestMiddleware = require ('../middlewares/guestMiddleware');
+let adminMiddleware = require ('../middlewares/adminMiddleware');
+let loginMiddleware = require ('../middlewares/loginMiddleware');
 
 let fs = require ('fs');
 
@@ -24,7 +25,7 @@ var upload = multer({ storage: storage })
 
 // empieza CRUD base de datos
 router.get('/', userController.index); 
-router.get('/userList', userController.index); 
+router.get('/userList',loginMiddleware,adminMiddleware, userController.index); 
 router.get('/login',userController.showLoginForm);
 router.post('/login',[check('email').isEmail().withMessage("Ingrese un email correcto")],userController.login);
 router.get('/register',userController.showRegisterForm);
@@ -52,10 +53,12 @@ router.post('/register',[
                           });
                 
                         }).withMessage("Usuario ya existente")],*/
-router.get('/:id',userController.showProfile);
-router.get('/edit/:id',userController.edit);
-router.post('/edit/:id',userController.update);
-router.post('/delete/:id', userController.delete);
+router.get('/:id',loginMiddleware,userController.showProfile);
+router.get('/edit/:id',loginMiddleware,userController.edit);
+router.post('/edit/:id',loginMiddleware,userController.update);
+router.post('/delete/:id',loginMiddleware, userController.delete);
+router.post("/logout", userController.logout)
+
 
 // fin CRUD base de datos
 /*

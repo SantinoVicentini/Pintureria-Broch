@@ -35,7 +35,7 @@ addProduct:function(req, res,next) {
                                     where: {
                                       id: result.id
                                     }
-                                })    ;                    return res.redirect("/carts")
+                                })   
 
                         });
                         

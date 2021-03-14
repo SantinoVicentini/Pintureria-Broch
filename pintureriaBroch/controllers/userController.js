@@ -155,6 +155,11 @@ delete: function (req,res,next) {
   res.redirect("/users/register");
 },
 
+logout : (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+}
+
 
   // FIN CRUD BASE DE DATOS
 /* 
