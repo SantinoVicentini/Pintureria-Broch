@@ -55,16 +55,15 @@ addProduct:function(req, res,next) {
                             })
                             db.Product.findByPk(req.params.id)
                             .then(function(product){
-                                db.Cart.update({total: product.price}, 
+                                db.Cart.update(
+                                    {total: product.price}, 
                                     {
                                     where:{
                                       user_id: req.session.userid
                                     }
 
                                 })                       
-
-
-                                                })
+ })
                             
                                 }) 
                     }
@@ -114,9 +113,38 @@ viewCart : function(req, res, next){
     .then(function(cart) {
       cart.getProducts()
         .then (function(products){
-            res.render('cart', {products:products});
+            res.render('cart', {products:products,cart:cart});
         })
     })
+},
+checkout: function(req, res, next){
+    db.User.findOne({
+        where: {
+            email: req.session.userLogged.email
+        }
+    }).then(function(result){
+        req.session.userid = result.id;
+        db.Cart.findOne({
+            where:{
+                user_id: req.session.userid,
+                status:1
+            }
+        }).then(cart => {
+            db.Cart.update(
+                {status:0}, {
+                where: {
+                    user_id: req.session.userid
+                }
+            })
+            res.render('error',{errors:[{msg:'Gracias. Tu compra va en camino'}]})
+        })
+    })
+},
+buy:function (req, res, next){
+    res.redirect('/error',{errors:[{msg:'Gracias. Tu compra va en camino'}]})
+}
+
+
 
 
 
@@ -130,7 +158,7 @@ viewCart : function(req, res, next){
       });
   } */
     
-}
+
 }
 
 module.exports = cartController;

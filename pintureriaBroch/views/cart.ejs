@@ -58,6 +58,17 @@
                   <% } %> 
                 </div>
   </section>  
+<div class="totalprice">
+                <h1>Total: $ <%=cart.total%></h1>
+</div>
+<div class="finalizar">
+
+<form action="/carts/buy" method="POST">
+  <button type="submit" class="btn">Finalizar compra</button>
+</form>
+
+</div>
+
 
 <div>
 <br>

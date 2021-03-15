@@ -54,6 +54,71 @@
  
  button:hover{
    background-color: rgba(0, 136, 169, 0.8);
+ }*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+  }
+ 
+  li, a, button{
+   font-family: Roboto;
+   font-weight: 500;
+   font-size: 14px;
+   color:white;/*#edf0f1;*/
+   text-decoration: none;
+ }
+ .errores{
+   justify-content: center;
+   margin-top:100px;
+   padding-left: 50px;
+   padding-right: 50px;
+ }
+ .errores a{
+   color:black;
+ }
+  
+ .infoheader{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(112, 136, 218);
+   padding:10px;
+   flex-direction: column;
+ }
+ 
+ .search{
+   justify-content: center;
+ }
+ 
+ .infoheader .logosearch{
+   display: flex;
+   padding-left:50px;
+   padding-right:50px;
+ }
+ 
+ .infoheader .linksheader{
+   display: flex;
+   padding-left:20px;
+   padding-right:20px;
+ }
+ 
+ .search-form{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ button{
+   padding: 9px 25px;
+   background-color: rgba(0, 136, 169, 1);
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+ }
+ 
+ button:hover{
+   background-color: rgba(0, 136, 169, 0.8);
  }
 
 .login-container{
@@ -122,80 +187,67 @@
 
  /*FOOTER*/
  
- @media (min-width: 1024px){
-    .login-container{
-        background-color: white;
-    height: 70vh;
-    width: 40%;
-    padding: 15px 45px;
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    border-radius: 6px;
-    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
-  }
- }
- @media (min-width: 991px) and (max-width: 1023px) {
-    .login-container{
-        background-color: white;
-    height: 70vh;
-    width: 40%;
-    padding: 15px 45px;
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    border-radius: 6px;
-    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
-  }
- }
- /*Tablet*/
- @media (min-width: 768px) and (max-width: 990px) { 
-    .login-container{
-        background-color:white;
-        height: 60vh;
-        width: 40%;
-        padding: 15px 45px;
-        position: absolute;
-        top: 25%;
-        border-radius: 6px;
-        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
-  }}
 
   /*mobile horizontal*/
-  @media (min-width: 576px) and (max-width: 767px)
-  { 
-    .login-container{
-        background-color: white;
-        height: 70vh;
-        width: 50%;
-        padding: 20px 30px;
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        border-radius: 6px;
-        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
+  @media(min-width:426px)and (max-width:768px){
+    .infoheader{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(112, 136, 218);
+      padding:10px;
+      flex-direction: row;
     }
-}
-  /*mobile-vertical*/
-
-  @media (max-width: 575px) { 
-    .login-container{
-        background-color: white;
-        height: 70vh;
-        width: 70%;
-        padding: 1px 6px;
-        position: absolute;
-        top: 25%;
-        left: 15%;
-        border-radius: 6px;
-        box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);
-  }
-  .login-container h1{
-    float: left;
-    font-size: 30px;
-    border-bottom: 6px solid rgb(111, 111, 245);
-    margin-bottom:20px;
-    padding: 13px 0;
-    color: rgb(61, 61, 61);}
-
-  }
+    
+    .search{
+      justify-content: center;
+    }
+    
+    .infoheader .logosearch{
+      display: flex;
+      padding-left:50px;
+      padding-right:50px;
+    }
+    
+    .infoheader .linksheader{
+      display: flex;
+      padding-left:20px;
+      padding-right:20px;
+    }
+    
+    .search-form{
+      display: flex;
+      flex-direction: column;
+    }}
+    @media(min-width:769px){
+        .infoheader{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(112, 136, 218);
+          padding:10px;
+          flex-direction: row;
+        }
+        
+        .search{
+          justify-content: center;
+        }
+        
+        .infoheader .logosearch{
+          display: flex;
+          padding-left:50px;
+          padding-right:50px;
+        }
+        
+        .infoheader .linksheader{
+          display: flex;
+          padding-left:20px;
+          padding-right:20px;
+        }
+        
+        .search-form{
+          display: flex;
+          flex-direction: column;
+        }
+    } 
+    

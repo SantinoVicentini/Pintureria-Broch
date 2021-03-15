@@ -23,6 +23,16 @@ list : function(req,res,next) {
         res.send("Error de la página")
     
       })
-  }};
+  },
+  find : function(req, res, next){
+      db.User.findByPk(req.params.id)
+      .then(function(user){
+          res.json(user);
+      })
+
+      
+  }
+
+};
 
   module.exports = usuariosController;
