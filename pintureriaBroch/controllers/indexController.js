@@ -53,6 +53,14 @@ search: function(req, res, next) {
     .then (function (product){
         res.render('buscarproductos',{product})})
     .catch(err => console.log(err)); 
+},
+gif: function(req, res, next){
+    if ( req.session.userLogged != undefined){
+        return res.render("gifs");
+          }
+        else{
+           return  res.render("index",{errors:[{msg:'No estas logueado'}]});
+        }
 }
 
 

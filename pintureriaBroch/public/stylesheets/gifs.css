@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    background-color:  rgb(112, 136, 218) ;
+  }
+
+ ul li, a, button{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    color:white;/*#edf0f1;*/
+    text-decoration: none;
+    justify-content: center;
+    padding: 40px;
+  }
