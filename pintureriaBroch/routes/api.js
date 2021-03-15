@@ -7,4 +7,7 @@ router.get ("/contarProductos" , apisController.contarProductos);
 
 router.get ("/contarUsuarios" , apisController.contarUsuarios);
 
+router.get ("/contarVentas" , apisController.contarVentas);
+
+
 module.exports = router;

@@ -6,7 +6,7 @@ let apisController = {
     contarProductos : (req, res) =>{
         db.Product.findAll()
         .then((data) => {
-            let productsData = {
+            let dataProductos = {
                 meta: {
                     url: "http://localhost:3030/api/contarProductos",
                     status: 200,
@@ -19,7 +19,7 @@ let apisController = {
 
                 }
             }
-            res.json(productsData);
+            res.json(dataProductos);
         })
     },
 
@@ -27,7 +27,7 @@ let apisController = {
     contarUsuarios : (req, res) =>{
         db.User.findAll()
         .then((data) => {
-            let usersData = {
+            let DataUsuarios = {
                 meta: {
                     url: "http://localhost:3030/api/contarUsuarios",
                     status: 200,
@@ -40,7 +40,27 @@ let apisController = {
 
                 }
             }
-            res.json(usersData);
+            res.json(DataUsuarios);
+        })
+    },
+
+    contarVentas : (req, res) =>{
+        db.Cart.findAll( {where:{status : 0}})
+        .then((data) => {
+            let DataVentas = {
+                meta: {
+                    url: "http://localhost:3030/api/contarVentas",
+                    status: 200,
+                    state: "OK"
+
+                },
+
+                data: {
+                    quantity: data.length,
+
+                }
+            }
+            res.json(DataVentas);
         })
     },
 }
