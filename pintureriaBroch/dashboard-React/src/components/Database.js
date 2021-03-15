@@ -32,13 +32,13 @@ class Database extends Component{
 		
 		{
 
-            this.apiCall("localhost:3030/api/contarUsuarios", this.actualizarCantidad);
+            this.apiCall("http://localhost:3030/api/contarUsuarios", this.actualizarCantidad);
 
 
 
         }else if(this.props.api==="contarProductos"){
 
-            this.apiCall("localhost:3030/api/contarProductos", this.actualizarCantidad);
+            this.apiCall("http://localhost:3030/api/contarProductos", this.actualizarCantidad);
 
        }else if(this.props.api==="contarVentas"){
 

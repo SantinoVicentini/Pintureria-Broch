@@ -102,7 +102,7 @@ function App() {
 
               <Database
               api="contarVentas"
-              name="Ventas realizadas">
+              name="Ventas Realizadas">
               </Database>
               
               
