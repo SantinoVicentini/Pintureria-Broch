@@ -136,7 +136,15 @@ button:hover{
 }
 
 
+.totalprice{
+  justify-content: center;
+  text-align:center;
+}
 
+.finalizar{
+  justify-content: center;
+  text-align:center;
+}
 
 
 
