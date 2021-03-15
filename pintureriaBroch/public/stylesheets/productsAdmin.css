@@ -107,9 +107,13 @@ font-size:125%;
 .lotarticles{
   display:flex;
    flex-wrap:wrap;
-   flex-direction: row;
+   flex-direction: column;
    align-items: flex-start;
 
+}
+.opciones{
+  display:flex;
+  flex-direction: row;
 }
 
 .imageart{
@@ -120,27 +124,24 @@ font-size:125%;
 
   background-color: white;
   height: 100px;
-  width: 90%;
-  padding: 10px;
+  width: 70%;
   margin: 10px;
   position: relative;
   border-radius: 5px;
   /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
   filter: drop-shadow(0 0 15px #333);
-  padding-top: 10px;
  /*FLEXBOX*/
  display: flex;  
  }
  .imagen-articulo{
- padding: 10px;width: 40%;
  justify-content: center;
  align-items: center;
  }
 .infoart{
-  width: 70%;
+  width: 60%;
 }
  .info-articulos{
-   display:flex
+   display:flex;
  }
 
  .infoart .infoart-name {
@@ -241,7 +242,7 @@ font-size:125%;
  align-items: center;
  
  }
- 
+
  .container-aviso{
    padding:10px 10px;
  }
@@ -336,8 +337,7 @@ font-size:125%;
      margin: 20px;
      position: relative;
      border-radius: 5px;
-     /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
-     filter: drop-shadow(0 0 15px #333);
+    filter: drop-shadow(0 0 15px #333);
      padding-top: 10px;
     /*FLEXBOX*/
     display: flex;  
@@ -383,7 +383,10 @@ font-size:125%;
   .search{
     justify-content: center;
   }
-  
+  .opciones{
+    display:flex;
+    flex-direction: row;
+  }
   .infoheader .logosearch{
     display: flex;
     padding-left:50px;
@@ -413,6 +416,8 @@ font-size:125%;
      flex-wrap:wrap;
      flex-direction: row;
      align-items: flex-start;
+     margin-left: 75px;
+     margin-right: auto;
  
  }
 
@@ -432,12 +437,11 @@ font-size:125%;
      margin: 20px;
      position: relative;
      border-radius: 5px;
-     /*box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.15);*/
      filter: drop-shadow(0 0 15px #333);
      padding-top: 10px;
     /*FLEXBOX*/
     display: flex; 
-    justify-content: space-between; 
+   flex-direction: row; 
     }
  
 

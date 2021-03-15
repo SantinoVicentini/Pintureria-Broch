@@ -14,22 +14,10 @@
 	<!-- /Header -->
 
     <main>
-<br> <div class="container"></div>
-        <section class="Carrito">
-<h1>Carrito de Compras </h1>
-
-<div class="Carrito_Compras">
-
-
-
-
-</div>
-
-</div>
-</section>
-
 <br>
-
+<div class="carritodecompras">
+  <h1>Carrito de compras</h1>
+</div>
   <section class="lotarticles">
     <div class="container-articulos">
                 <%for(let i = 0; i < products.length; i++) { %>
@@ -37,7 +25,7 @@
                     
                     <div class="info-articulos">
                             <div class="imagen-articulo">
-                                <img class="imageart" src="/images/<%=products[i].image%>" style="height: 50px;">
+                                <img class="imageart" src="/images/<%=products[i].image%>" style="height: 100px;">
                             </div>
                             <hr>
                             <div class="infoart">

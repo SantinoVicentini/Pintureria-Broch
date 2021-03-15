@@ -24,7 +24,7 @@ var upload = multer({ storage: storage })
 
 
 // empieza CRUD base de datos
-router.get('/', userController.index); 
+router.get('/',loginMiddleware,adminMiddleware, userController.index); 
 router.get('/userList',loginMiddleware,adminMiddleware, userController.index); 
 router.get('/login',userController.showLoginForm);
 router.post('/login',[check('email').isEmail().withMessage("Ingrese un email correcto")],userController.login);
