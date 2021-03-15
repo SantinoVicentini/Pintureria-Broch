@@ -27,17 +27,18 @@ addProduct:function(req, res,next) {
                         db.Cart_Product.create({
                             carrito_id: result.id,
                             product_id: req.params.id
-                        })
+                        }) 
                         
                         db.Product.findByPk(req.params.id)
                             .then(function(product){
                                 db.Cart.update({total: result.total + product.price}, {
                                     where: {
                                       id: result.id
-                                    }
-                                })   
+                                    } 
+                                })                              
 
-                        });
+
+                        })  , res.redirect("/carts");
                         
                     //Si no es asi, crealo el carrito y tenemos que agregar el producto al carrito
                     } else {
@@ -52,6 +53,8 @@ addProduct:function(req, res,next) {
                                 carrito_id: result.id,
                                 product_id: req.params.id
                             })
+                            return res.redirect("/carts"),
+
                             db.Product.findByPk(req.params.id)
                             .then(function(product){
                                 db.Cart.update(
@@ -60,14 +63,18 @@ addProduct:function(req, res,next) {
                                     where:{
                                       user_id: req.session.userid
                                     }
+                                    
 
-                                })                       
- })
-                            
-                                }) 
+                                })                        
+                
+ })  
+
+
+                                })                   
+
                     }
-                })
-            })
+                }) 
+            }) 
         },
 deleteProduct:function(req, res,next) {
     db.User.findOne({

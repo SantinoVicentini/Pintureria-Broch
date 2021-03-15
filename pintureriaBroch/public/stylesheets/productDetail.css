@@ -13,6 +13,10 @@ li, a, button{
  text-decoration: none;
 }
 
+.pickupcontainerinfo a {
+  color: rgb(112, 136, 218);
+}
+
 .infoheader{
  display: flex;
  justify-content: center;

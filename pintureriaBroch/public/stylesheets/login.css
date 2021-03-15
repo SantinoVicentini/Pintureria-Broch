@@ -12,7 +12,19 @@
    color:white;/*#edf0f1;*/
    text-decoration: none;
  }
-  
+ main a {
+  color: rgb(112, 136, 218);
+}
+
+.login-container li {
+  color: rgb(112, 136, 218);
+
+}
+
+.container-listUsuarios a {
+  color: rgb(112, 136, 218);
+
+}
  .infoheader{
    display: flex;
    justify-content: center;
