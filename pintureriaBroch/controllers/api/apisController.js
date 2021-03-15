@@ -1,7 +1,6 @@
 
 const db = require("../../database/models");
 
-
 let apisController = {
     contarProductos : (req, res) =>{
         db.Product.findAll()
@@ -11,18 +10,14 @@ let apisController = {
                     url: "http://localhost:3030/api/contarProductos",
                     status: 200,
                     state: "OK"
-
                 },
-
                 data: {
                     quantity: data.length,
-
                 }
             }
             res.json(dataProductos);
         })
     },
-
 
     contarUsuarios : (req, res) =>{
         db.User.findAll()
@@ -32,12 +27,9 @@ let apisController = {
                     url: "http://localhost:3030/api/contarUsuarios",
                     status: 200,
                     state: "OK"
-
                 },
-
                 data: {
                     quantity: data.length,
-
                 }
             }
             res.json(DataUsuarios);
@@ -52,12 +44,9 @@ let apisController = {
                     url: "http://localhost:3030/api/contarVentas",
                     status: 200,
                     state: "OK"
-
                 },
-
                 data: {
                     quantity: data.length,
-
                 }
             }
             res.json(DataVentas);
