@@ -22,6 +22,8 @@ li, a, button{
  color:black;
 }
 
+
+
 .infoheader{
  display: flex;
  justify-content: center;
@@ -262,7 +264,7 @@ font-size:125%;
     color:white;
   }
 
-  @media(max-width:426px){
+  @media(max-width:425px){
     .body{
  flex-direction: column;
     }
@@ -332,7 +334,7 @@ font-size:125%;
  
      background-color: white;
      height: 100px;
-     width: 150px;
+     width: 250px;
      padding: 10px;
      margin: 20px;
      position: relative;
@@ -370,7 +372,7 @@ font-size:125%;
   }
  }
 
- @media(min-width:768px){
+ @media(min-width:769px){
   .infoheader{
     display: flex;
     justify-content: center;
@@ -479,5 +481,8 @@ font-size:125%;
  
  }
 
+ .tituloProductos {
+  padding: 50px;
+}
 
  }

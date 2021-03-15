@@ -12,6 +12,10 @@
   color:white;/*#edf0f1;*/
   text-decoration: none;
 }
+
+main a {
+  color: rgb(112, 136, 218);
+}
 .errores{
   justify-content: center;
   margin-top:100px;
