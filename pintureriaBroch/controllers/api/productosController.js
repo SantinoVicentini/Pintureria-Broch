@@ -24,6 +24,16 @@ list : function(req,res,next) {
         res.send("Error de la página")
     
       })
-  }};
+  },
+  find : function (req,res,next) {
+    db.Product.findByPk(req.params.id)
+    .then (function (product) {
+        res.json(product)
+
+    })
+}
+
+}
+
 
   module.exports = productosController;
