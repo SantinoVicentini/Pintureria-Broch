@@ -42,7 +42,6 @@ addProduct:function(req, res,next) {
                     //Si no es asi, crealo el carrito y tenemos que agregar el producto al carrito
                     } else {
 
-                    console.log('Llegaste acá!');
                         db.Cart.create({
                             user_id: req.session.userid,
                             status: 1,

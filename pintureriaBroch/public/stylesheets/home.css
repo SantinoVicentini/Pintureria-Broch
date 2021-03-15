@@ -347,9 +347,11 @@ flex-direction: column;
   
  
  }
-
+ .categoria-pintureria {
+  padding-left: 20px;
+} 
 }
-@media(min-width:768px){
+@media(min-width:769px){
   .infoheader{
     display: flex;
     justify-content: center;
@@ -385,7 +387,7 @@ flex-direction: column;
 
   .lotarticles{
 
-
+justify-content: center;
     display:flex;
      flex-wrap:wrap;
      flex-direction: row;
@@ -451,4 +453,8 @@ flex-direction: column;
   
  
  }
+
+.categoria-pintureria {
+  padding-left: 160px;
+} 
 }
