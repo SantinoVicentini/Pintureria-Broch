@@ -31,23 +31,32 @@
                     <input type="file" name="image" id="image" value="<%= product.image %>" >
                 </div>
 
-            <div class="text-box">
-                <i class="fas fa-angle-double-right"></i>
-            <input type="text" name="idcategory" id="idcategory" value="<%= product.idcategory%>" >
-        </div>
-
-             
-
+                <div>
+                    <label for="idcategory"> Categoria </label>
+                    <select name="categorias">
+                    <% for (let h = 0; h < categorias.length; h++) { %>
+                        <option value= "<%= categorias[h].id%>"> <%= categorias[h].name %> </option>
+                        <% }  %>
+                    </select>
+                </div>
             
 
-                <div class="text-box">
-                    <i class="fas fa-angle-double-right"></i>
-                    <input type="text" name="idcolor" id="idcolor" value="<%= product.idcolor %>">
+                <div>
+                    <label for="idcolor"> Color </label>
+                    <select name="colores">
+                    <% for (let h = 0; h < colores.length; h++) { %>
+                        <option value= "<%= colores.id%>"> <%= colores[h].name %> </option>
+                        <% }  %>
+                    </select>
                 </div>
 
-                <div class="text-box">
-                    <i class="fas fa-angle-double-right"></i>
-                    <input type="text" name="idtrademark" id="idtrademark" value="<%= product.idtrademark %>">
+                <div>
+                    <label for="idtrademark"> Marca </label>
+                    <select name="marcas">
+                    <% for (let h = 0; h < marcas.length; h++) { %>
+                        <option value= "<%= marcas[h].id%>"> <%= marcas[h].name %> </option>
+                        <% }  %>
+                    </select>
                 </div>
         
 
