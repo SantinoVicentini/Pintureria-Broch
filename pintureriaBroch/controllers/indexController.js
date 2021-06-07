@@ -61,6 +61,8 @@ gif: function(req, res, next){
         else{
            return  res.render("index",{errors:[{msg:'No estas logueado'}]});
         }
+},probando:function(req, res, next){
+        res.render('probando');
 }
 
 
